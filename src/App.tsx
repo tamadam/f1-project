@@ -5,12 +5,14 @@ import DriverList from "./components/DriverList";
 import DriverStandingList from "./components/DriverStandingList";
 import ConstructorList from "./components/ConstructorList";
 import ConstructorStandingList from "./components/ConstructorStandingList";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   const [year, setYear] = useState("current");
 
   return (
     <div className="container">
+      <NavBar />
       <YearSelector onSelectYear={(year) => setYear(year)} />
 
       <div className="data-container">
