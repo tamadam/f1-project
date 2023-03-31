@@ -1,0 +1,262 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.story-cards {}
+
+.story-card {
+    width: 100%;
+    min-height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0b0b0b;
+    position: relative;
+
+
+}
+
+.story-card-bg {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.story-card-bg img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 / 40%);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+
+
+}
+
+.story-card-text-container{
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 2rem;
+
+}
+
+.card-text-main-title-container {
+    text-align: center;
+
+}
+
+.card-text-main-title {
+    font-size: 1.8rem;
+
+    font-family: "NetflixBold";
+}
+
+.card-text-subtitle{
+    font-size: 1.125rem;
+    font-family: "NetflixMedium";
+    margin: 1rem 0 0;
+
+}
+
+header {
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+
+.separator-line {
+    height: 0.5rem;
+    background-color: rgb(41, 41, 41);
+}
+
+
+
+@media (min-width: 50em){
+    .story-card {
+        min-height: 40rem;
+    
+    }
+    .card-text-main-title {
+
+        font-size: 2.8rem;
+
+    
+    }
+
+    .card-text-subtitle{
+        font-size: 1.4rem;
+        font-family: "NetflixMedium";
+        margin: 1rem 0 0;
+    
+    }
+}
+
+@media (min-width: 65em){
+}
+
+
+@media (min-width: 70em){
+    .story-card {
+        min-height: 50rem;
+    
+    }
+    .card-text-main-title {
+
+        font-size: 3rem;
+        font-weight: 900;
+    
+    }
+
+    .card-text-subtitle{
+        font-size: 1.5rem;
+        font-family: "NetflixMedium";
+        margin: 1rem 0 0;
+    
+    }
+
+    
+}
+
+@media (min-width: 80em){
+    .story-card {
+        min-height: 50rem;
+    
+    }
+    
+}
+
+  /*
+.data-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+header {
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+
+
+.story-cards {
+    display: flex;
+    position: relative;
+    height: 50vh;
+}
+
+.test-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    padding: 8rem;
+}
+
+.hero-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.image-bg {
+    position: relative;
+}
+
+.bg-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.bg-color {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.40);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.main-title {
+    color: white
+}
+
+
+
+
+
+
+*/
+
+/*
+.main-header {
+    background-color: #2e2b2b;
+    background-image: url("./assets/background-f1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+
+.background-image-header {
+
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.background-header {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.40);
+
+}
+
+
+  
+.hero {
+    height: 40vh;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+  
+  
+  @media (min-width: 50em) {
+
+  
+    .data-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  */

@@ -1,15 +1,33 @@
+@font-face {
+  font-family: 'NetflixBold';
+  src: url('./fonts/Netflix_Sans_Bold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NetflixMedium';
+  src: url('./fonts/Netflix_Sans_Medium.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NetflixLight';
+  src: url('./fonts/Netflix_Sans_Light.otf') format('truetype');
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
 * {
   font: inherit;
+
 }
 
-img, picture, svg, video {
-  display: block;
-  max-width: 100%;
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
+
 
 body {
   margin: 0;
@@ -20,32 +38,6 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-
+  font-family: "NetflixLight";
 }
 
-.navigation-bar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background-color: lightblue;
-  height: 5rem;
-  margin: 0 1.5rem;
-}
-
-.data-container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-}
-
-
-
-@media (min-width: 50em) {
-  .navigation-bar {
-      margin: 0 2rem;
-  }
-
-  .data-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
