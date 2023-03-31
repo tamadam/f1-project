@@ -86,6 +86,10 @@ header {
     background-color: rgb(41, 41, 41);
 }
 
+.data-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
 
 
 @media (min-width: 50em){
@@ -106,6 +110,10 @@ header {
         margin: 1rem 0 0;
     
     }
+
+    .data-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
 }
 
 @media (min-width: 65em){

@@ -41,11 +41,13 @@ function App() {
         <div className="separator-line"></div>
         <div className="story-card" style={styles}>
           <YearSelector onSelectYear={(year) => setYear(year)} />
-          <DriverList year={year} />
-          <DriverStandingList year={year} />
+          <div className="data-container">
+            <DriverList year={year} />
+            <DriverStandingList year={year} />
 
-          <ConstructorList year={year} />
-          <ConstructorStandingList year={year} />
+            <ConstructorList year={year} />
+            <ConstructorStandingList year={year} />
+          </div>
         </div>
       </div>
     </div>
