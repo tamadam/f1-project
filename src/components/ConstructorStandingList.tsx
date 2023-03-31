@@ -17,7 +17,7 @@ const ConstructorStandingList = ({ year }: Props) => {
   const yearInTitle = year === "current" ? new Date().getFullYear() : year;
 
   return (
-    <div className="data-container">
+    <div className="">
       <h2>Constructor standings in {yearInTitle}</h2>
       {errorConstructorStandings && (
         <p className="error-message">{errorConstructorStandings}</p>

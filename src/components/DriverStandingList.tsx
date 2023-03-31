@@ -17,7 +17,7 @@ const DriverStandingList = ({ year }: Props) => {
   const yearInTitle = year === "current" ? new Date().getFullYear() : year;
 
   return (
-    <div className="data-container">
+    <div className="">
       <h2>Driver standings in {yearInTitle}</h2>
       {errorDriverStandings && (
         <p className="error-message">{errorDriverStandings}</p>

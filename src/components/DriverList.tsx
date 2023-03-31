@@ -16,7 +16,7 @@ const DriverList = ({ year }: Props) => {
   const yearInTitle = year === "current" ? new Date().getFullYear() : year;
 
   return (
-    <div className="data-container">
+    <div className="">
       <h2>Driver list in {yearInTitle}</h2>
       {errorDrivers && <p className="error-message">{errorDrivers}</p>}
       {isLoadingDrivers && <div className="spinner-border"></div>}
