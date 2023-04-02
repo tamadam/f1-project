@@ -40,9 +40,14 @@
     flex-grow: 2;
 }
 
-img {
+img {    
     height: 1.5rem;
     width: 5.55rem;
+
+}
+
+@media (min-width: 10em){
+
 }
 
 
