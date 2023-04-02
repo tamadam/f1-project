@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, FocusEvent } from "react";
 import "./App.css";
 import YearSelector from "./components/YearSelector";
 import DriverList from "./components/DriverList";
@@ -13,8 +13,28 @@ import arrow from "./assets/icon.png";
 function App() {
   const [year, setYear] = useState("current");
 
-  const styles = {
-    color: "white",
+  //const [email, setEmail] = useState("");
+  const [isEmailValid, setEmailValid] = useState(true);
+
+  const errorMessageStyle = `error-message-container ${
+    isEmailValid ? "validEmail" : "invalidEmail"
+  }`;
+
+  const inputBorderError = `email-input ${
+    isEmailValid ? "" : "invalidEmailInput"
+  }`;
+
+  const checkEmailValidity = (event: FocusEvent<HTMLInputElement>) => {
+    const valueMissing = event.target.validity.valueMissing;
+    const validityFull = event.target.validity.valid;
+
+    if (validityFull) {
+      setEmailValid(true);
+      //setEmail(event.target.value)
+    } else {
+      if (valueMissing) setEmailValid(true);
+      else setEmailValid(false);
+    }
   };
 
   return (
@@ -50,7 +70,43 @@ function App() {
                   }}
                   className="form-container"
                 >
-                  <div className="input-c email-input-container">1</div>
+                  <div className="input-c email-input-container">
+                    <div className="email-field">
+                      <input
+                        id="email-input"
+                        type="email"
+                        className={inputBorderError /* email-input */}
+                        autoComplete="off"
+                        placeholder=" "
+                        required
+                        onBlur={checkEmailValidity}
+                      />
+                      <label htmlFor="email-input" className="email-label">
+                        E-mail-cím
+                      </label>
+                    </div>
+
+                    <div className={errorMessageStyle}>
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        data-name="Failure"
+                        role="img"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M13.5 8C13.5 11.0376 11.0376 13.5 8 13.5C4.96243 13.5 2.5 11.0376 2.5 8C2.5 4.96243 4.96243 2.5 8 2.5C11.0376 2.5 13.5 4.96243 13.5 8ZM15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8ZM4.96967 6.03033L6.93934 8L4.96967 9.96967L6.03033 11.0303L8 9.06066L9.96967 11.0303L11.0303 9.96967L9.06066 8L11.0303 6.03033L9.96967 4.96967L8 6.93934L6.03033 4.96967L4.96967 6.03033Z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                      Adj meg egy érvényes e-mail-címet.
+                    </div>
+                  </div>
                   <button
                     type="submit"
                     className="input-c submit-button-container"
@@ -82,7 +138,7 @@ function App() {
         </div>
         <div className="separator-line"></div>
 
-        <div className="story-card" style={styles}>
+        <div className="story-card">
           <YearSelector onSelectYear={(year) => setYear(year)} />
           <div className="data-container">
             <DriverList year={year} />
