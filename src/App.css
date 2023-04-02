@@ -121,11 +121,11 @@
 }
 
 .validEmail {
-    visibility: hidden;
+    display: none;
 }
 
 .invalidEmail {
-    visibility: visible;
+    display: flex;
 }
 
 
