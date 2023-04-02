@@ -121,11 +121,11 @@
 }
 
 .validEmail {
-    display: none;
+    display: none
 }
 
 .invalidEmail {
-    display: flex;
+    display: flex
 }
 
 
@@ -365,6 +365,17 @@ header {
 
         font-size: 1.7rem;
         
+    }
+
+
+    .validEmail {
+        display: flex;
+        visibility: hidden;
+    }
+    
+    .invalidEmail {
+        display: flex;
+        visibility: visible;
     }
 
 
