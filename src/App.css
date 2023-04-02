@@ -113,12 +113,13 @@
     color: rgb(235, 57, 66);;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     width: 100%;    
     gap: 0.4rem;
     margin: 0 auto; 
     text-align: left;
+    padding-top: 0.2rem;
 }
 
 .error-message-container svg {
@@ -391,6 +392,14 @@ header {
         display: flex;
         visibility: visible;
     }
+
+
+    .error-message-container{
+
+        align-items: center;
+        padding-top: 0rem;
+    }
+    
 
 
 }
