@@ -104,7 +104,7 @@ function App() {
                           fill="currentColor"
                         ></path>
                       </svg>
-                      Adj meg egy érvényes e-mail-címet.
+                      <span>Adj meg egy érvényes e-mail-címet.</span>
                     </div>
                   </div>
                   <button

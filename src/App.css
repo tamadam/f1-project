@@ -118,7 +118,14 @@
     width: 100%;    
     gap: 0.4rem;
     margin: 0 auto; 
+    text-align: left;
 }
+
+.error-message-container svg {
+    flex-shrink: 0;
+    flex-basis: 16px;
+}
+
 
 .validEmail {
     display: none
