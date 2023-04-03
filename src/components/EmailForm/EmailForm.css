@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 90%;
 
     
     gap: 1rem;
@@ -178,7 +178,7 @@ input:not(:placeholder-shown).email-input + .email-label
 
 @media (min-width: 22em){
     .submit-button-container{  
-        width: 70%;       
+        width: 65%;       
 
     }
 
@@ -189,10 +189,28 @@ input:not(:placeholder-shown).email-input + .email-label
 
 @media (min-width: 25em){
     .submit-button-container{  
-        width: 60%;       
+        width: 58%;       
 
     }
 
+
+
+}
+
+
+
+@media (min-width: 27em){
+    .submit-button-container{
+   
+  
+        width: 54%;
+
+        
+    
+    }
+    .button-label {
+        font-size: 1.4rem;
+    }
 
 
 }
@@ -202,20 +220,18 @@ input:not(:placeholder-shown).email-input + .email-label
 
 
 @media (min-width: 30em){
-    .submit-button-container{
-   
-  
-        width: 55%;
-        min-height: 3.2rem;
-        
-    
-    }
-    .button-label {
-        font-size: 1.4rem;
-    }
+
 }
 
 @media (min-width: 35em) {
+    .form-container {
+    
+
+        width: 80%;
+
+    
+    }
+
     .email-field {
         width: 90%;
     }
