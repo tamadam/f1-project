@@ -52,6 +52,11 @@ img {
 
 
 @media (min-width: 30em) {
+    img {
+        height: 2rem;
+        width: 7.25rem;
+    }
+
     .navigation-bar {
         padding: 0 2.4rem;
     }
@@ -70,11 +75,14 @@ img {
     
 
 }
+
+@media (min-width: 40em) {
+
+
+}
   
 @media (min-width: 50em) {
-    .navigation-bar {
-        padding: 0 3rem;
-    }
+
 
     .item-container-1 {
         flex-grow: 3;
@@ -98,7 +106,11 @@ img {
     }
   }
 
-  
-@media (max-width: 60em) {
 
+
+  
+@media (min-width: 58em) {
+    .navigation-bar {
+        padding: 0 7rem;
+    }
 }
