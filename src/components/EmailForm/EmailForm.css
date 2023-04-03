@@ -19,7 +19,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    width: 90%;    
+    width: 100%;    
     gap: 0.4rem;
     /*margin: 0 auto;*/ 
     text-align: left;
@@ -62,7 +62,7 @@
 }
 
 .email-field {
-    width: 90%;
+    width: 100%;
     position: relative;
 }
 
@@ -212,6 +212,17 @@ input:not(:placeholder-shown).email-input + .email-label
     }
     .button-label {
         font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 35em) {
+    .email-field {
+        width: 90%;
+    }
+
+    .error-message-container {
+        width: 90%;
+        align-items: center;
     }
 }
 
