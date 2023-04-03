@@ -29,6 +29,7 @@
 .error-message-container svg {
     flex-shrink: 0;
     flex-basis: 16px;
+    align-self: center;
 }
 
 
