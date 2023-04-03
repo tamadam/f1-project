@@ -1,0 +1,283 @@
+.form-container {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+
+    
+    gap: 1rem;
+    margin: 0 auto; 
+    
+
+}
+
+.error-message-container{
+    color: rgb(235, 57, 66);;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;    
+    gap: 0.4rem;
+    margin: 0 auto; 
+    text-align: left;
+    padding-top: 0.2rem;
+}
+
+.error-message-container svg {
+    flex-shrink: 0;
+    flex-basis: 16px;
+}
+
+
+.validEmail {
+    display: none
+}
+
+.invalidEmail {
+    display: flex
+}
+
+
+
+.input-c {
+    min-height: 3rem;
+}
+
+.email-input-container{
+    color: white;
+    width: 100%;
+    flex-grow: 1;
+    /*min-width: 10rem;*/
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1.4rem;
+    gap: 0.4rem;
+    
+}
+
+.email-field {
+    width: 100%;
+    position: relative;
+}
+
+
+
+.email-label {
+    position: absolute;
+    left: 1rem;
+
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    transition: all 0.2s;
+    padding: 0 0.125rem;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.8);
+
+}
+
+.email-input {
+    padding: 1.8rem 1rem 0.5rem;
+    width: 100%;
+
+    border: 1px solid rgb(109, 109, 109);
+    background-color: rgba(34, 34, 34, 0.6);
+    border-radius: 0.25rem;
+    font-size: 1.2rem;
+    outline: none;
+    transition: all .3s;
+    color: white;
+
+}
+
+
+
+.email-input:focus{
+    /*border-color: rgb(197, 197, 197);*/
+    background-color: rgba(0,0,0, 0.8);   
+
+}
+
+
+
+/* needed only if placeholder provided
+.email-input::placeholder{
+    font-size: 1rem;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.email-input:focus::placeholder{
+    opacity: 1;
+    animation-delay: 0.2s;
+}
+*/
+
+.email-input:focus+.email-label,
+.email-input:valid+.email-label,
+input:not(:placeholder-shown).email-input + .email-label
+{
+    top: 1.1rem;
+    color: whitesmoke;
+    font-size: 0.875rem;
+}
+
+
+
+
+.submit-button-container{
+   
+    background-color: rgb(229, 9, 20);
+    width: 100%;
+    min-height: 3.8rem;
+    /*min-width: 8rem;*/
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition-duration: 250ms;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+    border-radius: 0.25rem;
+    
+
+}
+
+.submit-button-container:hover{
+    cursor: pointer;
+    background-color: rgb(184, 8, 17);
+
+
+}
+
+.button-label {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "NetflixMedium";
+    font-size: 1.2rem;
+    margin: 0.6rem;
+}
+
+.invalidEmailInput {
+    border: 1px solid red;
+}
+
+
+
+@media (min-width: 22em){
+    .submit-button-container{  
+        width: 70%;       
+
+    }
+
+
+
+}
+
+
+
+
+
+@media (min-width: 30em){
+    .submit-button-container{
+   
+  
+        width: 55%;
+
+        
+    
+    }
+    .button-label {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 40em){
+    .submit-button-container{
+   
+  
+        width: 40%;
+
+        
+    
+    }
+}
+
+
+
+
+@media (min-width: 50em){
+
+
+    .form-container {
+        flex-direction: row;
+
+    }
+
+    .email-input-container{
+        flex-grow: 0;
+        flex-basis: 30rem;
+        width: 70%;
+
+    }
+    
+    .submit-button-container{
+        flex-grow: 0;
+        flex-basis: 14rem;
+        width: 56%;
+
+    }
+
+    .button-label {
+
+        font-size: 1.7rem;
+        
+    }
+
+
+    .validEmail {
+        display: flex;
+        visibility: hidden;
+    }
+    
+    .invalidEmail {
+        display: flex;
+        visibility: visible;
+    }
+
+
+    .error-message-container{
+
+        align-items: center;
+        padding-top: 0rem;
+    }
+    
+
+
+}
+
+@media (min-width: 65em){
+}
+
+
+@media (min-width: 70em){
+
+
+    
+}
+
+@media (min-width: 80em){
+
+    
+}
