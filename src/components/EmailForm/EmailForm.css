@@ -135,7 +135,7 @@ input:not(:placeholder-shown).email-input + .email-label
    
     background-color: rgb(229, 9, 20);
     width: 100%;
-    min-height: 3.8rem;
+    min-height: 3rem;
     /*min-width: 8rem;*/
     flex-grow: 1;
     flex-shrink: 0;
@@ -186,6 +186,17 @@ input:not(:placeholder-shown).email-input + .email-label
 }
 
 
+@media (min-width: 25em){
+    .submit-button-container{  
+        width: 60%;       
+
+    }
+
+
+
+}
+
+
 
 
 
@@ -194,7 +205,7 @@ input:not(:placeholder-shown).email-input + .email-label
    
   
         width: 55%;
-
+        min-height: 3.2rem;
         
     
     }

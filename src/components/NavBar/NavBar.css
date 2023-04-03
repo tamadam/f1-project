@@ -91,12 +91,12 @@ img {
     
     .item-container-2 {
         flex-grow: 0;
-        flex-basis: 12.5rem;
+        flex-basis: 10rem;
     }
     
     .item-container-3 {
         flex-grow: 0;
-        flex-basis: 12.5rem;
+        flex-basis: 10rem;
     }
 
 
