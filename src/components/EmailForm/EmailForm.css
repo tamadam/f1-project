@@ -74,7 +74,7 @@
 
     top: 50%;
     transform: translateY(-50%);
-    font-size: 1.2rem;
+    font-size: 1.125rem;
     transition: all 0.2s;
     padding: 0 0.125rem;
     z-index: 1;
@@ -89,7 +89,7 @@
     border: 1px solid rgb(109, 109, 109);
     background-color: rgba(34, 34, 34, 0.6);
     border-radius: 0.25rem;
-    font-size: 1.2rem;
+    font-size: 1.125rem;
     outline: none;
     transition: all .3s;
     color: white;

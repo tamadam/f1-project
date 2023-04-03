@@ -8,7 +8,11 @@ const NavBar = () => {
         <img src={mainLogo}></img>
       </div>
       <div className="nav-item item-container-2">Item2</div>
-      <div className="nav-item item-container-3">Item3</div>
+      <div className="nav-item item-container-3">
+        <span className="explore-button">
+          <a href="#">Bejelentkezés</a>
+        </span>
+      </div>
     </div>
   );
 };
