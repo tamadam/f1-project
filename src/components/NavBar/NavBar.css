@@ -9,12 +9,7 @@
     padding: 0 1rem;
     font-family: "NetflixMedium";
     font-size: 0.875rem;
-    /*
-    margin: 0 4rem;
-    position: relative;
-    z-index: 1;*/
     position: absolute;
-
 }
 
 .nav-item {
@@ -30,19 +25,15 @@
 }
 
 .item-container-2 {
-    background-color: rgba(138, 138, 138, 0.4);
-    border: 2px solid black;
-    border-right: 0px;
-    flex-grow: 1;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;  
+    height: 100%;
+    color: white;
 }
 
 .item-container-3 {
-    /*
-    background-color: rgba(138, 138, 138, 0.4);
-    border: 2px solid black;
-    flex-grow: 2;
-    */
- 
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -69,24 +60,18 @@
 .explore-button:hover{
     cursor: pointer;
     background-color: rgb(184, 8, 17);
-
-
 }
 
-img {    
+.main-logo {    
     height: 1.5rem;
     width: 5.55rem;
     user-select: none;
-
 }
 
-@media (min-width: 10em){
-
-}
-
+/* MEDIA */
 
 @media (min-width: 30em) {
-    img {
+    .main-logo {
         height: 2rem;
         width: 7.25rem;
     }
@@ -95,6 +80,7 @@ img {
         padding: 0 2.4rem;
     }
 
+    /*
     .item-container-1 {
         flex-grow: 2;
     }
@@ -104,23 +90,15 @@ img {
     }
     
     .item-container-3 {
-        /*flex-grow: 1;*/
+        
     }
-    
-
-}
-
-@media (min-width: 40em) {
-
-
+    */
 }
   
 @media (min-width: 50em) {
-
-
+    /*
     .item-container-1 {
         flex-grow: 3;
-
     }
     
     .item-container-2 {
@@ -129,21 +107,15 @@ img {
     }
     
     .item-container-3 {
-        /*
-        flex-grow: 0;
-        flex-basis: 10rem;
-        */
+
     }
+    */
 
-
-    img {
+    .main-logo {
         height: 2.5rem;
         width: 9.25rem;
     }
-  }
-
-
-
+}
   
 @media (min-width: 58em) {
     .navigation-bar {

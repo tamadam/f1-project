@@ -1,0 +1,57 @@
+.language-selector-container {
+    display: inline-flex;
+    height: 2rem;
+}
+
+
+
+.language-selector {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    background-color: rgba(63, 63, 63, 0.4);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 0.25rem;
+    padding: 0.0009rem 0;
+}
+
+.world-icon {
+    position: absolute;
+    left: 0.7rem;
+    pointer-events: none;
+}
+
+.selector {  
+    all: unset;
+    width: 0.0625rem;
+    padding: 0.375rem 1.907rem;
+}
+
+.selector option  {
+    background-color: black;
+}
+
+.selector-icon {
+    position: absolute;
+    right: 0.7rem;
+    pointer-events: none;
+}
+
+/* MEDIA */
+
+@media (min-width: 40em) {
+    .selector {  
+        width: fit-content;
+        max-width: 8rem;
+    }
+
+    .world-icon {
+        left: 0.4rem;
+    }
+
+    .selector-icon {
+        right: 0.4rem;
+    }
+}
+  
