@@ -1,38 +1,20 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
 import "./LanguageSelector.css";
 
-export type Language = {
-  title: string;
-  subtitle: string;
-};
-
-type Languages = {
-  [key: string]: Language;
-};
-
 interface Props {
-  onLanguageChange: (language: Language) => void;
+  onLanguageChange: (language: string) => void;
 }
 
 const LanguageSelector = ({ onLanguageChange }: Props) => {
   const [selectedLanguage, setSelectedLanguage] = useState("hu");
-  const [languages, setLanguages] = useState<Languages>({
-    en: {
-      title: "Hello",
-      subtitle: "Welcome to",
-    },
-    hu: {
-      title: "Halihó",
-      subtitle: "Üdv itt",
-    },
-  });
-  const currentLanguageData = languages[selectedLanguage];
+
   const handleLanguageSelect = (event: ChangeEvent<HTMLSelectElement>) => {
     setSelectedLanguage(event.target.value);
   };
 
   useEffect(() => {
-    onLanguageChange(currentLanguageData);
+    // need to do that here, state is not updated in the handler function
+    onLanguageChange(selectedLanguage);
   }, [selectedLanguage]);
 
   return (

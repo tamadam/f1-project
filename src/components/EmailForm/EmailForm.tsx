@@ -1,7 +1,10 @@
-import React, { useState, FocusEvent } from "react";
+import React, { useState, FocusEvent, useContext } from "react";
 import "./EmailForm.css";
+import { LanguageContext } from "../../App";
 
 const EmailForm = () => {
+  const language = useContext(LanguageContext);
+
   //const [email, setEmail] = useState("");
   const [isEmailValid, setEmailValid] = useState(true);
 
@@ -46,7 +49,7 @@ const EmailForm = () => {
             onBlur={checkEmailValidity}
           />
           <label htmlFor="email-input" className="email-label">
-            E-mail-cím
+            {language.emailForm.emailInputText}
           </label>
         </div>
 
@@ -68,12 +71,12 @@ const EmailForm = () => {
               fill="currentColor"
             ></path>
           </svg>
-          <span>Adj meg egy érvényes e-mail-címet.</span>
+          <span>{language.emailForm.emailErrorText}</span>
         </div>
       </div>
       <button type="submit" className="input-c submit-button-container">
         <div className="button-label">
-          <span>Első lépések</span>
+          <span>{language.emailForm.emailSubmitText}</span>
           <svg
             width="20"
             height="20"

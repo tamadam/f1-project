@@ -1,13 +1,23 @@
 import "./NavBar.css";
 import mainLogo from "../../assets/F1.png";
-import LanguageSelector, {
-  Language,
-} from "../LanguageSelector/LanguageSelector";
+import LanguageSelector from "../LanguageSelector/LanguageSelector";
+//import { LanguageContext } from "../languages/LanguageContext";
+import { LanguageContext } from "../../App";
+import { useContext } from "react";
 
-const NavBar = () => {
-  const handleLanguageChange = (language: Language) => {
-    console.log("changing language");
-    console.log(language);
+interface Props {
+  onLanguageChange?: (language: string) => void;
+}
+
+const NavBar = ({ onLanguageChange }: Props) => {
+  const language = useContext(LanguageContext);
+
+  const handleLanguageChange = (language: string) => {
+    //console.log("changing language nav");
+    //console.log(language);
+    if (onLanguageChange) {
+      onLanguageChange(language);
+    }
   };
 
   return (
@@ -20,7 +30,7 @@ const NavBar = () => {
       </div>
       <div className="nav-item item-container-3">
         <span className="explore-button">
-          <a href="#">Bejelentkezés</a>
+          <a href="#">{language.navbar.buttonText}</a>
         </span>
       </div>
     </div>

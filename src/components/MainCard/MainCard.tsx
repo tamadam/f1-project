@@ -1,8 +1,12 @@
 import backgroundF1nosub from "../../assets/f1back2.jpg";
 import "./MainCard.css";
 import EmailForm from "../EmailForm/EmailForm";
+import { useContext } from "react";
+import { LanguageContext } from "../../App";
 
 const MainCard = () => {
+  const language = useContext(LanguageContext);
+
   return (
     <div className="story-card">
       <div className="story-card-bg">
@@ -12,17 +16,12 @@ const MainCard = () => {
       <div className="story-card-text-container">
         <div className="card-text-main-title-container">
           <h1 className="card-text-main-title">
-            Forma 1 adatok és elemzések korlátlan kínálata.
+            {language.mainCard.mainTitle}
           </h1>
-          <p className="card-text-subtitle">
-            Bárhol nézheted. Amikor csak akarod.
-          </p>
+          <p className="card-text-subtitle">{language.mainCard.mainSubtitle}</p>
           <div className="first-steps-container">
             <div className="form-title">
-              <h3>
-                Készülj fel, a lámpák mindjárt kialszanak! Add meg az
-                email-címedet és már kezdheted is.
-              </h3>
+              <h3>{language.mainCard.firstStepsTitle}</h3>
             </div>
             {/* Form container*/}
             <EmailForm />
