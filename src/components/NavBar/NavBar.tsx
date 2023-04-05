@@ -1,5 +1,6 @@
 import "./NavBar.css";
-import mainLogo from "../../assets/F1.png";
+//import mainLogo from "../../assets/F1.png";
+import mainLogo from "../../assets/f1logomain3.png";
 import LanguageSelector from "../LanguageSelector/LanguageSelector";
 //import { LanguageContext } from "../languages/LanguageContext";
 import { LanguageContext } from "../../App";
