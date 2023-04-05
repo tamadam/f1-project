@@ -1,16 +1,22 @@
 import "./NavBar.css";
 import mainLogo from "../../assets/F1.png";
-import { useRef } from "react";
-import LanguageSelector from "../LanguageSelector/LanguageSelector";
+import LanguageSelector, {
+  Language,
+} from "../LanguageSelector/LanguageSelector";
 
 const NavBar = () => {
+  const handleLanguageChange = (language: Language) => {
+    console.log("changing language");
+    console.log(language);
+  };
+
   return (
     <div className="navigation-bar">
       <div className="nav-item item-container-1">
         <img className="main-logo" src={mainLogo}></img>
       </div>
       <div className="nav-item item-container-2">
-        <LanguageSelector />
+        <LanguageSelector onLanguageChange={handleLanguageChange} />
       </div>
       <div className="nav-item item-container-3">
         <span className="explore-button">

@@ -1,7 +1,40 @@
-import React from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import "./LanguageSelector.css";
 
-const LanguageSelector = () => {
+export type Language = {
+  title: string;
+  subtitle: string;
+};
+
+type Languages = {
+  [key: string]: Language;
+};
+
+interface Props {
+  onLanguageChange: (language: Language) => void;
+}
+
+const LanguageSelector = ({ onLanguageChange }: Props) => {
+  const [selectedLanguage, setSelectedLanguage] = useState("hu");
+  const [languages, setLanguages] = useState<Languages>({
+    en: {
+      title: "Hello",
+      subtitle: "Welcome to",
+    },
+    hu: {
+      title: "Halihó",
+      subtitle: "Üdv itt",
+    },
+  });
+  const currentLanguageData = languages[selectedLanguage];
+  const handleLanguageSelect = (event: ChangeEvent<HTMLSelectElement>) => {
+    setSelectedLanguage(event.target.value);
+  };
+
+  useEffect(() => {
+    onLanguageChange(currentLanguageData);
+  }, [selectedLanguage]);
+
   return (
     <div className="language-selector-container">
       <div className="language-selector">
@@ -28,11 +61,11 @@ const LanguageSelector = () => {
           className="selector"
           name="language-select"
           id="language-select-1"
+          value={selectedLanguage}
+          onChange={handleLanguageSelect}
         >
-          <option selected value="hu-HU">
-            Magyar
-          </option>
-          <option value="en-EN">English</option>
+          <option value="hu">Magyar</option>
+          <option value="en">English</option>
         </select>
         <div className="selector-icon">
           <svg

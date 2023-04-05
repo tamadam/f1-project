@@ -10,6 +10,7 @@ import backgroundF1 from "./assets/background-f1.jpg";
 import backgroundF1nosub from "./assets/f1back2.jpg";
 import arrow from "./assets/icon.png";
 import EmailForm from "./components/EmailForm/EmailForm";
+import MainCard from "./components/MainCard/MainCard";
 
 function App() {
   const [year, setYear] = useState("current");
@@ -20,32 +21,8 @@ function App() {
         <NavBar />
       </header>
       <div className="story-cards">
-        <div className="story-card">
-          <div className="story-card-bg">
-            <img src={backgroundF1nosub} alt="" />
-            <div className="bg-color"></div>
-          </div>
-          <div className="story-card-text-container">
-            <div className="card-text-main-title-container">
-              <h1 className="card-text-main-title">
-                Forma 1 adatok és elemzések korlátlan kínálata.
-              </h1>
-              <p className="card-text-subtitle">
-                Bárhol nézheted. Amikor csak akarod.
-              </p>
-              <div className="first-steps-container">
-                <div className="form-title">
-                  <h3>
-                    Készülj fel, a lámpák mindjárt kialszanak! Add meg az
-                    email-címedet és már kezdheted is.
-                  </h3>
-                </div>
-                {/* Form container*/}
-                <EmailForm />
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* main storycard*/}
+        <MainCard />
         <div className="separator-line"></div>
 
         <div className="story-card">

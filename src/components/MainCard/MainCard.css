@@ -1,0 +1,174 @@
+.story-card {
+    width: 100%;
+    min-height: 36rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0b0b0b;
+    position: relative;
+    color: white;
+
+
+}
+
+.story-card-bg {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.story-card-bg img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 / 40%);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+
+
+}
+
+.story-card-text-container{
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 2rem;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+
+}
+
+.card-text-main-title-container {
+    text-align: center;
+
+}
+
+.card-text-main-title {
+    font-size: 1.8rem;
+
+    font-family: "NetflixBold";
+}
+
+.card-text-subtitle{
+    font-size: 1.125rem;
+    font-family: "NetflixMedium";
+    margin: 1rem 0 0;
+
+}
+
+
+.first-steps-container{
+    margin: 1.5rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.form-title{
+    font-family: "NetflixMedium";
+    font-size: 1.125rem;
+
+
+}
+
+@media (min-width: 22em){
+ 
+
+    .story-card-text-container{
+
+    
+        padding-bottom: 2rem;
+    
+    }
+
+
+}
+
+
+
+
+
+@media (min-width: 30em){
+
+}
+
+@media (min-width: 40em){
+
+}
+
+
+
+
+@media (min-width: 50em){
+    .story-card {
+        min-height: 40rem;
+    
+    }
+    .card-text-main-title {
+
+        font-size: 2.8rem;
+
+    
+    }
+
+    .card-text-subtitle{
+        font-size: 1.4rem;
+        font-family: "NetflixMedium";
+        margin: 1rem 0 0;
+    
+    }
+
+
+
+
+}
+
+@media (min-width: 65em){
+}
+
+
+@media (min-width: 70em){
+    .story-card {
+        min-height: 50rem;
+    
+    }
+    .card-text-main-title {
+
+        font-size: 3rem;
+        font-weight: 900;
+    
+    }
+
+    .card-text-subtitle{
+        font-size: 1.5rem;
+        font-family: "NetflixMedium";
+        margin: 1rem 0 0;
+    
+    }
+
+    
+}
+
+@media (min-width: 80em){
+    .story-card {
+        min-height: 50rem;
+    
+    }
+    
+}
+
