@@ -6,19 +6,7 @@
 
 .story-cards {}
 
-/* have this in maincard.css */
-.story-card {
-    width: 100%;
-    min-height: 36rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #0b0b0b;
-    position: relative;
-    color: white;
 
-
-}
 
 
 

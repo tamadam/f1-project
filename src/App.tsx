@@ -11,6 +11,7 @@ import MainCard from "./components/MainCard/MainCard";
 import { languageHUN } from "./components/languages/languageHUN";
 import { languageEN } from "./components/languages/languageEN";
 import SeparatorLine from "./components/SeparatorLine/SeparatorLine";
+import Card from "./components/Card/Card";
 
 export const LanguageContext = createContext(languageEN);
 
@@ -36,10 +37,12 @@ function App() {
           <NavBar onLanguageChange={handleLanguageChange} />
         </header>
         <div className="story-cards">
-          <MainCard />
+          <Card>
+            <MainCard />
+          </Card>
           <SeparatorLine />
 
-          <div className="story-card">
+          <Card>
             <YearSelector onSelectYear={(year) => setYear(year)} />
             <div className="data-container">
               <DriverList year={year} />
@@ -48,7 +51,7 @@ function App() {
               <ConstructorList year={year} />
               <ConstructorStandingList year={year} />
             </div>
-          </div>
+          </Card>
         </div>
       </LanguageContext.Provider>
     </div>

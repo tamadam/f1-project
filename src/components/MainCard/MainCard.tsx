@@ -8,7 +8,7 @@ const MainCard = () => {
   const language = useContext(LanguageContext);
 
   return (
-    <div className="story-card">
+    <>
       <div className="story-card-bg">
         <img src={backgroundF1nosub} alt="" />
         <div className="bg-color"></div>
@@ -28,7 +28,7 @@ const MainCard = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,15 +1,4 @@
-.story-card {
-    width: 100%;
-    min-height: 36rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #0b0b0b;
-    position: relative;
-    color: white;
 
-
-}
 
 .story-card-bg {
     position: absolute;
@@ -115,10 +104,7 @@
 
 
 @media (min-width: 50em){
-    .story-card {
-        min-height: 40rem;
-    
-    }
+
     .card-text-main-title {
 
         font-size: 2.8rem;
@@ -143,10 +129,7 @@
 
 
 @media (min-width: 70em){
-    .story-card {
-        min-height: 50rem;
-    
-    }
+
     .card-text-main-title {
 
         font-size: 3rem;
@@ -165,10 +148,7 @@
 }
 
 @media (min-width: 80em){
-    .story-card {
-        min-height: 50rem;
     
-    }
     
 }
 
