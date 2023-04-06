@@ -10,10 +10,7 @@ import MainCard from "./components/MainCard/MainCard";
 //import { LanguageContextProvider } from "./components/languages/LanguageContext";
 import { languageHUN } from "./components/languages/languageHUN";
 import { languageEN } from "./components/languages/languageEN";
-
-type Props = {
-  children: React.ReactNode;
-};
+import SeparatorLine from "./components/SeparatorLine/SeparatorLine";
 
 export const LanguageContext = createContext(languageEN);
 
@@ -40,9 +37,7 @@ function App() {
         </header>
         <div className="story-cards">
           <MainCard />
-
-          {/* ------------------- */}
-          <div className="separator-line"></div>
+          <SeparatorLine />
 
           <div className="story-card">
             <YearSelector onSelectYear={(year) => setYear(year)} />
