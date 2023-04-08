@@ -11,5 +11,9 @@ export const languageEN = {
         emailInputText: "Email address",
         emailSubmitText: "Get Started", 
         emailErrorText: "Please enter a valid email address"
+    },
+    storyCard: {
+        storyTitle: "Being up to date.",
+        storySubtitle: "Check out the recap videos so you don't miss any important details."
     }
 }

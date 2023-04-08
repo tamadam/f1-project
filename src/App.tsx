@@ -11,7 +11,10 @@ import MainCard from "./components/MainCard/MainCard";
 import { languageHUN } from "./components/languages/languageHUN";
 import { languageEN } from "./components/languages/languageEN";
 import SeparatorLine from "./components/SeparatorLine/SeparatorLine";
-import Card from "./components/Card/Card";
+import StoryCard from "./components/StoryCard/StoryCard";
+import demoVideo from "./assets/titlevideo.mp4";
+import laptopBackground from "./assets/laptop6.png";
+import mainLogo from "./assets/f1logomain3.png";
 
 export const LanguageContext = createContext(languageEN);
 
@@ -37,12 +40,39 @@ function App() {
           <NavBar onLanguageChange={handleLanguageChange} />
         </header>
         <div className="story-cards">
-          <Card>
-            <MainCard />
-          </Card>
+          <MainCard />
           <SeparatorLine />
-
-          <Card>
+          <StoryCard
+            title="Ne maradj le a lényegről."
+            subtitle="Nézd meg rövid összefoglalóinkat a nagydíjakról magyar nyelven, hogy minden fontos momentum megmaradjon."
+            extraImage={
+              laptopBackground /*"https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"*/
+            }
+          >
+            {/*src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"*/}
+            <video autoPlay={true} playsInline={true} muted={true} loop={true}>
+              <source src={demoVideo} type="video/mp4" />
+            </video>
+          </StoryCard>
+          <SeparatorLine />
+          <StoryCard
+            mediaLeft={true}
+            title="Lorem ipsum dolor sit adipiscing elit."
+            subtitle="Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque."
+          >
+            <img alt="" src={mainLogo}></img>
+          </StoryCard>
+          <SeparatorLine />
+          {/*------------------ */}
+          <div
+            style={{
+              backgroundColor: "black",
+              color: "white",
+              display: "flex",
+              alignItems: "flex-start",
+              justifyContent: "center",
+            }}
+          >
             <YearSelector onSelectYear={(year) => setYear(year)} />
             <div className="data-container">
               <DriverList year={year} />
@@ -51,7 +81,7 @@ function App() {
               <ConstructorList year={year} />
               <ConstructorStandingList year={year} />
             </div>
-          </Card>
+          </div>
         </div>
       </LanguageContext.Provider>
     </div>

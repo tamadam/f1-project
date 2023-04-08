@@ -31,14 +31,15 @@
     align-items: flex-end;  
     height: 100%;
     color: white;
+ 
 }
 
 .item-container-3 {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: fit-content;
     height: 100%;
+
 }
 
 .explore-button {
@@ -55,6 +56,7 @@
     justify-content: center;
     border-radius: 0.25rem;
     user-select: none;
+    white-space: nowrap;
 }
 
 .explore-button:hover{
@@ -69,6 +71,8 @@
 }
 
 /* MEDIA */
+
+
 
 @media (min-width: 30em) {
     .main-logo {

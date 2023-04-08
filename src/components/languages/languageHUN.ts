@@ -11,5 +11,9 @@ export const languageHUN = {
         emailInputText: "E-mail-cím",
         emailSubmitText: "Első lépések",
         emailErrorText: "Adj meg egy érvényes e-mail-címet"
+    },
+    storyCard: {
+        storyTitle: "Ne maradj le a lényegről.",
+        storySubtitle: "Nézd meg rövid összefoglalóinkat a nagydíjakról magyar nyelven, hogy minden fontos momentum megmaradjon."
     }
 }

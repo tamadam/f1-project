@@ -1,7 +1,8 @@
 .container{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 150%; /* overflow nem volt és a width 100% volt nem csak mediaquery utan */
+    overflow-x: auto;
 }
 
 .story-cards {}
@@ -21,6 +22,12 @@ header {
 .data-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 20em) {
+    .container{
+        width: 100%;
+    }
 }
 
 @media (min-width: 50em){

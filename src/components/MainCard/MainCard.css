@@ -1,4 +1,15 @@
+.main-card-container {
+    width: 100%;
+    min-height: 36rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0b0b0b;
+    position: relative;
+    color: white;
 
+
+}
 
 .story-card-bg {
     position: absolute;
@@ -104,6 +115,10 @@
 
 
 @media (min-width: 50em){
+    .main-card-container {
+        min-height: 40rem;
+    
+    }
 
     .card-text-main-title {
 
@@ -129,11 +144,15 @@
 
 
 @media (min-width: 70em){
+    .main-card-container {
+        min-height: 50rem;
+    
+    }
 
     .card-text-main-title {
 
         font-size: 3rem;
-        font-weight: 900;
+
     
     }
 
@@ -148,7 +167,11 @@
 }
 
 @media (min-width: 80em){
+    .main-card-container {
+        min-height: 50rem;
     
+    }  
     
 }
+
 
