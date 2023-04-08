@@ -15,6 +15,7 @@ import StoryCard from "./components/StoryCard/StoryCard";
 import demoVideo from "./assets/titlevideo.mp4";
 import laptopBackground from "./assets/laptop6.png";
 import mainLogo from "./assets/f1logomain3.png";
+import posterImage from "./assets/posterImage.webp";
 
 export const LanguageContext = createContext(languageEN);
 
@@ -55,7 +56,7 @@ function App() {
               playsInline={true}
               muted={true}
               loop={true}
-              poster={mainLogo}
+              poster={posterImage}
               controls={false}
             >
               <source src={demoVideo} type="video/mp4" />
