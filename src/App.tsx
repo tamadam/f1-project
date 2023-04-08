@@ -50,8 +50,15 @@ function App() {
             }
           >
             {/*src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"*/}
-            <video autoPlay={true} playsInline={true} muted={true} loop={true}>
+            <video
+              autoPlay={true}
+              playsInline={true}
+              muted={true}
+              loop={true}
+              poster={mainLogo}
+            >
               <source src={demoVideo} type="video/mp4" />
+              Your browser does not support the video tag.
             </video>
           </StoryCard>
           <SeparatorLine />
