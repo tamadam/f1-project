@@ -49,10 +49,10 @@ function App() {
               laptopBackground /*"https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"*/
             }
           >
-            {/*src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"*/}
+            {/*src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
             <video autoPlay={true} playsInline={true} muted={true} loop={true}>
               <source src={demoVideo} type="video/mp4" />
-            </video>
+            </video>*/}
           </StoryCard>
           <SeparatorLine />
           <StoryCard
