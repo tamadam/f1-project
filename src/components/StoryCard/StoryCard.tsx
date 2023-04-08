@@ -1,5 +1,6 @@
 import { Children, ReactNode, useEffect, useState } from "react";
 import "./StoryCard.css";
+import demoVideo from "../../assets/titlevideo.mp4";
 
 interface Props {
   title: string;
@@ -46,7 +47,21 @@ const StoryCard = ({
             {extraImage && (
               <>
                 <img alt="" src={extraImage} />
-                <div className="tv-container">{children}</div>
+
+                <div
+                  className="tv-container"
+                  dangerouslySetInnerHTML={{
+                    __html: `
+                    <video
+                    loop
+                    muted
+                    autoplay
+                    playsinline
+                    src="${demoVideo}"
+                    />,
+                `,
+                  }}
+                ></div>
               </>
             )}
             {!extraImage && children}
