@@ -5,11 +5,6 @@
     overflow-x: auto;
 }
 
-.story-cards {}
-
-
-
-
 
 header {
     position: relative;
@@ -19,10 +14,7 @@ header {
 
 
 
-.data-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-}
+
 
 @media (min-width: 20em) {
     .container{
@@ -30,14 +22,3 @@ header {
     }
 }
 
-@media (min-width: 50em){
-
-
-    .data-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-
-
-
-}

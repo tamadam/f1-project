@@ -1,0 +1,18 @@
+.main-page-cards {}
+
+.data-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 50em){
+
+
+    .data-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+
+
+
+}
