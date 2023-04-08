@@ -51,17 +51,12 @@ const StoryCard = ({
                 <div
                   className="tv-container"
                   dangerouslySetInnerHTML={{
-                    __html: `
-                    <video
-                    loop="${true}"
-                    muted="${true}"
-                    autoplay="${true}"
-                    playsinline="${true}"
-                    src="${demoVideo}"
-                    />,
-                `,
+                    __html: `<video className="app__backgroundVideo" autoplay loop muted playsinline>
+      <source src=${demoVideo} type="video/mp4" />
+      Your browser does not support the video tag.
+</video>`,
                   }}
-                ></div>
+                />
               </>
             )}
             {!extraImage && children}
