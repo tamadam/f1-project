@@ -47,8 +47,9 @@ const StoryCard = ({
             {extraImage && (
               <>
                 <img alt="" src={extraImage} />
+                <div className="tv-container">{children}</div>
 
-                <div
+                {/*<div
                   className="tv-container"
                   dangerouslySetInnerHTML={{
                     __html: `<video className="app__backgroundVideo" autoplay loop muted playsinline>
@@ -56,7 +57,7 @@ const StoryCard = ({
       Your browser does not support the video tag.
 </video>`,
                   }}
-                />
+                />*/}
               </>
             )}
             {!extraImage && children}
