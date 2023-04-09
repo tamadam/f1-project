@@ -43,6 +43,7 @@
     flex-basis: 50%;
     order: 2;
     position: relative;
+    width: 100%;
 }
 
 .multi-media-container{

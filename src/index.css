@@ -13,6 +13,11 @@
   src: url('./fonts/Netflix_Sans_Light.otf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Formula1_Regular';
+  src: url('./fonts/Formula1_Regular.ttf') format('truetype');
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }

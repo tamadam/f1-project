@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import MainCard from "../MainCard/MainCard";
 import SeparatorLine from "../SeparatorLine/SeparatorLine";
 import StoryCard from "../StoryCard/StoryCard";
@@ -13,10 +13,58 @@ import mainLogo from "../../assets/f1logomain3.png";
 import posterImage from "../../assets/posterImage.webp";
 import { LanguageContext } from "../../App";
 import "./MainPageCards.css";
+import StandingsLine from "../StandingsLine/StandingsLine";
+import alonsoAvatar from "../../assets/alonso.png";
+import leclercAvatar from "../../assets/leclerc.png";
+import norrisAvatar from "../../assets/norris.png";
+import verstappenAvatar from "../../assets/verstappen.png";
+import tablet from "../../assets/tablet.png";
 
 const MainPageCards = () => {
   const [year, setYear] = useState("current");
   const language = useContext(LanguageContext);
+  const lineRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const dataLineContainer = lineRef.current;
+    const lines = dataLineContainer?.querySelectorAll(".line");
+    const avatars = dataLineContainer?.querySelectorAll(".avatar");
+    const rankTexts = dataLineContainer?.querySelectorAll(
+      ".rank-value-container"
+    );
+
+    const observer = new IntersectionObserver((entries) => {
+      console.log(entries);
+      let lineCounter = 1;
+      let avatarCounter = 1;
+
+      entries.forEach((entry) => {
+        lines?.forEach((line) => {
+          line.classList.toggle(
+            `start-animate-line${lineCounter}`,
+            entry.isIntersecting
+          );
+          lineCounter += 1;
+        });
+        avatars?.forEach((avatar) => {
+          avatar.classList.toggle(
+            `start-animate-avatar${avatarCounter}`,
+            entry.isIntersecting
+          );
+          avatarCounter += 1;
+        });
+        rankTexts?.forEach((rankText, index) => {
+          if (index == 0) {
+            rankText.classList.toggle("show-first-place", entry.isIntersecting);
+          }
+        });
+
+        if (entry.isIntersecting) observer.unobserve(entry.target);
+      });
+    }, {});
+
+    if (lineRef.current) observer.observe(lineRef.current);
+  });
 
   return (
     <div className="main-page-cards">
@@ -48,7 +96,28 @@ const MainPageCards = () => {
         title={language.storyCard.card2.storyTitle}
         subtitle={language.storyCard.card2.storySubtitle}
       >
-        <img alt="" src={mainLogo}></img>
+        <div className="standings-demo-container" ref={lineRef}>
+          <StandingsLine
+            lineColor="blue"
+            avatarImage={verstappenAvatar}
+            rankValue={9.4}
+          />
+          <StandingsLine
+            lineColor="red"
+            avatarImage={leclercAvatar}
+            rankValue={6.6}
+          />
+          <StandingsLine
+            lineColor="#006756"
+            avatarImage={alonsoAvatar}
+            rankValue={8.2}
+          />
+          <StandingsLine
+            lineColor="orange"
+            avatarImage={norrisAvatar}
+            rankValue={4.1}
+          />
+        </div>
       </StoryCard>
       <SeparatorLine />
       {/*------------------ */}
