@@ -163,11 +163,12 @@
 @keyframes animate-first-rank-text {
     0% {
       transform: scale(1);
+      font-weight: bold;
     }
     50% {
         transform: scale(1.4);
         color: #18f21a;
-        font-weight: bold;
+        
     }
     100% {
         transform: scale(1.2);
