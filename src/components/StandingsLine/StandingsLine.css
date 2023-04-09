@@ -157,7 +157,7 @@
 
 
 .show-first-place {
-    animation: animate-first-rank-text 2s ease forwards;
+    animation: animate-first-rank-text 1.8s ease-in forwards;
 }
 
 @keyframes animate-first-rank-text {

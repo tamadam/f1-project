@@ -18,7 +18,7 @@ import alonsoAvatar from "../../assets/alonso.png";
 import leclercAvatar from "../../assets/leclerc.png";
 import norrisAvatar from "../../assets/norris.png";
 import verstappenAvatar from "../../assets/verstappen.png";
-import tablet from "../../assets/tablet.png";
+import phone from "../../assets/phone.png";
 
 const MainPageCards = () => {
   const [year, setYear] = useState("current");
@@ -118,6 +118,13 @@ const MainPageCards = () => {
             rankValue={4.1}
           />
         </div>
+      </StoryCard>
+      <SeparatorLine />
+      <StoryCard
+        title="Lorem ipsum ide colore."
+        subtitle="Damorde di sipanale wontage sampelevo, si ku, puid hugro."
+      >
+        <img src={phone} alt="phone with logo" />
       </StoryCard>
       <SeparatorLine />
       {/*------------------ */}
