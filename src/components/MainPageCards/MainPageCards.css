@@ -17,7 +17,7 @@
     /*background-color: red;*/
    
 
-    background: radial-gradient(ellipse 24rem 18rem at center , rgb(39, 39, 39) 0%, rgba(0, 0, 0, 0) 60%);
+    background: radial-gradient(ellipse 20rem 16rem at center , rgb(39, 39, 39) 0%, rgba(0, 0, 0, 0) 60%);
 
 
     gap: 3rem;
@@ -27,6 +27,14 @@
   
 
 @media (min-width: 50em){
+
+    .standings-demo-container {
+   
+        background: radial-gradient(ellipse 24rem 18rem at center , rgb(39, 39, 39) 0%, rgba(0, 0, 0, 0) 60%);
+  
+
+    
+      }
 
 
     .data-container {
