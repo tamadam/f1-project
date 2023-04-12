@@ -64,7 +64,7 @@
 
 @keyframes animate-avatar1 {
     0% {
-      right: 100%;
+      right: 90%;
     }
     100% {
       right: 2%;
@@ -92,7 +92,7 @@
 
 @keyframes animate-avatar2 {
     0% {
-      right: 100%;
+      right: 90%;
     }
     100% {
       right: 30%;
@@ -120,7 +120,7 @@
 
 @keyframes animate-avatar3 {
     0% {
-      right: 100%;
+      right: 90%;
     }
     100% {
       right: 14%;
@@ -148,7 +148,7 @@
 
 @keyframes animate-avatar4 {
     0% {
-      right: 100%;
+      right: 90%;
     }
     100% {
       right: 55%;
