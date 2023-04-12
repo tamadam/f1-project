@@ -1,5 +1,7 @@
 .faq-wrapper {
     padding: 3.5rem 0;
+    text-align: center;
+    color: white;
 }
 
 .faq-container {
@@ -8,8 +10,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    color: white;
 }
 
 .faq-content {
@@ -114,6 +114,23 @@
     transform: rotate(-45deg);  
 }
 
+/* similar to the first steps container in the main card */
+.first-steps-wrapper {
+    margin-top: 2.85rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+/* same as the main card form-title class */
+.form-title-faq{
+    font-family: "NetflixMedium";
+    font-size: 1.125rem;
+}
+
 
 @media (min-width: 35em) {
     .question-button {
@@ -133,7 +150,7 @@
 
 @media (min-width: 37.5em) {
     .faq-wrapper {
-        padding: 4.5rem;
+        padding: 4.5rem 0;
     }
 
     .faq-container {
@@ -150,7 +167,11 @@
         font-size: 1.5rem;    
     }
 
-    .answer {
-        font-size: 1.5rem;
+}
+
+@media (min-width: 80em) {
+    .faq-container {
+        max-width: calc( 83.33333333333334% - 6rem );
     }
+
 }

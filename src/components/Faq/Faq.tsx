@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./Faq.css";
+import EmailForm from "../EmailForm/EmailForm";
+import { LanguageContext } from "../../App";
 
 const Faq = () => {
+  const language = useContext(LanguageContext);
+
   const [activeIndex, setActiveIndex] = useState(-1);
 
   const handleClick = (index: number) => {
@@ -232,6 +236,13 @@ const Faq = () => {
             </ul>
           </div>
         </div>
+      </div>
+      <div className="first-steps-wrapper">
+        <div className="form-title-faq">
+          <h3>{language.mainCard.firstStepsTitle}</h3>
+        </div>
+        {/* Form container*/}
+        <EmailForm />
       </div>
     </div>
   );
