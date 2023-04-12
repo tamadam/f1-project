@@ -1,0 +1,134 @@
+.faq-wrapper {
+    padding: 3.5rem 0;
+}
+
+.faq-container {
+    max-width: calc(100% - 3rem);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.faq-content {
+    width: 100%;
+    flex-basis: 50%;
+}
+
+.faq-title {
+    font-size: 1.8rem;
+    font-family: "NetflixBold";
+}
+
+.faq-questions {
+    margin: 1.5rem 0 0;
+    text-align: left;
+}
+
+.question-list {
+    list-style: none;
+    font-size: 1.4rem;
+    padding: 0;
+    margin: 0;
+
+}
+
+.question-item {
+    list-style-type: none;
+    text-indent: 0;
+    margin: 0 0 0.5rem;
+    display: list-item;
+}
+
+.question-item h3 {
+    background-color: rgba(45, 45, 45, 1);
+    margin-bottom: 0.0625rem;
+    display: flex;
+    transition-duration: 250ms;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+
+}
+
+
+.question-item h3:hover {
+    transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+    background-color: rgba(78, 78, 78, 1);
+}
+
+.question-button {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+}
+
+.question-button:hover {
+    cursor: pointer;
+}
+
+
+
+.answer-container {
+    transition: all 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+    max-height: 0;
+    padding: 0 1.5rem;
+}
+
+.active-answer-container {
+    max-height: 75rem;
+    background-color: rgb(45, 45, 45);
+    transition: all 0.25s cubic-bezier(0.5, 0, 0.1, 1) 0s;
+    padding: 1.5rem;
+
+}
+
+.answer-content-hidden {
+    visibility: collapse;
+    transition: all 0.20s cubic-bezier(0.5, 0, 0.1, 1) 0s;
+}
+
+.answer-content-visible {
+    visibility: visible;
+    transition: all 0.20s cubic-bezier(0.5, 0, 0.1, 1) 0s;
+
+}
+
+.question-svg {
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+}
+
+.question-svg-original{
+    transform: rotate(0);
+}
+
+.question-svg-rotate {
+    transform: rotate(-45deg);  
+}
+
+
+@media (min-width: 37.5em) {
+    .faq-wrapper {
+        padding: 4.5rem;
+    }
+
+    .faq-container {
+        max-width: calc(100% - 4rem);
+    }
+}
+
+@media (min-width: 50em) {
+    .faq-title {
+        font-size: 2.8rem;
+    }
+
+    .question-list {
+        font-size: 1.5rem;    
+    }
+}

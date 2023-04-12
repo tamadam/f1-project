@@ -19,6 +19,7 @@ import leclercAvatar from "../../assets/leclerc.png";
 import norrisAvatar from "../../assets/norris.png";
 import verstappenAvatar from "../../assets/verstappen.png";
 import phone from "../../assets/phone.png";
+import Faq from "../Faq/Faq";
 
 const MainPageCards = () => {
   const [year, setYear] = useState("current");
@@ -126,6 +127,8 @@ const MainPageCards = () => {
       >
         <img src={phone} alt="phone with logo" />
       </StoryCard>
+      <SeparatorLine />
+      <Faq />
       <SeparatorLine />
       {/*------------------ */}
       <div
