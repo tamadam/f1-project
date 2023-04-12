@@ -48,8 +48,8 @@ const Faq = () => {
                 <div
                   className={
                     activeIndex === 0
-                      ? "active-answer-container"
-                      : "answer-container"
+                      ? "answer active-answer-container"
+                      : "answer hidden-answer-container"
                   }
                 >
                   <span
@@ -101,8 +101,8 @@ const Faq = () => {
                 <div
                   className={
                     activeIndex === 1
-                      ? "active-answer-container"
-                      : "answer-container"
+                      ? "answer active-answer-container"
+                      : "answer hidden-answer-container"
                   }
                 >
                   <span
@@ -151,8 +151,8 @@ const Faq = () => {
                 <div
                   className={
                     activeIndex === 2
-                      ? "active-answer-container"
-                      : "answer-container"
+                      ? "answer active-answer-container"
+                      : "answer hidden-answer-container"
                   }
                 >
                   <span
@@ -211,8 +211,8 @@ const Faq = () => {
                 <div
                   className={
                     activeIndex === 3
-                      ? "active-answer-container"
-                      : "answer-container"
+                      ? "answer active-answer-container"
+                      : "answer hidden-answer-container"
                   }
                 >
                   <span

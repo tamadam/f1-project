@@ -72,9 +72,11 @@
     cursor: pointer;
 }
 
+.answer {
+    font-size: 1.125rem;
+}
 
-
-.answer-container {
+.hidden-answer-container {
     transition: all 0.25s cubic-bezier(0.5, 0, 0.1, 1);
     max-height: 0;
     padding: 0 1.5rem;
@@ -118,6 +120,10 @@
         font-size: 1.4rem;
     }
 
+    .answer {
+        font-size: 1.4rem;
+    }
+
     .question-svg {
         width: 1.5rem;
         height: 1.5rem;
@@ -142,5 +148,9 @@
 
     .question-button {
         font-size: 1.5rem;    
+    }
+
+    .answer {
+        font-size: 1.5rem;
     }
 }
