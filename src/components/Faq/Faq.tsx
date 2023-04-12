@@ -236,13 +236,13 @@ const Faq = () => {
             </ul>
           </div>
         </div>
-      </div>
-      <div className="first-steps-wrapper">
-        <div className="form-title-faq">
-          <h3>{language.mainCard.firstStepsTitle}</h3>
+        <div className="first-steps-wrapper">
+          <div className="form-title-faq">
+            <h3>{language.mainCard.firstStepsTitle}</h3>
+          </div>
+          {/* Form container*/}
+          <EmailForm />
         </div>
-        {/* Form container*/}
-        <EmailForm />
       </div>
     </div>
   );
