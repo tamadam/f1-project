@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import "./Faq.css";
 import EmailForm from "../EmailForm/EmailForm";
 import { LanguageContext } from "../../App";
+import React from "react";
 
 const Faq = () => {
   const language = useContext(LanguageContext);
@@ -17,7 +18,7 @@ const Faq = () => {
     <div className="faq-wrapper">
       <div className="faq-container">
         <div className="faq-content">
-          <h2 className="faq-title">Gyakran ismételt kérdések</h2>
+          <h2 className="faq-title">{language.faq.faqTitle}</h2>
           <div className="faq-questions">
             <ul className="question-list">
               <li className="question-item">
@@ -26,7 +27,7 @@ const Faq = () => {
                     className="question-button"
                     onClick={() => handleClick(0)}
                   >
-                    <span>Kérdés 1</span>
+                    <span>{language.faq.question1}</span>
                     <svg
                       width="24"
                       height="24"
@@ -63,13 +64,7 @@ const Faq = () => {
                         : "answer-content-hidden"
                     }
                   >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec ultrices dolor sit amet elit euismod, eget malesuada
-                    urna laoreet. Class aptent taciti sociosqu ad litora
-                    torquent per conubia nostra, per inceptos himenaeos. Nulla
-                    elementum lobortis facilisis. Aliquam sed faucibus arcu.
-                    Nunc scelerisque tellus ac ex condimentum, id malesuada urna
-                    cursus.
+                    {language.faq.question1Answer}
                   </span>
                 </div>
               </li>
@@ -79,7 +74,7 @@ const Faq = () => {
                     className="question-button"
                     onClick={() => handleClick(1)}
                   >
-                    <span>Kérdés 2</span>
+                    <span>{language.faq.question2}</span>
                     <svg
                       width="24"
                       height="24"
@@ -116,10 +111,7 @@ const Faq = () => {
                         : "answer-content-hidden"
                     }
                   >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec ultrices dolor sit amet elit euismod, eget malesuada
-                    urna laoreet. Class aptent taciti sociosqu ad litora
-                    torquent per conubia nostra, per inceptos himenaeos.
+                    {language.faq.question2Answer}
                   </span>
                 </div>
               </li>
@@ -129,7 +121,7 @@ const Faq = () => {
                     className="question-button"
                     onClick={() => handleClick(2)}
                   >
-                    <span>Kérdés 3</span>
+                    <span>{language.faq.question3}</span>
                     <svg
                       width="24"
                       height="24"
@@ -166,20 +158,15 @@ const Faq = () => {
                         : "answer-content-hidden"
                     }
                   >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec ultrices dolor sit amet elit euismod, eget malesuada
-                    urna laoreet. Class aptent taciti sociosqu ad litora
-                    torquent per conubia nostra, per inceptos himenaeos. Nulla
-                    elementum lobortis facilisis. Aliquam sed faucibus arcu.
-                    Nunc scelerisque tellus ac ex condimentum, id malesuada urna
-                    cursus.
-                    <br />
-                    <br />
-                    Quisque accumsan, magna eget venenatis tempor, erat dui
-                    placerat ligula, sed consequat justo est feugiat urna. Nunc
-                    sapien risus, posuere nec fringilla ac, consectetur non mi.
-                    Nunc condimentum in diam vitae tristique. Maecenas sem orci,
-                    tristique eu nibh et, sodales eleifend massa.
+                    {language.faq.question3Answer
+                      .split("\n")
+                      .map((text, index) => (
+                        <React.Fragment key={index}>
+                          {text}
+                          <br />
+                          <br />
+                        </React.Fragment>
+                      ))}
                   </span>
                 </div>
               </li>
@@ -189,7 +176,7 @@ const Faq = () => {
                     className="question-button"
                     onClick={() => handleClick(3)}
                   >
-                    <span>Kérdés 4</span>
+                    <span>{language.faq.question4}</span>
                     <svg
                       width="24"
                       height="24"
@@ -226,10 +213,7 @@ const Faq = () => {
                         : "answer-content-hidden"
                     }
                   >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec ultrices dolor sit amet elit euismod, eget malesuada
-                    urna laoreet. Class aptent taciti sociosqu ad litora
-                    torquent per conubia nostra, per inceptos himenaeos.
+                    {language.faq.question4Answer}
                   </span>
                 </div>
               </li>

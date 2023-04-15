@@ -5,13 +5,16 @@ import notebookLogo from "../../assets/computer3.png";
 import tabletLogo from "../../assets/tablet.png";
 import tabletPhoneLogo from "../../assets/tabletphone.png";
 import LanguageSelector from "../LanguageSelector/LanguageSelector";
-import { ReactNode } from "react";
+import { ReactNode, useContext } from "react";
+import { LanguageContext } from "../../App";
 
 const MainFooter = () => {
+  const language = useContext(LanguageContext);
+
   return (
     <div className="main-footer-container">
       <div className="devices-title">
-        <h2>Végtelen adat. Akár a zsebedben. </h2>
+        <h2>{language.mainFooter.devicesTitle}</h2>
       </div>
       <div className="devices-logo-container">
         <div className="footer-device">
@@ -20,7 +23,9 @@ const MainFooter = () => {
             alt="smartphone logo"
             className="footer-phone-logo"
           />
-          <p className="footer-logo-title">Mobil és táblagép</p>
+          <p className="footer-logo-title">
+            {language.mainFooter.device1Subtitle}
+          </p>
         </div>
         <div className="footer-device">
           <img
@@ -28,7 +33,9 @@ const MainFooter = () => {
             alt="notebook logo"
             className="footer-notebook-logo"
           />
-          <p className="footer-logo-title">Számítógép</p>
+          <p className="footer-logo-title">
+            {language.mainFooter.device2Subtitle}
+          </p>
         </div>
       </div>
       <div className="footer-logo-container">
@@ -36,12 +43,9 @@ const MainFooter = () => {
       </div>
       <div className="footer-warning-text-container">
         <span className="footer-warning-text">
-          I built this site to gain experience working with React on the
-          frontend and Node.js on the backend as part of my educational journey.
-          This site is designed to provide information and data about Formula 1,
-          that is publicly available through different data sources.{" "}
+          {language.mainFooter.warningMessage}{" "}
           <mark className="footer-warning-important">
-            It is not intended to be used for commercial or monetary gain.
+            {language.mainFooter.warningMessageImportant}
           </mark>
         </span>
       </div>
