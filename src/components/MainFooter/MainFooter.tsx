@@ -13,6 +13,11 @@ const MainFooter = () => {
 
   return (
     <div className="main-footer-container">
+      <div className="footer-redirect-links-container">
+        <a href="#">Contact Us</a>
+        <a href="#">Help Center</a>
+        <a href="#">Account</a>
+      </div>
       <div className="footer-logo-container">
         <img src={mainLogo} alt="f1-dataset-logo" />
       </div>
