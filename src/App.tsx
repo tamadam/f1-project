@@ -36,11 +36,19 @@ function App() {
     }
   };
 
+  let prevScrollPos = window.pageYOffset;
+
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
+      const currentScrollPos = window.pageYOffset;
+      if (prevScrollPos > currentScrollPos) {
         setArrowVisible(true);
       } else {
+        setArrowVisible(false);
+      }
+      prevScrollPos = currentScrollPos;
+
+      if (window.scrollY === 0) {
         setArrowVisible(false);
       }
     };
