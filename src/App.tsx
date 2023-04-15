@@ -17,6 +17,7 @@ import laptopBackground from "./assets/laptop6.png";
 import mainLogo from "./assets/f1logomain3.png";
 import posterImage from "./assets/posterImage.webp";
 import MainPageCards from "./components/MainPageCards/MainPageCards";
+import MainFooter from "./components/MainFooter/MainFooter";
 
 export const LanguageContext = createContext(languageEN);
 
@@ -40,6 +41,9 @@ function App() {
           <NavBar onLanguageChange={handleLanguageChange} />
         </header>
         <MainPageCards />
+        <footer>
+          <MainFooter />
+        </footer>
       </LanguageContext.Provider>
     </div>
 

@@ -1,6 +1,113 @@
 .main-footer-container {
     color: white;
-    font-size: 2rem;
+    font-size: 1rem;
     text-align: center;
-    padding: 3rem 0;
+    padding: 3rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: calc(100% - 3rem);
+    margin: auto;
+    gap: 1rem;
+
 }
+
+.devices-logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 1.4rem 0 3rem;
+
+}
+
+
+.footer-logo-container {
+    width: 70%;
+    max-width: 20rem;
+}
+
+.footer-logo-container img {
+    width: 100%;
+}
+
+.footer-warning-text-container {
+    /* */
+}
+
+
+.footer-warning-important {
+    all: unset;
+    color: rgb(229, 9, 20);
+    font-family: "NetflixMedium";
+    display: block;
+    margin-top: 0.6rem;
+}
+
+.footer-copyright-container {
+    font-size: 0.7rem;
+}
+
+.devices-title h2 {
+    font-size: 1.8rem;
+    font-family: "NetflixBold";
+}
+
+.footer-logo-title {
+    font-size: 1.125rem;
+}
+
+.footer-device {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+.footer-device img {
+    max-width: 60%;
+}
+
+.footer-device p {
+    height: 3rem;
+
+}
+
+@media (min-width: 37.5em) {
+    .main-footer-container {
+        max-width: calc(100% - 4rem);
+        font-size: 1.2rem;
+    }
+
+    .footer-copyright-container {
+        font-size: 0.8rem;
+    }
+
+}
+
+
+@media (min-width: 50em) {
+
+    .footer-warning-text-container {
+        max-width: calc( 83.33333333333334% - 10rem );
+    }
+
+    .devices-title h2 {
+        font-size: 2.8rem;
+    }
+
+    .footer-logo-title {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 80em) {
+
+    .footer-warning-text-container {
+        max-width: calc( 63.33333333333334% - 10rem );
+    }
+}
+

@@ -131,9 +131,8 @@ const MainPageCards = () => {
       <SeparatorLine />
       <Faq />
       <SeparatorLine />
-      <MainFooter />
-      <SeparatorLine />
-      {/*------------------ */}
+
+      {/*------------------ 
       <div
         style={{
           backgroundColor: "black",
@@ -152,6 +151,7 @@ const MainPageCards = () => {
           <ConstructorStandingList year={year} />
         </div>
       </div>
+    */}
     </div>
   );
 };
