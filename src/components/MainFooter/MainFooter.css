@@ -25,7 +25,7 @@
 
 
 .footer-logo-container {
-    width: 70%;
+    width: 50%;
     max-width: 20rem;
 }
 
@@ -86,6 +86,7 @@
         font-size: 0.8rem;
     }
 
+
 }
 
 
@@ -101,6 +102,10 @@
 
     .footer-logo-title {
         font-size: 1.4rem;
+    }
+
+    .footer-logo-container {
+        width: 70%;
     }
 }
 

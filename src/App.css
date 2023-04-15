@@ -12,6 +12,11 @@ header {
     display: block;
 }
 
+footer {
+    background-color: black;
+    background: linear-gradient(0deg, rgb(23, 23, 23) 0%, rgba(5,5,5,0.9150035014005602) 40%, rgba(0,0,0,0.48363095238095233) 100%);
+}
+
 
 
 
