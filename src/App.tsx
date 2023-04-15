@@ -36,6 +36,7 @@ function App() {
     }
   };
 
+  /* show arrow only on up scroll
   let prevScrollPos = window.pageYOffset;
 
   useEffect(() => {
@@ -56,6 +57,20 @@ function App() {
     window.addEventListener("scroll", toggleVisibility);
 
     return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+  */
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setArrowVisible(true);
+      } else {
+        setArrowVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleArrowClick = () => {

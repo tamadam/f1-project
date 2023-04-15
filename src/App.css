@@ -39,6 +39,7 @@ footer {
 
   .arrow-container img {
     max-width: 60%;
+    user-select: none;
   }
   
 
