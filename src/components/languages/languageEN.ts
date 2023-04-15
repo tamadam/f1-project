@@ -33,10 +33,15 @@ export const languageEN = {
         question4: "Question 4",
         question4Answer: "en- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices dolor sit amet elit euismod, eget malesuada urna laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
     },
-    mainFooter: {
+    supportedDevices: {
         devicesTitle: "Infinite data. Inside your pocket.",
         device1Subtitle: "Mobile & Tablet",
         device2Subtitle: "Computer",
+    },
+    mainFooter: {
+        linkContactUs: "Contact Us",
+        linkHelpCenter: "Help Center",
+        linkAccount: "Account",
         warningMessage: "I built this site to gain experience working with React on the frontend and Node.js on the backend as part of my educational journey. This site is designed to provide information and data about Formula 1, that is publicly available through different data sources.",
         warningMessageImportant: "It is not intended to be used for commercial or monetary gain."
     }

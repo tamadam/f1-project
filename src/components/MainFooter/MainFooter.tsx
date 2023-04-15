@@ -14,9 +14,9 @@ const MainFooter = () => {
   return (
     <div className="main-footer-container">
       <div className="footer-redirect-links-container">
-        <a href="#">Contact Us</a>
-        <a href="#">Help Center</a>
-        <a href="#">Account</a>
+        <a href="#">{language.mainFooter.linkContactUs}</a>
+        <a href="#">{language.mainFooter.linkHelpCenter}</a>
+        <a href="#">{language.mainFooter.linkAccount}</a>
       </div>
       <div className="footer-logo-container">
         <img src={mainLogo} alt="f1-dataset-logo" />

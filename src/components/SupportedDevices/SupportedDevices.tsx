@@ -9,7 +9,7 @@ const SupportedDevices = () => {
   return (
     <div className="supported-devices-container">
       <div className="devices-title">
-        <h2>{language.mainFooter.devicesTitle}</h2>
+        <h2>{language.supportedDevices.devicesTitle}</h2>
       </div>
       <div className="devices-logo-container">
         <div className="footer-device">
@@ -19,7 +19,7 @@ const SupportedDevices = () => {
             className="footer-phone-logo"
           />
           <p className="footer-logo-title">
-            {language.mainFooter.device1Subtitle}
+            {language.supportedDevices.device1Subtitle}
           </p>
         </div>
         <div className="footer-device">
@@ -29,7 +29,7 @@ const SupportedDevices = () => {
             className="footer-notebook-logo"
           />
           <p className="footer-logo-title">
-            {language.mainFooter.device2Subtitle}
+            {language.supportedDevices.device2Subtitle}
           </p>
         </div>
       </div>

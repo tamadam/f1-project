@@ -33,10 +33,15 @@ export const languageHUN = {
         question4: "Kérdés 4",
         question4Answer: "hu- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices dolor sit amet elit euismod, eget malesuada urna laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
     },
-    mainFooter: {
+    supportedDevices: {
         devicesTitle: "Végtelen adat. Benne a zsebedben.",
         device1Subtitle: "Mobiltelefon és táblagép",
         device2Subtitle: "Számítógép",
+    },
+    mainFooter: {
+        linkContactUs: "Kapcsolat",
+        linkHelpCenter: "Ügyfélszolgálat",
+        linkAccount: "Fiók",
         warningMessage: "Ez az oldal azért készült, hogy tapasztalatot szerezzek mind frontend, mind backend környezetben történő fejlesztésben a React és Node.js technológiákat alkalmazva. Az oldal Forma 1-el kapcsolatos információkat illetve adatokat bocsájt a felhasználó rendelkezésére. Ezen adatok nyilvánosan elérhető forrásokból származnak.",
         warningMessageImportant: "Az oldal nem kereskedelmi vagy pénzbeli haszonszerzés céljából jött létre."
     }
