@@ -1,4 +1,4 @@
-import { useState, createContext } from "react";
+import { useState, createContext, useEffect } from "react";
 import "./App.css";
 import YearSelector from "./components/YearSelector";
 import DriverList from "./components/DriverList";
@@ -18,11 +18,13 @@ import mainLogo from "./assets/f1logomain3.png";
 import posterImage from "./assets/posterImage.webp";
 import MainPageCards from "./components/MainPageCards/MainPageCards";
 import MainFooter from "./components/MainFooter/MainFooter";
+import uploadLogo from "./assets/upload.png";
 
 export const LanguageContext = createContext(languageEN);
 
 function App() {
   const [currentLanguage, setCurrentLanguage] = useState(languageHUN);
+  const [isArrowVisible, setArrowVisible] = useState(true);
 
   const handleLanguageChange = (selectedLanguage: string) => {
     if (selectedLanguage === "hu") {
@@ -34,9 +36,35 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
+        setArrowVisible(true);
+      } else {
+        setArrowVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  const handleArrowClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="container">
       <LanguageContext.Provider value={currentLanguage}>
+        {isArrowVisible && (
+          <div className="arrow-container" onClick={handleArrowClick}>
+            <img src={uploadLogo} alt="" />
+          </div>
+        )}
         <header>
           <NavBar onLanguageChange={handleLanguageChange} />
         </header>

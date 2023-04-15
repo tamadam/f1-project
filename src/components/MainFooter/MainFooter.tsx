@@ -50,7 +50,7 @@ const MainFooter = () => {
         </span>
       </div>
       <div className="footer-copyright-container">
-        <span>©2023 F1 Dataset Hungary. </span>
+        <span>©2023 F1 Dataset Hungary.</span>
       </div>
     </div>
   );

@@ -18,6 +18,29 @@ footer {
 }
 
 
+.arrow-container {
+    position: fixed;
+    bottom: 1.4rem;
+    right: 1.4rem;
+    z-index: 1000;
+    background-color: rgb(229, 9, 20);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arrow-container:hover {
+    cursor: pointer;
+    background-color: rgb(184, 8, 17);
+  }
+
+  .arrow-container img {
+    max-width: 60%;
+  }
+  
 
 
 
