@@ -66,7 +66,7 @@ const MainPageCards = () => {
     }, {});
 
     if (lineRef.current) observer.observe(lineRef.current);
-  });
+  }, [language]);
 
   return (
     <div className="main-page-cards">

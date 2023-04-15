@@ -50,3 +50,25 @@ footer {
     }
 }
 
+@media (min-width: 50em) {
+    
+    .arrow-container {
+        bottom: 3rem;
+        right: 2.8rem;
+        width: 4rem; 
+        height: 4rem;
+    }
+}
+
+
+
+
+@media (min-width: 70em) {
+    .arrow-container {
+        bottom: 4rem;
+        right: 3.8rem;
+        width: 5rem; 
+        height: 5rem;
+    }
+}
+
