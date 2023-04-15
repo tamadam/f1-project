@@ -62,7 +62,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
+      if (window.scrollY > 300) {
         setArrowVisible(true);
       } else {
         setArrowVisible(false);
