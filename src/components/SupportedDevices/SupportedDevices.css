@@ -1,0 +1,68 @@
+.supported-devices-container {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    padding: 3.5rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: calc(100% - 3rem);
+    margin: auto;
+    gap: 1rem;
+
+}
+
+
+.devices-logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+    width: 100%;
+    margin: 1.4rem 0 0;
+
+}
+
+.devices-title h2 {
+    font-size: 1.8rem;
+    font-family: "NetflixBold";
+}
+
+.footer-device {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+.footer-device img {
+    max-width: 60%;
+}
+
+.footer-device p {
+    height: 3rem;
+
+}
+
+@media (min-width: 37.5em) {
+    .supported-devices-container {
+        max-width: calc(100% - 4rem);
+        font-size: 1.2rem;
+        padding: 4.5rem 0 2rem;
+    }
+
+
+
+
+}
+
+
+@media (min-width: 50em) {
+
+    .devices-title h2 {
+        font-size: 2.8rem;
+    }
+
+}

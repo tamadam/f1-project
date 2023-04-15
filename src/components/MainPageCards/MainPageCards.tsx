@@ -21,6 +21,7 @@ import verstappenAvatar from "../../assets/verstappen.png";
 import phone from "../../assets/phone.png";
 import Faq from "../Faq/Faq";
 import MainFooter from "../MainFooter/MainFooter";
+import SupportedDevices from "../SupportedDevices/SupportedDevices";
 
 const MainPageCards = () => {
   const [year, setYear] = useState("current");
@@ -130,6 +131,9 @@ const MainPageCards = () => {
       </StoryCard>
       <SeparatorLine />
       <Faq />
+      <SeparatorLine />
+
+      <SupportedDevices />
       <SeparatorLine />
 
       {/*------------------ 

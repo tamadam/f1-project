@@ -13,31 +13,6 @@ const MainFooter = () => {
 
   return (
     <div className="main-footer-container">
-      <div className="devices-title">
-        <h2>{language.mainFooter.devicesTitle}</h2>
-      </div>
-      <div className="devices-logo-container">
-        <div className="footer-device">
-          <img
-            src={tabletPhoneLogo}
-            alt="smartphone logo"
-            className="footer-phone-logo"
-          />
-          <p className="footer-logo-title">
-            {language.mainFooter.device1Subtitle}
-          </p>
-        </div>
-        <div className="footer-device">
-          <img
-            src={notebookLogo}
-            alt="notebook logo"
-            className="footer-notebook-logo"
-          />
-          <p className="footer-logo-title">
-            {language.mainFooter.device2Subtitle}
-          </p>
-        </div>
-      </div>
       <div className="footer-logo-container">
         <img src={mainLogo} alt="f1-dataset-logo" />
       </div>
