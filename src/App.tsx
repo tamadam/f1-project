@@ -24,7 +24,7 @@ export const LanguageContext = createContext(languageEN);
 
 function App() {
   const [currentLanguage, setCurrentLanguage] = useState(languageHUN);
-  const [isArrowVisible, setArrowVisible] = useState(true);
+  const [isArrowVisible, setArrowVisible] = useState(false);
 
   const handleLanguageChange = (selectedLanguage: string) => {
     if (selectedLanguage === "hu") {
