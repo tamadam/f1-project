@@ -23,10 +23,10 @@ footer {
     bottom: 1.4rem;
     right: 1.4rem;
     z-index: 1000;
-    background-color: rgb(229, 9, 20);
+    background-color: rgb(184, 8, 17);
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 3.4rem; /*used to be 60px*/
+    height: 3.4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +34,7 @@ footer {
 
   .arrow-container:hover {
     cursor: pointer;
-    background-color: rgb(184, 8, 17);
+    background-color: rgb(229, 9, 20);
   }
 
   .arrow-container img {
