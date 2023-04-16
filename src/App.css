@@ -1,7 +1,7 @@
 .container{
     display: flex;
     flex-direction: column;
-    width: 150%; /* overflow nem volt és a width 100% volt nem csak mediaquery utan */
+    width: 100%; /* 150% majd overflow nem volt és a width 100% volt nem csak mediaquery utan */
     overflow-x: auto;
 }
 
@@ -46,9 +46,11 @@ footer {
 
 
 @media (min-width: 20em) {
+    /*
     .container{
         width: 100%;
     }
+    */
 }
 
 @media (min-width: 50em) {
