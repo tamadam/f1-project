@@ -30,10 +30,12 @@ const MainPageCards = () => {
 
   useEffect(() => {
     const dataLineContainer = lineRef.current;
-    const lines = dataLineContainer?.querySelectorAll(".line");
-    const avatars = dataLineContainer?.querySelectorAll(".avatar");
+    const lines = dataLineContainer?.querySelectorAll(".main-page-driver-line");
+    const avatars = dataLineContainer?.querySelectorAll(
+      ".main-page-driver-avatar"
+    );
     const rankTexts = dataLineContainer?.querySelectorAll(
-      ".rank-value-container"
+      ".main-page-driver-value-container"
     );
 
     const observer = new IntersectionObserver((entries) => {
@@ -58,7 +60,10 @@ const MainPageCards = () => {
         });
         rankTexts?.forEach((rankText, index) => {
           if (index == 0) {
-            rankText.classList.toggle("show-first-place", entry.isIntersecting);
+            rankText.classList.toggle(
+              "main-page-show-first-driver-value",
+              entry.isIntersecting
+            );
           }
         });
 

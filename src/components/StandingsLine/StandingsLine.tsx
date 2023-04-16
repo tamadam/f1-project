@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react";
 import "./StandingsLine.css";
 
 interface Props {
@@ -22,12 +21,13 @@ const StandingsLine = ({ lineColor, avatarImage, rankValue }: Props) => {
   };
 
   return (
-    <div className="data-line-container">
-      <div className="line-container">
-        <div className="line" style={lineStyles}></div>
-        <div className="avatar" style={avatarStyles}></div>
+    <div className="main-page-power-rankings-container">
+      <div className="main-page-driver-line-container">
+        {/* the next 3 animated div has a reference in the container component > MainPageCards > and also in CSS main-page-show-first-driver-value */}
+        <div className="main-page-driver-line" style={lineStyles}></div>
+        <div className="main-page-driver-avatar" style={avatarStyles}></div>
       </div>
-      <div className="rank-value-container">{rankValue}</div>
+      <div className="main-page-driver-value-container">{rankValue}</div>
     </div>
   );
 };
