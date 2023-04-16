@@ -1,5 +1,5 @@
-import React, { ChangeEvent, useEffect, useState } from "react";
 import "./LanguageSelector.css";
+import { ChangeEvent, useEffect, useState } from "react";
 
 interface Props {
   onLanguageChange: (language: string) => void;
@@ -18,9 +18,9 @@ const LanguageSelector = ({ onLanguageChange }: Props) => {
   }, [selectedLanguage]);
 
   return (
-    <div className="language-selector-container">
-      <div className="language-selector">
-        <div className="world-icon">
+    <div className="main-page-language-selector-container">
+      <div className="main-page-language-selector">
+        <div className="main-page-language-world-icon">
           <svg
             width="16"
             height="16"
@@ -40,7 +40,7 @@ const LanguageSelector = ({ onLanguageChange }: Props) => {
         </div>
 
         <select
-          className="selector"
+          className="main-page-language-select"
           name="language-select"
           id="language-select-1"
           value={selectedLanguage}
@@ -49,7 +49,7 @@ const LanguageSelector = ({ onLanguageChange }: Props) => {
           <option value="hu">Magyar</option>
           <option value="en">English</option>
         </select>
-        <div className="selector-icon">
+        <div className="main-page-selector-icon">
           <svg
             width="16"
             height="16"
