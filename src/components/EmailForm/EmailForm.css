@@ -150,6 +150,7 @@ input:not(:placeholder-shown).email-input + .email-label
     transition-property: background-color;
     transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
     border-radius: 0.25rem;
+    padding: 0.088rem 0;
     
 
 }
