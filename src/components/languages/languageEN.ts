@@ -44,6 +44,7 @@ export const languageEN = {
         linkAccount: "Account",
         linkAboutUs: "About Us",
         linkSpeedTest: "Speed Test",
+        linkPrivacy: "Privacy",
         warningMessage: "I built this site to gain experience working with React on the frontend and Node.js on the backend as part of my educational journey. This site is designed to provide information and data about Formula 1, that is publicly available through different data sources.",
         warningMessageImportant: "It is not intended to be used for commercial or monetary gain."
     }

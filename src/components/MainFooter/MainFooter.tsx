@@ -22,7 +22,7 @@ const MainFooter = () => {
         <a href="#">{language.mainFooter.linkAccount}</a>
         <a href="#">{language.mainFooter.linkAboutUs}</a>
         <a href="#">{language.mainFooter.linkSpeedTest}</a>
-        <a href="#">Language selector</a>
+        <a href="#">{language.mainFooter.linkPrivacy}</a>
       </div>
       <div className="footer-warning-text-container">
         <span className="footer-warning-text">
