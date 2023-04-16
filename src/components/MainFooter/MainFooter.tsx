@@ -13,13 +13,16 @@ const MainFooter = () => {
 
   return (
     <div className="main-footer-container">
+      <div className="footer-logo-container">
+        <img src={mainLogo} alt="f1-dataset-logo" />
+      </div>
       <div className="footer-redirect-links-container">
         <a href="#">{language.mainFooter.linkContactUs}</a>
         <a href="#">{language.mainFooter.linkHelpCenter}</a>
         <a href="#">{language.mainFooter.linkAccount}</a>
-      </div>
-      <div className="footer-logo-container">
-        <img src={mainLogo} alt="f1-dataset-logo" />
+        <a href="#">Rólunk</a>
+        <a href="#">Sebességteszt</a>
+        <a href="#">Language selector</a>
       </div>
       <div className="footer-warning-text-container">
         <span className="footer-warning-text">
