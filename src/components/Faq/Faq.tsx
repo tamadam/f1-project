@@ -1,5 +1,5 @@
-import { useContext, useState } from "react";
 import "./Faq.css";
+import { useContext, useState } from "react";
 import EmailForm from "../EmailForm/EmailForm";
 import { LanguageContext } from "../../App";
 import React from "react";
@@ -15,16 +15,16 @@ const Faq = () => {
   };
 
   return (
-    <div className="faq-wrapper">
-      <div className="faq-container">
-        <div className="faq-content">
-          <h2 className="faq-title">{language.faq.faqTitle}</h2>
-          <div className="faq-questions">
-            <ul className="question-list">
-              <li className="question-item">
+    <div className="main-page-faq-wrapper">
+      <div className="main-page-faq-container">
+        <div className="main-page-faq-content">
+          <h2 className="main-page-faq-title">{language.faq.faqTitle}</h2>
+          <div className="main-page-faq-questions">
+            <ul className="main-page-question-list">
+              <li className="main-page-question-item">
                 <h3>
                   <button
-                    className="question-button"
+                    className="main-page-question-button"
                     onClick={() => handleClick(0)}
                   >
                     <span>{language.faq.question1}</span>
@@ -36,8 +36,8 @@ const Faq = () => {
                       xmlns="http://www.w3.org/2000/svg"
                       className={
                         activeIndex === 0
-                          ? "question-svg question-svg-rotate"
-                          : "question-svg question-svg-original"
+                          ? "main-page-question-svg main-page-question-svg-rotate"
+                          : "main-page-question-svg main-page-question-svg-original"
                       }
                       data-name="Add"
                     >
@@ -53,15 +53,15 @@ const Faq = () => {
                 <div
                   className={
                     activeIndex === 0
-                      ? "answer active-answer-container"
-                      : "answer hidden-answer-container"
+                      ? "main-page-answer main-page-active-answer-container"
+                      : "main-page-answer main-page-hidden-answer-container"
                   }
                 >
                   <span
                     className={
                       activeIndex === 0
-                        ? "answer-content-visible"
-                        : "answer-content-hidden"
+                        ? "main-page-answer-content-visible"
+                        : "main-page-answer-content-hidden"
                     }
                   >
                     {language.faq.question1Answer
@@ -80,10 +80,10 @@ const Faq = () => {
                   </span>
                 </div>
               </li>
-              <li className="question-item">
+              <li className="main-page-question-item">
                 <h3>
                   <button
-                    className="question-button"
+                    className="main-page-question-button"
                     onClick={() => handleClick(1)}
                   >
                     <span>{language.faq.question2}</span>
@@ -95,8 +95,8 @@ const Faq = () => {
                       xmlns="http://www.w3.org/2000/svg"
                       className={
                         activeIndex === 1
-                          ? "question-svg question-svg-rotate"
-                          : "question-svg question-svg-original"
+                          ? "main-page-question-svg main-page-question-svg-rotate"
+                          : "main-page-question-svg main-page-question-svg-original"
                       }
                       data-name="Add"
                     >
@@ -112,25 +112,25 @@ const Faq = () => {
                 <div
                   className={
                     activeIndex === 1
-                      ? "answer active-answer-container"
-                      : "answer hidden-answer-container"
+                      ? "main-page-answer main-page-active-answer-container"
+                      : "main-page-answer main-page-hidden-answer-container"
                   }
                 >
                   <span
                     className={
                       activeIndex === 1
-                        ? "answer-content-visible"
-                        : "answer-content-hidden"
+                        ? "main-page-answer-content-visible"
+                        : "main-page-answer-content-hidden"
                     }
                   >
                     {language.faq.question2Answer}
                   </span>
                 </div>
               </li>
-              <li className="question-item">
+              <li className="main-page-question-item">
                 <h3>
                   <button
-                    className="question-button"
+                    className="main-page-question-button"
                     onClick={() => handleClick(2)}
                   >
                     <span>{language.faq.question3}</span>
@@ -142,8 +142,8 @@ const Faq = () => {
                       xmlns="http://www.w3.org/2000/svg"
                       className={
                         activeIndex === 2
-                          ? "question-svg question-svg-rotate"
-                          : "question-svg question-svg-original"
+                          ? "main-page-question-svg main-page-question-svg-rotate"
+                          : "main-page-question-svg main-page-question-svg-original"
                       }
                       data-name="Add"
                     >
@@ -159,15 +159,15 @@ const Faq = () => {
                 <div
                   className={
                     activeIndex === 2
-                      ? "answer active-answer-container"
-                      : "answer hidden-answer-container"
+                      ? "main-page-answer main-page-active-answer-container"
+                      : "main-page-answer main-page-hidden-answer-container"
                   }
                 >
                   <span
                     className={
                       activeIndex === 2
-                        ? "answer-content-visible"
-                        : "answer-content-hidden"
+                        ? "main-page-answer-content-visible"
+                        : "main-page-answer-content-hidden"
                     }
                   >
                     {
@@ -185,10 +185,10 @@ const Faq = () => {
                   </span>
                 </div>
               </li>
-              <li className="question-item">
+              <li className="main-page-question-item">
                 <h3>
                   <button
-                    className="question-button"
+                    className="main-page-question-button"
                     onClick={() => handleClick(3)}
                   >
                     <span>{language.faq.question4}</span>
@@ -200,8 +200,8 @@ const Faq = () => {
                       xmlns="http://www.w3.org/2000/svg"
                       className={
                         activeIndex === 3
-                          ? "question-svg question-svg-rotate"
-                          : "question-svg question-svg-original"
+                          ? "main-page-question-svg main-page-question-svg-rotate"
+                          : "main-page-question-svg main-page-question-svg-original"
                       }
                       data-name="Add"
                     >
@@ -217,15 +217,15 @@ const Faq = () => {
                 <div
                   className={
                     activeIndex === 3
-                      ? "answer active-answer-container"
-                      : "answer hidden-answer-container"
+                      ? "main-page-answer main-page-active-answer-container"
+                      : "main-page-answer main-page-hidden-answer-container"
                   }
                 >
                   <span
                     className={
                       activeIndex === 3
-                        ? "answer-content-visible"
-                        : "answer-content-hidden"
+                        ? "main-page-answer-content-visible"
+                        : "main-page-answer-content-hidden"
                     }
                   >
                     {language.faq.question4Answer}
@@ -235,11 +235,10 @@ const Faq = () => {
             </ul>
           </div>
         </div>
-        <div className="first-steps-wrapper">
-          <div className="form-title-faq">
+        <div className="main-page-first-steps-bottom">
+          <div className="main-page-form-title-faq">
             <h3>{language.mainCard.firstStepsTitle}</h3>
           </div>
-          {/* Form container*/}
           <EmailForm />
         </div>
       </div>

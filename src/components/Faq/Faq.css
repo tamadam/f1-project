@@ -1,10 +1,10 @@
-.faq-wrapper {
+.main-page-faq-wrapper {
     padding: 3.5rem 0;
     text-align: center;
     color: white;
 }
 
-.faq-container {
+.main-page-faq-container {
     max-width: calc(100% - 3rem);
     margin: auto;
     display: flex;
@@ -12,52 +12,50 @@
     align-items: center;
 }
 
-.faq-content {
+.main-page-faq-content {
     width: 100%;
     flex-basis: 50%;
 }
 
-.faq-title {
+.main-page-faq-title {
     font-size: 1.8rem;
     font-family: "NetflixBold";
 }
 
-.faq-questions {
+.main-page-faq-questions {
     margin: 1.5rem 0 0;
     text-align: left;
 }
 
-.question-list {
+.main-page-question-list {
     list-style: none;
     padding: 0;
     margin: 0;
-
 }
 
-.question-item {
+.main-page-question-item {
     list-style-type: none;
     text-indent: 0;
     margin: 0 0 0.5rem;
     display: list-item;
 }
 
-.question-item h3 {
+.main-page-question-item h3 {
     background-color: rgba(45, 45, 45, 1);
     margin-bottom: 0.0625rem;
     display: flex;
     transition-duration: 250ms;
     transition-property: background-color;
     transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
-
 }
 
 
-.question-item h3:hover {
+.main-page-question-item h3:hover {
     transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
     background-color: rgba(78, 78, 78, 1);
 }
 
-.question-button {
+.main-page-question-button {
     font-size: 1.125rem;
     padding: 1.5rem;
     display: flex;
@@ -67,58 +65,56 @@
     width: 100%;
 }
 
-.question-button:hover {
+.main-page-question-button:hover {
     cursor: pointer;
 }
 
-.question-button span {
+.main-page-question-button span {
     width: 90%;
 }
 
-.answer {
+.main-page-question-svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.main-page-question-svg-original{
+    transform: rotate(0);
+}
+
+.main-page-question-svg-rotate {
+    transform: rotate(-45deg);  
+}
+
+.main-page-answer {
     font-size: 1.125rem;
 }
 
-.hidden-answer-container {
+.main-page-hidden-answer-container {
     transition: all 0.25s cubic-bezier(0.5, 0, 0.1, 1);
     max-height: 0;
     padding: 0 1.5rem;
 }
 
-.active-answer-container {
+.main-page-active-answer-container {
     max-height: 75rem;
     background-color: rgb(45, 45, 45);
     transition: all 0.25s cubic-bezier(0.5, 0, 0.1, 1) 0s;
     padding: 1.5rem;
-
 }
 
-.answer-content-hidden {
+.main-page-answer-content-hidden {
     visibility: collapse;
     transition: all 0.20s cubic-bezier(0.5, 0, 0.1, 1) 0s;
 }
 
-.answer-content-visible {
+.main-page-answer-content-visible {
     visibility: visible;
     transition: all 0.20s cubic-bezier(0.5, 0, 0.1, 1) 0s;
-
-}
-
-.question-svg {
-    width: 1rem;
-    height: 1rem;
-}
-
-.question-svg-original{
-    transform: rotate(0);
-}
-
-.question-svg-rotate {
-    transform: rotate(-45deg);  
 }
 
 /* similar to the first steps container in the main card */
-.first-steps-wrapper {
+.main-page-first-steps-bottom {
     margin-top: 2.85rem;
     display: flex;
     flex-direction: column;
@@ -129,53 +125,51 @@
 }
 
 /* same as the main card form-title class */
-.form-title-faq{
+.main-page-form-title-faq{
     font-family: "NetflixMedium";
     font-size: 1.125rem;
     margin: 0 0.5rem;
 }
 
+/* MEDIA */
 
 @media (min-width: 35em) {
-    .question-button {
+    .main-page-question-button {
         font-size: 1.4rem;
     }
 
-    .answer {
+    .main-page-answer {
         font-size: 1.4rem;
     }
 
-    .question-svg {
+    .main-page-question-svg {
         width: 1.5rem;
         height: 1.5rem;
     }
 }
 
-
 @media (min-width: 37.5em) {
-    .faq-wrapper {
+    .main-page-faq-wrapper {
         padding: 4.5rem 0;
     }
 
-    .faq-container {
+    .main-page-faq-container {
         max-width: calc(100% - 4rem);
     }
 }
 
 @media (min-width: 50em) {
-    .faq-title {
+    .main-page-faq-title {
         font-size: 2.8rem;
     }
 
-    .question-button {
+    .main-page-question-button {
         font-size: 1.5rem;    
     }
-
 }
 
 @media (min-width: 80em) {
-    .faq-container {
+    .main-page-faq-container {
         max-width: calc( 83.33333333333334% - 6rem );
     }
-
 }
