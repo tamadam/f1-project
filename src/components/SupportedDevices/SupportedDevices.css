@@ -1,4 +1,4 @@
-.supported-devices-container {
+.main-page-supported-devices-container {
     color: white;
     font-size: 1rem;
     text-align: center;
@@ -10,26 +10,23 @@
     max-width: calc(100% - 3rem);
     margin: auto;
     gap: 1rem;
-
 }
 
+.main-page-supported-devices-title h2 {
+    font-size: 1.8rem;
+    font-family: "NetflixBold";
+}
 
-.devices-logo-container {
+.main-page-supported-devices-logo-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content:space-evenly;
     width: 100%;
     margin: 1.4rem 0 0;
-
 }
 
-.devices-title h2 {
-    font-size: 1.8rem;
-    font-family: "NetflixBold";
-}
-
-.footer-device {
+.main-page-supported-device {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,32 +34,31 @@
     gap: 1.6rem;
 }
 
-.footer-device img {
+.main-page-device-logo-image {
     max-width: 60%;
 }
 
-.footer-device p {
+.main-page-device-logo-description {
+    font-size: 1.125rem;
     height: 3rem;
-
 }
 
+/* MEDIA */
+
 @media (min-width: 37.5em) {
-    .supported-devices-container {
+    .main-page-supported-devices-container {
         max-width: calc(100% - 4rem);
         font-size: 1.2rem;
         padding: 4.5rem 0;
     }
-
-
-
-
 }
 
-
 @media (min-width: 50em) {
-
-    .devices-title h2 {
+    .main-page-supported-devices-title h2 {
         font-size: 2.8rem;
     }
 
+    .main-page-device-logo-description {
+        font-size: 1.4rem;
+    }
 }
