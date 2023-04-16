@@ -73,7 +73,7 @@ const MainPageCards = () => {
   }, [language]);
 
   return (
-    <div className="main-page-cards">
+    <main className="main-page-cards">
       <MainCard />
       <SeparatorLine />
       <StoryCard
@@ -158,7 +158,7 @@ const MainPageCards = () => {
         </div>
       </div>
     */}
-    </div>
+    </main>
   );
 };
 
