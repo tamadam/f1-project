@@ -1,4 +1,4 @@
-.navigation-bar {
+.main-page-navigation-bar-container {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -12,37 +12,41 @@
     position: absolute;
 }
 
-.nav-item {
+.main-page-nav-item {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
 }
 
-.item-container-1 {
+.main-page-nav-item-container-1 {
     justify-content: flex-start;
     flex-grow: 2;
 }
 
-.item-container-2 {
+.main-page-navbar-main-logo {    
+    height: 1.5rem;
+    width: 5.55rem;
+    user-select: none;
+}
+
+.main-page-nav-item-container-2 {
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;  
     height: 100%;
     color: white;
- 
 }
 
-.item-container-3 {
+.main-page-nav-item-container-3 {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     height: 100%;
-
 }
 
-.explore-button {
+.main-page-explore-button {
     background-color: rgb(229, 9, 20);
     color: white;
     transition-duration: 250ms;
@@ -59,70 +63,33 @@
     white-space: nowrap;
 }
 
-.explore-button:hover{
+.main-page-explore-button:hover{
     cursor: pointer;
     background-color: rgb(184, 8, 17);
 }
 
-.main-logo {    
-    height: 1.5rem;
-    width: 5.55rem;
-    user-select: none;
-}
-
 /* MEDIA */
 
-
-
 @media (min-width: 30em) {
-    .main-logo {
-        height: 2rem;
-        width: 7.25rem;
-    }
-
-    .navigation-bar {
+    .main-page-navigation-bar-container {
         padding: 0 2.4rem;
     }
 
-    /*
-    .item-container-1 {
-        flex-grow: 2;
+    .main-page-navbar-main-logo {
+        height: 2rem;
+        width: 7.25rem;
     }
-    
-    .item-container-2 {
-        flex-grow: 1;
-    }
-    
-    .item-container-3 {
-        
-    }
-    */
 }
   
 @media (min-width: 50em) {
-    /*
-    .item-container-1 {
-        flex-grow: 3;
-    }
-    
-    .item-container-2 {
-        flex-grow: 0;
-        flex-basis: 10rem;
-    }
-    
-    .item-container-3 {
-
-    }
-    */
-
-    .main-logo {
+    .main-page-navbar-main-logo {
         height: 2.5rem;
         width: 9.25rem;
     }
 }
   
 @media (min-width: 58em) {
-    .navigation-bar {
+    .main-page-navigation-bar-container {
         padding: 0 7rem;
     }
 }

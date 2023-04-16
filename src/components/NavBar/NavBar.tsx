@@ -1,8 +1,6 @@
 import "./NavBar.css";
-//import mainLogo from "../../assets/F1.png";
 import mainLogo from "../../assets/f1logomain3.png";
 import LanguageSelector from "../LanguageSelector/LanguageSelector";
-//import { LanguageContext } from "../languages/LanguageContext";
 import { LanguageContext } from "../../App";
 import { useContext } from "react";
 
@@ -14,23 +12,25 @@ const NavBar = ({ onLanguageChange }: Props) => {
   const language = useContext(LanguageContext);
 
   const handleLanguageChange = (language: string) => {
-    //console.log("changing language nav");
-    //console.log(language);
     if (onLanguageChange) {
       onLanguageChange(language);
     }
   };
 
   return (
-    <div className="navigation-bar">
-      <div className="nav-item item-container-1">
-        <img className="main-logo" src={mainLogo}></img>
+    <div className="main-page-navigation-bar-container">
+      <div className="main-page-nav-item main-page-nav-item-container-1">
+        <img
+          className="main-page-navbar-main-logo"
+          src={mainLogo}
+          alt="f1 dataset logo"
+        ></img>
       </div>
-      <div className="nav-item item-container-2">
+      <div className="main-page-nav-item main-page-nav-item-container-2">
         <LanguageSelector onLanguageChange={handleLanguageChange} />
       </div>
-      <div className="nav-item item-container-3">
-        <span className="explore-button">
+      <div className="main-page-nav-item main-page-nav-item-container-3">
+        <span className="main-page-explore-button">
           <a href="#">{language.navbar.buttonText}</a>
         </span>
       </div>
