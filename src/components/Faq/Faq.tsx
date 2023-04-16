@@ -64,7 +64,19 @@ const Faq = () => {
                         : "answer-content-hidden"
                     }
                   >
-                    {language.faq.question1Answer}
+                    {language.faq.question1Answer
+                      .split("<LINEBREAK>")
+                      .map((text, index, array) => (
+                        <React.Fragment key={index}>
+                          {text}
+                          {index !== array.length - 1 && (
+                            <>
+                              <br />
+                              <br />
+                            </>
+                          )}
+                        </React.Fragment>
+                      ))}
                   </span>
                 </div>
               </li>
@@ -158,7 +170,9 @@ const Faq = () => {
                         : "answer-content-hidden"
                     }
                   >
-                    {language.faq.question3Answer
+                    {
+                      language.faq
+                        .question3Answer /*language.faq.question3Answer
                       .split("\n")
                       .map((text, index) => (
                         <React.Fragment key={index}>
@@ -166,7 +180,8 @@ const Faq = () => {
                           <br />
                           <br />
                         </React.Fragment>
-                      ))}
+                      ))*/
+                    }
                   </span>
                 </div>
               </li>

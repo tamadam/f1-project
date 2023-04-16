@@ -124,8 +124,8 @@ const MainPageCards = () => {
       </StoryCard>
       <SeparatorLine />
       <StoryCard
-        title="Lorem ipsum ide colore."
-        subtitle="Damorde di sipanale wontage sampelevo, si ku, puid hugro."
+        title={language.storyCard.card3.storyTitle}
+        subtitle={language.storyCard.card3.storySubtitle}
       >
         <img src={phone} alt="phone with logo" />
       </StoryCard>

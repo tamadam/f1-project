@@ -65,11 +65,14 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    gap: 2rem;
 }
 
 .question-button:hover {
     cursor: pointer;
+}
+
+.question-button span {
+    width: 90%;
 }
 
 .answer {

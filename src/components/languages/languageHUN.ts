@@ -18,20 +18,24 @@ export const languageHUN = {
             storySubtitle: "Nézd meg rövid összefoglalóinkat a nagydíjakról magyar nyelven, hogy minden fontos momentum megmaradjon."
         },
         card2: {
-            storyTitle: "hu- Lorem ipsum dolor sit adipiscing elit.",
-            storySubtitle: "hu- Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque."  
+            storyTitle: "Erősorrend. Ahol csak a versenyző számít.",
+            storySubtitle: "Rangsoraink figyelembe vesznek olyan tényezőket, mint az aktuális teljesítmény vagy a konzisztencia, hogy a lehető legpontosabb rangsort biztosítsuk számodra."  
+        },
+        card3: {
+            storyTitle: "Testreszabható statisztika",
+            storySubtitle: "Az adatok korlátlan mennyiségben állnak rendelkezésedre. Ezekből az adatokból pedig bármilyen statisztikát képes leszel összeállítani!",
         }
     },
     faq: {
         faqTitle: "Gyakran ismételt kérdések",
-        question1: "Kérdés 1",
-        question1Answer: "hu- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices dolor sit amet elit euismod, eget malesuada urna laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla elementum lobortis facilisis. Aliquam sed faucibus arcu. Nunc scelerisque tellus ac ex condimentum, id malesuada urna cursus.",
-        question2: "Kérdés 2",
-        question2Answer: "hu- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices dolor sit amet elit euismod, eget malesuada urna laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-        question3: "Kérdés 3",
-        question3Answer: "hu- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices dolor sit amet elit euismod, eget malesuada urna laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla elementum lobortis facilisis. Aliquam sed faucibus arcu. Nunc scelerisque tellus ac ex condimentum, id malesuada urna cursus.\nQuisque accumsan, magna eget venenatis tempor, erat dui placerat ligula, sed consequat justo est feugiat urna. Nunc sapien risus, posuere nec fringilla ac, consectetur non mi. Nunc condimentum in diam vitae tristique. Maecenas sem orci, tristique eu nibh et, sodales eleifend massa.",
-        question4: "Kérdés 4",
-        question4Answer: "hu- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices dolor sit amet elit euismod, eget malesuada urna laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+        question1: "Milyen statisztikák és adatok érhetőek el az oldalon?",
+        question1Answer: "Az oldalon Forma-1-hez kapcsolódó statisztikák és adatok széles skálája található. Ide tartozik az aktuális tabella, valamint további információk a versenyzőkről és a csapatokról, valamint egyéb hírek az F1 világából.<LINEBREAK>Az adatok a legelső F1-es futamtól kezdve állnak rendelkezésre. Egyedi szűrők is alkalmazhatóak az adatokon, ezáltal a keresés személyre szabható, így könnyen elérheti az Ön számára legrelevánsabb adatokat.",
+        question2: "Milyen gyakran frissülnek ezek a statisztikák és adatok?",
+        question2Answer: "Az adatokat az Ergast Developer API nevű szolgáltatás biztosítja. Általában az aktuális versenyt követő néhány óra elegendő ahhoz, hogy az adatok frissítésre kerüljenek. Ezt követően az adatok és statisztikák azonnal frissülnek az oldalon.",
+        question3: "Beállítható, hogy csak egy adott versenyzőről vagy csapatról kapjak információt?",
+        question3Answer: "Igen, rendelkezésre állnak szűrő funkciók, amellyel szűkítheti az adatokat egy adott versenyzőre vagy csapatra.",
+        question4: "Elérhető valamilyen menetrend, ahol a közelgő versenyek és események láthatóak?",
+        question4Answer: "Bár a jövőben tervezünk ehhez hasonló funkció bevezetését az oldalon, jelenleg nem ez az elsődleges prioritás. Mindazonáltal mindig törekszünk a folyamatos fejlesztésre és bővítésre, ezért legyen résen és figyelje a jövőbeni frissítéseket.",
     },
     supportedDevices: {
         devicesTitle: "Végtelen adat. Benne a zsebedben.",

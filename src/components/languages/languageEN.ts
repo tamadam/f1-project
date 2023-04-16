@@ -18,20 +18,24 @@ export const languageEN = {
             storySubtitle: "Check out the recap videos so you don't miss any important details."
         },
         card2: {
-            storyTitle: "en- Lorem ipsum dolor sit adipiscing elit.",
-            storySubtitle: "en- Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque."  
+            storyTitle: "Find top-performing drivers with our Power Rankings.",
+            storySubtitle: "Our rankings take into account factors such as recent performance and consistency to provide you with the most accurate ranking possible."  
+        },
+        card3: {
+            storyTitle: "Customizable statistics",
+            storySubtitle: "Unlimited data sets available. With these data sets, you can create any statistic you want!",
         }
     },
     faq: {
         faqTitle: "Frequently Asked Questions",
-        question1: "Question 1",
-        question1Answer: "en- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices dolor sit amet elit euismod, eget malesuada urna laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla elementum lobortis facilisis. Aliquam sed faucibus arcu. Nunc scelerisque tellus ac ex condimentum, id malesuada urna cursus.",
-        question2: "Question 2",
-        question2Answer: "en- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices dolor sit amet elit euismod, eget malesuada urna laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-        question3: "Question 3",
-        question3Answer: "en- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices dolor sit amet elit euismod, eget malesuada urna laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla elementum lobortis facilisis. Aliquam sed faucibus arcu. Nunc scelerisque tellus ac ex condimentum, id malesuada urna cursus.\nQuisque accumsan, magna eget venenatis tempor, erat dui placerat ligula, sed consequat justo est feugiat urna. Nunc sapien risus, posuere nec fringilla ac, consectetur non mi. Nunc condimentum in diam vitae tristique. Maecenas sem orci, tristique eu nibh et, sodales eleifend massa.",
-        question4: "Question 4",
-        question4Answer: "en- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices dolor sit amet elit euismod, eget malesuada urna laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+        question1: "What kind of statistics and data can I find on this page?",
+        question1Answer: "On our page, you can find a wide range of statistics and data related to Formula 1. This includes the latest standings, information on drivers and teams, as well as news from the world of F1.<LINEBREAK>We provide data sets starting from the very first F1 race. You can also apply custom filters to tailor your search and access the data that is most relevant to you.",
+        question2: "How often are the statistics and data updated?",
+        question2Answer: "We use a service called Ergast Developer API to retrieve the data from. It usually updates the data after a few hours of the last race, so you can expect to see the latest information as soon as it becomes available.",
+        question3: "Can I filter the statistics and data based on a specific driver or team?",
+        question3Answer: "Yes, you can use our custom filters to narrow down the statistics and data to specific drivers or teams.",
+        question4: "Is there a schedule of upcoming races and events available?",
+        question4Answer: "While we do plan to provide a schedule of upcoming races and events in the future, it is not currently a top priority for our website. However, we are always looking for ways to improve and expand our offerings, so stay tuned for updates in the future.",
     },
     supportedDevices: {
         devicesTitle: "Infinite data. Inside your pocket.",
