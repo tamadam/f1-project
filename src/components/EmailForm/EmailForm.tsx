@@ -1,19 +1,18 @@
-import React, { useState, FocusEvent, useContext } from "react";
 import "./EmailForm.css";
+import { useState, FocusEvent, useContext } from "react";
 import { LanguageContext } from "../../App";
 
 const EmailForm = () => {
   const language = useContext(LanguageContext);
 
-  //const [email, setEmail] = useState("");
   const [isEmailValid, setEmailValid] = useState(true);
 
-  const errorMessageStyle = `error-message-container ${
-    isEmailValid ? "validEmail" : "invalidEmail"
+  const errorMessageStyle = `main-page-email-error-message-container ${
+    isEmailValid ? "main-page-valid-email" : "main-page-invalid-email"
   }`;
 
-  const inputBorderError = `email-input ${
-    isEmailValid ? "" : "invalidEmailInput"
+  const inputBorderError = `main-page-email-input ${
+    isEmailValid ? "" : "main-page-invalid-email-border"
   }`;
 
   const checkEmailValidity = (event: FocusEvent<HTMLInputElement>) => {
@@ -35,20 +34,20 @@ const EmailForm = () => {
         event.preventDefault();
         console.log("SUBMITTED.");
       }}
-      className="form-container"
+      className="main-page-email-form-container"
     >
-      <div className="input-c email-input-container">
-        <div className="email-field">
+      <div className="main-page-email-input-container">
+        <div className="main-page-email-field">
           <input
             id="email-input"
             type="email"
-            className={inputBorderError /* email-input */}
+            className={inputBorderError /* main-page-email-input */}
             autoComplete="off"
             placeholder=" "
             required
             onBlur={checkEmailValidity}
           />
-          <label htmlFor="email-input" className="email-label">
+          <label htmlFor="email-input" className="main-page-email-label">
             {language.emailForm.emailInputText}
           </label>
         </div>
@@ -74,8 +73,8 @@ const EmailForm = () => {
           <span>{language.emailForm.emailErrorText}</span>
         </div>
       </div>
-      <button type="submit" className="input-c submit-button-container">
-        <div className="button-label">
+      <button type="submit" className="main-page-submit-button-container">
+        <div className="main-page-submit-button-label">
           <span>{language.emailForm.emailSubmitText}</span>
           <svg
             width="20"
