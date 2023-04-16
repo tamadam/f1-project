@@ -74,13 +74,13 @@
 @media (min-width: 20em){
     .footer-redirect-links-container{
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 1rem;
+        column-gap: 4rem;
     }
 }
 
 @media (min-width: 30em){
     .footer-redirect-links-container{
-        column-gap: 3rem;
+        column-gap: 6rem;
     }
 }
 
@@ -105,7 +105,7 @@
 
 @media (min-width: 40em){
     .footer-redirect-links-container{
-        column-gap: 6rem;
+        column-gap: 8rem;
     }
 }
 
