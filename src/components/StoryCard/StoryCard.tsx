@@ -1,6 +1,5 @@
-import { Children, ReactNode, useEffect, useState } from "react";
 import "./StoryCard.css";
-import demoVideo from "../../assets/titlevideo.mp4";
+import { ReactNode, useEffect, useState } from "react";
 
 interface Props {
   title: string;
@@ -33,31 +32,23 @@ const StoryCard = ({
   }, []);
 
   return (
-    <div className="story-card">
-      <div className="card-content-container">
+    <div className="main-page-story-card-container">
+      <div className="main-page-story-card-content-container">
         <div
-          className="card-text-container"
+          className="main-page-story-card-text-container"
           style={{ order: mediaLeft && windowWidth >= 800 ? 3 : 1 }}
         >
-          <h2 className="story-card-main-title">{title}</h2>
-          <p className="story-card-subtitle">{subtitle}</p>
+          <h2 className="main-page-story-card-main-title">{title}</h2>
+          <p className="main-page-story-card-subtitle">{subtitle}</p>
         </div>
-        <div className="card-media-container">
-          <div className="multi-media-container">
+        <div className="main-page-story-card-media-container">
+          <div className="main-page-story-card-multi-media-container">
             {extraImage && (
               <>
                 <img alt="" src={extraImage} />
-                <div className="tv-container">{children}</div>
-
-                {/*<div
-                  className="tv-container"
-                  dangerouslySetInnerHTML={{
-                    __html: `<video className="app__backgroundVideo" autoplay loop muted playsinline>
-      <source src=${demoVideo} type="video/mp4" />
-      Your browser does not support the video tag.
-</video>`,
-                  }}
-                />*/}
+                <div className="main-page-laptop-media-container">
+                  {children}
+                </div>
               </>
             )}
             {!extraImage && children}

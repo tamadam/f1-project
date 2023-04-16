@@ -1,4 +1,4 @@
-.story-card {
+.main-page-story-card-container {
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -8,11 +8,9 @@
     color: white;
     padding: 3.5rem 0;
     z-index: -2;
-
 }
 
-
-.card-content-container {
+.main-page-story-card-content-container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -23,48 +21,45 @@
     text-align: center;
 }
 
-.story-card-main-title {
-    font-size: 1.8rem;
-    font-family: "NetflixBold";
-
+.main-page-story-card-text-container {
+    flex-basis: 50%;
+    order: 1;
 }
 
-.story-card-subtitle {
+.main-page-story-card-main-title {
+    font-size: 1.8rem;
+    font-family: "NetflixBold";
+}
+
+.main-page-story-card-subtitle {
     font-size: 1.125rem;
     font-family: "NetflixLight";
     margin: 1rem 0 0;
 }
 
-.card-text-container {
-    flex-basis: 50%;
-    order: 1;
-}
-
-.card-media-container {
+.main-page-story-card-media-container {
     flex-basis: 50%;
     order: 2;
     position: relative;
     width: 100%;
 }
 
-.multi-media-container{
+.main-page-story-card-multi-media-container {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-
 }
 
-.multi-media-container video,
-.multi-media-container img {
+.main-page-story-card-multi-media-container video,
+.main-page-story-card-multi-media-container img {
     max-width: 100%;
     max-height: 100%;
-
 }
 
-.tv-container {
+.main-page-laptop-media-container {
     z-index: -1;
     overflow: hidden;
     width: 100%;
@@ -73,60 +68,45 @@
     max-height: 70%;
     position: absolute;
     top: 11%;
-
 }
 
-
-
-@media(min-width: 112em) {
-
-}
-
+/* MEDIA */
 
 @media(min-width: 37.5em) {
-    .story-card {
+    .main-page-story-card-container {
         padding: 4.5rem 0;
-    
     }
 
-    .card-content-container {
+    .main-page-story-card-content-container {
         max-width: calc(100% - 4rem);
     }
 }
 
-
 @media(min-width: 50em) {
-    .story-card-main-title {
-        font-size: 2.8rem;
-    }
-    
-    .story-card-subtitle {
-        font-size: 1.4rem;
-    }
-    
-    .card-content-container {
+    .main-page-story-card-content-container {
         flex-direction: row;
         text-align: left;
     }
-}
 
-
-@media (min-width: 60em){
-
+    .main-page-story-card-main-title {
+        font-size: 2.8rem;
+    }
     
+    .main-page-story-card-subtitle {
+        font-size: 1.4rem;
+    }    
 }
 
-@media (min-width: 70em){
-    .story-card-main-title {
+@media (min-width: 70em) {
+    .main-page-story-card-content-container {
+        max-width: calc( 83.33333333333334% - 6rem );
+    }
+
+    .main-page-story-card-main-title {
         font-size: 3rem;
     }
     
-    .story-card-subtitle {
+    .main-page-story-card-subtitle {
         font-size: 1.5rem;
-    }
-
-    .card-content-container {
-        max-width: calc( 83.33333333333334% - 6rem );
-    }
-    
+    }    
 }
