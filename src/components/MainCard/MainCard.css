@@ -1,4 +1,4 @@
-.main-card-container {
+.main-page-main-card-container {
     width: 100%;
     min-height: 36rem;
     display: flex;
@@ -7,25 +7,21 @@
     background-color: #0b0b0b;
     position: relative;
     color: white;
-
-
 }
 
-.story-card-bg {
+.main-page-main-card-background {
     position: absolute;
-
     width: 100%;
     height: 100%;
-
 }
 
-.story-card-bg img {
+.main-page-main-card-background img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-.bg-color {
+.main-page-main-card-color {
     position: absolute;
     top: 0;
     left: 0;
@@ -33,11 +29,9 @@
     height: 100%;
     background: rgb(0 0 0 / 40%);
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
-
-
 }
 
-.story-card-text-container{
+.main-page-main-card-text-container {
     position: relative;
     color: white;
     display: flex;
@@ -49,29 +43,24 @@
     margin: 0 2rem;
     padding-top: 8rem;
     padding-bottom: 4rem;
-
 }
 
-.card-text-main-title-container {
+.main-page-main-card-title-container {
     text-align: center;
-
 }
 
-.card-text-main-title {
+.main-page-main-card-title {
     font-size: 1.8rem;
-
     font-family: "NetflixBold";
 }
 
-.card-text-subtitle{
+.main-page-main-card-subtitle {
     font-size: 1.125rem;
     font-family: "NetflixMedium";
     margin: 1rem 0 0;
-
 }
 
-
-.first-steps-container{
+.main-page-main-card-first-steps-container {
     margin: 1.5rem 0 0;
     display: flex;
     flex-direction: column;
@@ -79,99 +68,53 @@
     width: 100%;
 }
 
-.form-title{
+.main-page-main-card-email-form-title {
     font-family: "NetflixMedium";
     font-size: 1.125rem;
-
-
 }
 
-@media (min-width: 22em){
- 
-
-    .story-card-text-container{
-
-    
+@media (min-width: 22em) {
+    .main-page-main-card-text-container {    
         padding-bottom: 2rem;
-    
     }
-
-
 }
 
-
-
-
-
-@media (min-width: 30em){
-
-}
-
-@media (min-width: 40em){
-
-}
-
-
-
-
-@media (min-width: 50em){
-    .main-card-container {
+@media (min-width: 50em) {
+    .main-page-main-card-container {
         min-height: 40rem;
-    
     }
 
-    .card-text-main-title {
-
-        font-size: 2.8rem;
-
-    
+    .main-page-main-card-title {
+        font-size: 2.8rem;    
     }
 
-    .card-text-subtitle{
+    .main-page-main-card-subtitle {
         font-size: 1.4rem;
         font-family: "NetflixMedium";
         margin: 1rem 0 0;
-    
     }
-
-
-
-
 }
 
-@media (min-width: 65em){
-}
-
-
-@media (min-width: 70em){
-    .main-card-container {
+@media (min-width: 70em) {
+    .main-page-main-card-container {
         min-height: 50rem;
-    
     }
 
-    .card-text-main-title {
-
-        font-size: 3rem;
-
-    
+    .main-page-main-card-title {
+        font-size: 3rem;    
     }
 
-    .card-text-subtitle{
+    .main-page-main-card-subtitle {
         font-size: 1.5rem;
         font-family: "NetflixMedium";
         margin: 1rem 0 0;
-    
-    }
-
-    
+    }    
 }
 
-@media (min-width: 80em){
-    .main-card-container {
+@media (min-width: 80em) {
+    .main-page-main-card-container {
         min-height: 50rem;
-    
-    }  
-    
+    }      
 }
 
 
