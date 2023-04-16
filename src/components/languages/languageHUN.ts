@@ -19,7 +19,7 @@ export const languageHUN = {
         },
         card2: {
             storyTitle: "Erősorrend. Ahol csak a versenyző számít.",
-            storySubtitle: "Rangsoraink figyelembe vesznek olyan tényezőket, mint az aktuális teljesítmény vagy a konzisztencia, hogy a lehető legpontosabb rangsort biztosítsuk számodra."  
+            storySubtitle: "Ez a rangsor olyan tényezők alapján, mint az aktuális versenyzői teljesítmény vagy a konzisztencia, sorrendbe állítja a versenyzőket az általuk vezetett autó teljesítményétől teljesen elvonatkoztatva."  
         },
         card3: {
             storyTitle: "Testreszabható statisztika",

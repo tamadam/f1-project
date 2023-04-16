@@ -19,7 +19,7 @@ export const languageEN = {
         },
         card2: {
             storyTitle: "Find top-performing drivers with our Power Rankings.",
-            storySubtitle: "Our rankings take into account factors such as recent performance and consistency to provide you with the most accurate ranking possible."  
+            storySubtitle: "This ranking orders the drivers based on factors such as their recent performance and consistency, completely independent of the performance of the car they drive."  
         },
         card3: {
             storyTitle: "Customizable statistics",
