@@ -20,8 +20,8 @@ const MainFooter = () => {
         <a href="#">{language.mainFooter.linkContactUs}</a>
         <a href="#">{language.mainFooter.linkHelpCenter}</a>
         <a href="#">{language.mainFooter.linkAccount}</a>
-        <a href="#">Rólunk</a>
-        <a href="#">Sebességteszt</a>
+        <a href="#">{language.mainFooter.linkAboutUs}</a>
+        <a href="#">{language.mainFooter.linkSpeedTest}</a>
         <a href="#">Language selector</a>
       </div>
       <div className="footer-warning-text-container">

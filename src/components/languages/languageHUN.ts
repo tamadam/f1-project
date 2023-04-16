@@ -42,6 +42,8 @@ export const languageHUN = {
         linkContactUs: "Kapcsolat",
         linkHelpCenter: "Ügyfélszolgálat",
         linkAccount: "Fiók",
+        linkAboutUs: "Rólunk",
+        linkSpeedTest: "Sebességteszt",
         warningMessage: "Ez az oldal azért készült, hogy tapasztalatot szerezzek mind frontend, mind backend környezetben történő fejlesztésben a React és Node.js technológiákat alkalmazva. Az oldal Forma 1-el kapcsolatos információkat illetve adatokat bocsájt a felhasználó rendelkezésére. Ezen adatok nyilvánosan elérhető forrásokból származnak.",
         warningMessageImportant: "Az oldal nem kereskedelmi vagy pénzbeli haszonszerzés céljából jött létre."
     }
