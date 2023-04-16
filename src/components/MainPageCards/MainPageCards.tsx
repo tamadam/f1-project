@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import MainCard from "../MainCard/MainCard";
 import SeparatorLine from "../SeparatorLine/SeparatorLine";
 import StoryCard from "../StoryCard/StoryCard";
@@ -9,7 +9,6 @@ import ConstructorList from "../ConstructorList";
 import ConstructorStandingList from "../ConstructorStandingList";
 import demoVideo from "../../assets/titlevideo.mp4";
 import laptopBackground from "../../assets/laptop6.png";
-import mainLogo from "../../assets/f1logomain3.png";
 import posterImage from "../../assets/posterImage.webp";
 import { LanguageContext } from "../../App";
 import "./MainPageCards.css";
@@ -20,7 +19,6 @@ import norrisAvatar from "../../assets/norris.png";
 import verstappenAvatar from "../../assets/verstappen.png";
 import phone from "../../assets/phone.png";
 import Faq from "../Faq/Faq";
-import MainFooter from "../MainFooter/MainFooter";
 import SupportedDevices from "../SupportedDevices/SupportedDevices";
 
 const MainPageCards = () => {
@@ -104,7 +102,7 @@ const MainPageCards = () => {
         title={language.storyCard.card2.storyTitle}
         subtitle={language.storyCard.card2.storySubtitle}
       >
-        <div className="standings-demo-container" ref={lineRef}>
+        <div className="main-page-power-rankings-demo-container" ref={lineRef}>
           <StandingsLine
             lineColor="blue"
             avatarImage={verstappenAvatar}
@@ -137,7 +135,6 @@ const MainPageCards = () => {
       <SeparatorLine />
       <Faq />
       <SeparatorLine />
-
       <SupportedDevices />
       <SeparatorLine />
 
