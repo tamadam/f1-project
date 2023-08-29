@@ -1,12 +1,16 @@
 import { useState, createContext, useEffect } from "react";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
-//import { LanguageContextProvider } from "./components/languages/LanguageContext";
 import { languageHUN } from "./components/languages/languageHUN";
 import { languageEN } from "./components/languages/languageEN";
 import MainPageCards from "./components/MainPageCards/MainPageCards";
 import MainFooter from "./components/MainFooter/MainFooter";
 import uploadLogo from "./assets/upload.png";
+
+import DriverList from "./components/DriverList";
+import DriverStandingList from "./components/DriverStandingList";
+import ConstructorList from "./components/ConstructorList";
+import ConstructorStandingList from "./components/ConstructorStandingList";
 
 export const LanguageContext = createContext(languageEN);
 
@@ -83,6 +87,12 @@ function App() {
         <footer>
           <MainFooter />
         </footer>
+        <div className="tmp-results">
+          <DriverList year="2023" />
+          <DriverStandingList year="2023" />
+          <ConstructorList year="2023" />
+          <ConstructorStandingList year="2023" />
+        </div>
       </LanguageContext.Provider>
     </div>
 
