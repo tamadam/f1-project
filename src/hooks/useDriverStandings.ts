@@ -1,34 +1,16 @@
-import { CanceledError } from "axios";
-import { useEffect, useState } from "react"
-import driverStandingsService, { DriverStanding } from "../services/driver-standings-service";
+import { useQuery } from "@tanstack/react-query";
+import driverStandingsService, { DriverStandingsData } from "../services/driver-standings-service";
+import { CACHE_KEY_DRIVER_STANDINGS } from "../constants";
 
 
 const useDriverStandings = (year: string) => {
-    const [driverStandings, setDriverStandings] = useState<DriverStanding[]>([]);
-    const [errorDriverStandings, setErrorDriverStandings] = useState("");
-    const [isLoadingDriverStandings, setLoadingDriverStanding] = useState(false);
 
-    useEffect(() => {
-        setLoadingDriverStanding(true);
-        const { request, cancel } = driverStandingsService.getAll(year);
-        request
-          .then((response) => {
-            console.log(response.data.MRData.StandingsTable.StandingsLists[0].DriverStandings);
-            setDriverStandings(response.data.MRData.StandingsTable.StandingsLists[0].DriverStandings);
-            setLoadingDriverStanding(false);
-          })
-          .catch((error) => {
-            if (error instanceof CanceledError) return;
-            setErrorDriverStandings(error.message);
-            setLoadingDriverStanding(false);
+    return useQuery<DriverStandingsData, Error>({
+        queryKey: CACHE_KEY_DRIVER_STANDINGS, 
+        queryFn: () => driverStandingsService.getAll(year), 
+        //staleTime: 3 * 1000,
+    });
 
-          });
-  
-    
-        return () => cancel();
-      }, [year]);
-  
-      return {driverStandings, errorDriverStandings, isLoadingDriverStandings, setDriverStandings, setErrorDriverStandings}
 }
 
 export default useDriverStandings;

@@ -5,27 +5,21 @@ interface Props {
 }
 
 const DriverList = ({ year }: Props) => {
-  const {
-    drivers,
-    errorDrivers,
-    isLoadingDrivers,
-    setDrivers,
-    setErrorDrivers,
-  } = useDrivers(year);
+  const { data, error, isLoading } = useDrivers(year);
 
   const yearInTitle = year === "current" ? new Date().getFullYear() : year;
 
   return (
     <div className="">
       <h2>Driver list in {yearInTitle}</h2>
-      {errorDrivers && <p className="error-message">{errorDrivers}</p>}
-      {isLoadingDrivers && <div className="spinner-border"></div>}
+      {error && <p className="error-message">{error.message}</p>}
+      {isLoading && <div className="spinner-border"></div>}
 
-      {!isLoadingDrivers && (
+      {!isLoading && (
         <ul>
-          {drivers.map((driver) => (
+          {data?.MRData.DriverTable.Drivers.map((driver) => (
             <li key={driver.driverId}>
-              {driver.driverId} {driver.familyName}
+              {driver.familyName} {driver.nationality}
             </li>
           ))}
         </ul>

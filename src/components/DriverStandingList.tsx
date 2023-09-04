@@ -6,31 +6,28 @@ interface Props {
 }
 
 const DriverStandingList = ({ year }: Props) => {
-  const {
-    driverStandings,
-    errorDriverStandings,
-    isLoadingDriverStandings,
-    setDriverStandings,
-    setErrorDriverStandings,
-  } = useDriverStandings(year);
+  const { data, error, isLoading } = useDriverStandings(year);
 
   const yearInTitle = year === "current" ? new Date().getFullYear() : year;
 
   return (
     <div className="">
       <h2>Driver standings in {yearInTitle}</h2>
-      {errorDriverStandings && (
-        <p className="error-message">{errorDriverStandings}</p>
-      )}
-      {isLoadingDriverStandings && <div className="spinner-border"></div>}
+      {error && <p className="error-message">{error.message}</p>}
+      {isLoading && <div className="spinner-border"></div>}
 
-      {!isLoadingDriverStandings && (
+      {!isLoading && (
         <ul>
-          {driverStandings.map((driverStanding) => (
-            <li key={driverStanding.Driver.driverId}>
-              {driverStanding.Driver.code} {driverStanding.Constructors[0].name}
-            </li>
-          ))}
+          {data?.MRData.StandingsTable.StandingsLists[0].DriverStandings.map(
+            (driverStanding) => (
+              <li key={driverStanding.Driver.driverId}>
+                {driverStanding.position} {driverStanding.Driver.givenName}{" "}
+                {driverStanding.Driver.familyName}{" "}
+                {"(" + driverStanding.Constructors[0].name + ")"}{" "}
+                {driverStanding.points}
+              </li>
+            )
+          )}
         </ul>
       )}
     </div>

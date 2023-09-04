@@ -1,9 +1,36 @@
+import APIClient from "./api-client";
 import { Constructor } from "./constructor-service";
-import create from "./http-service";
 
-export interface ConstructorStanding {
-    Constructor: Constructor;
-    points: string;
+export interface ConstructorStandingsData {
+    MRData: MRData;
 }
 
-export default create("constructorStandings.json");
+interface MRData {
+    StandingsTable: ConstructorStandingsTable;
+    limit: string;
+    offset: string;
+    series: string;
+    total: string;
+    url: string;
+}
+
+interface ConstructorStandingsTable {
+    StandingsLists: ConstructorStandingLists[];
+    season: string;   
+}
+
+interface ConstructorStandingLists {
+    season: string;
+    round: string;
+    ConstructorStandings: ConstructorStandings[]
+}
+
+interface ConstructorStandings {
+    Constructor: Constructor;
+    position: string;
+    positionText: string;
+    points: string;
+    wins: string;
+}
+
+export default new APIClient<ConstructorStandingsData>("constructorStandings.json");

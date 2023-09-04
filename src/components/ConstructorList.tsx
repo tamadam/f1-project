@@ -1,4 +1,3 @@
-import React from "react";
 import useConstructors from "../hooks/useConstructors";
 
 interface Props {
@@ -6,30 +5,19 @@ interface Props {
 }
 
 const ConstructorList = ({ year }: Props) => {
-  const {
-    constructors,
-    errorConstructors,
-    isLoadingConstructors,
-    setConstructors,
-    setErrorConstructors,
-  } = useConstructors(year);
+  const { data, error, isLoading } = useConstructors(year);
 
   const yearInTitle = year === "current" ? new Date().getFullYear() : year;
 
   return (
     <div className="">
       <h2>Constructor list in {yearInTitle}</h2>
-      {errorConstructors && (
-        <p className="error-message">{errorConstructors}</p>
-      )}
-      {isLoadingConstructors && <div className="spinner-border"></div>}
-
-      {!isLoadingConstructors && (
+      {error && <p className="error-message">{error.message}</p>}
+      {isLoading && <div className="spinner-border"></div>}
+      {!isLoading && (
         <ul>
-          {constructors.map((constructor) => (
-            <li key={constructor.constructorId}>
-              {constructor.name} {constructor.nationality}
-            </li>
+          {data?.MRData.ConstructorTable.Constructors.map((constructor) => (
+            <li key={constructor.constructorId}>{constructor.name}</li>
           ))}
         </ul>
       )}

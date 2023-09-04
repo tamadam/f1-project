@@ -1,33 +1,14 @@
-import { useEffect, useState } from "react";
-import { CanceledError } from "../services/api-client";
-import driverService, { Driver } from "../services/driver-service";
+import { useQuery } from "@tanstack/react-query";
+import driverService, { DriverData } from "../services/driver-service";
+import { CACHE_KEY_DRIVERS } from "../constants";
 
 const useDrivers = (year: string) => {
-    const [drivers, setDrivers] = useState<Driver[]>([]);
-    const [errorDrivers, setErrorDrivers] = useState("");
-    const [isLoadingDrivers, setLoadingDrivers] = useState(false);
 
-  
-    useEffect(() => {
-      setLoadingDrivers(true);
-      const { request, cancel } = driverService.getAll(year);
-      request
-        .then((response) => {
-          console.log(response.data.MRData.DriverTable.Drivers);
-          setDrivers(response.data.MRData.DriverTable.Drivers);
-          setLoadingDrivers(false);
-        })
-        .catch((error) => {
-          if (error instanceof CanceledError) return;
-          setErrorDrivers(error.message);
-          setLoadingDrivers(false);
-        });
-
-  
-      return () => cancel();
-    }, [year]);
-
-    return {drivers, errorDrivers, isLoadingDrivers, setDrivers, setErrorDrivers}
+    return useQuery<DriverData, Error>({
+        queryKey: CACHE_KEY_DRIVERS, 
+        queryFn: () => driverService.getAll(year), 
+        //staleTime: 3 * 1000,
+    });
 }
 
 export default useDrivers;

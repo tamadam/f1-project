@@ -1,4 +1,3 @@
-import React from "react";
 import useConstructorStandings from "../hooks/useConstructorStandings";
 
 interface Props {
@@ -6,35 +5,32 @@ interface Props {
 }
 
 const ConstructorStandingList = ({ year }: Props) => {
-  const {
-    constructorStandings,
-    errorConstructorStandings,
-    isLoadingConstructorStandings,
-    setConstructorStandings,
-    setErrorConstructorStandings,
-  } = useConstructorStandings(year);
+  const { data, error, isLoading } = useConstructorStandings(year);
 
   const yearInTitle = year === "current" ? new Date().getFullYear() : year;
 
   return (
     <div className="">
       <h2>Constructor standings in {yearInTitle}</h2>
-      {errorConstructorStandings && (
-        <p className="error-message">{errorConstructorStandings}</p>
-      )}
-      {isLoadingConstructorStandings && <div className="spinner-border"></div>}
-      {!isLoadingConstructorStandings && (
+      {error && <p className="error-message">{error.message}</p>}
+      {isLoading && <div className="spinner-border"></div>}
+      {/*   IMPORTANT!!!!!!!!!!!!!!!!!!!!!!!!
+    {!constructorStandings && (
+        <p className="warning-message">
+          The Constructors Championship was not awarded until 1958
+        </p>
+      )} */}
+      {!isLoading && (
         <ul>
-          {!constructorStandings && (
-            <p className="warning-message">
-              The Constructors Championship was not awarded until 1958
-            </p>
+          {data?.MRData.StandingsTable.StandingsLists[0].ConstructorStandings.map(
+            (constructorStanding) => (
+              <li key={constructorStanding.Constructor.constructorId}>
+                {constructorStanding.position}{" "}
+                {constructorStanding.Constructor.name}{" "}
+                {constructorStanding.points}
+              </li>
+            )
           )}
-          {constructorStandings?.map((constructorStanding) => (
-            <li key={constructorStanding.Constructor.constructorId}>
-              {constructorStanding.Constructor.constructorId}
-            </li>
-          ))}
         </ul>
       )}
     </div>
