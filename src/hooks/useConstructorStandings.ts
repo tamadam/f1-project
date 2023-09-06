@@ -5,7 +5,7 @@ import { CACHE_KEY_CONSTRUCTOR_STANDINGS } from "../constants";
 const useConstructorStandings = (year: string) => {
     
     return useQuery<ConstructorStandingsData, Error>({
-        queryKey: CACHE_KEY_CONSTRUCTOR_STANDINGS, 
+        queryKey: [CACHE_KEY_CONSTRUCTOR_STANDINGS, year], 
         queryFn: () => constructorStandingsService.getAll(year), 
         //staleTime: 3 * 1000,
     });

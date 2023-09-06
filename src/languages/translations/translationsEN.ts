@@ -1,6 +1,6 @@
 export const translationsEN = {
     navbar: {
-        buttonText: "Sign in"
+        buttonText: "Explore" // "Sign in"
     },
     mainCard: {
         mainTitle: "Unlimited Formula 1 data, analysis, and more.",

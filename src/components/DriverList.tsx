@@ -1,4 +1,5 @@
 import useDrivers from "../hooks/useDrivers";
+import LoadingIndicator from "./LoadingIndicator/LoadingIndicator";
 
 interface Props {
   year: string;
@@ -13,7 +14,7 @@ const DriverList = ({ year }: Props) => {
     <div className="">
       <h2>Driver list in {yearInTitle}</h2>
       {error && <p className="error-message">{error.message}</p>}
-      {isLoading && <div className="spinner-border"></div>}
+      {isLoading && <LoadingIndicator />}
 
       {!isLoading && (
         <ul>

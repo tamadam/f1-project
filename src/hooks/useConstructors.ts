@@ -5,7 +5,7 @@ import { CACHE_KEY_CONSTRUCTORS } from "../constants";
 const useConstructors = (year: string) => {
 
     return useQuery<ConstructorData, Error>({
-        queryKey: CACHE_KEY_CONSTRUCTORS, 
+        queryKey: [CACHE_KEY_CONSTRUCTORS, year], 
         queryFn: () => constructorService.getAll(year), 
         //staleTime: 3 * 1000,
     });

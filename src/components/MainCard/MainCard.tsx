@@ -1,5 +1,5 @@
 import "./MainCard.css";
-import backgroundF1nosub from "../../assets/f1back2.jpg";
+import mainPageBackground from "../../assets/mainPageBackground.jpg";
 import EmailForm from "../EmailForm/EmailForm";
 import useLanguage from "../../languages/useLanguage";
 
@@ -9,7 +9,7 @@ const MainCard = () => {
   return (
     <div className="main-page-main-card-container">
       <div className="main-page-main-card-background">
-        <img src={backgroundF1nosub} alt="f1 cars background" />
+        <img src={mainPageBackground} alt="f1 cars background" />
         <div className="main-page-main-card-color"></div>
       </div>
       <div className="main-page-main-card-text-container">

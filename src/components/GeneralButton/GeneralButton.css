@@ -9,7 +9,7 @@
     user-select: none;
     font-family: "NetflixMedium";
     font-size: 0.875rem;
-
+    width: fit-content;
 }
 
 .btn-primary:hover{

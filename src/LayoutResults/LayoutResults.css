@@ -1,0 +1,23 @@
+.results-page {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    font-family: "Formula1_Regular";
+    font-size: 2rem;
+}
+
+.results-page-test {
+    background-color: rgb(36, 36, 36);
+    padding: 1rem;
+    border-radius: 0.8rem;
+}
+
+
+.results-page-test, .results-page-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 1.2rem;
+}

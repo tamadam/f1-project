@@ -1,0 +1,68 @@
+header {
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+
+.arrow-container {
+    position: fixed;
+    bottom: 3.2rem; /* 2 rem */
+    right: 1.8rem;
+    z-index: 1000;
+    background-color: rgb(184, 8, 17);
+    border-radius: 50%;
+    width: 3.6rem; /*used to be 60px*/
+    height: 3.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-container:hover {
+    cursor: pointer;
+    background-color: rgb(229, 9, 20);
+}
+
+.arrow-container img {
+    max-width: 60%;
+    user-select: none;
+} 
+
+.main-page-power-rankings-demo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;  
+    background: radial-gradient(ellipse 20rem 16rem at center , rgb(39, 39, 39) 0%, rgba(0, 0, 0, 0) 60%);
+    gap: 3rem;
+}
+
+footer {
+    background-color: black;
+    background: linear-gradient(0deg, rgb(23, 23, 23) 0%, rgba(5,5,5,0.9150035014005602) 40%, rgba(0,0,0,0.48363095238095233) 100%);
+}
+
+/* MEDIA */ 
+
+@media (min-width: 50em) {
+    .arrow-container {
+        right: 2.8rem;
+        width: 4rem; 
+        height: 4rem;
+    }
+
+    .main-page-power-rankings-demo-container {
+        background: radial-gradient(ellipse 24rem 18rem at center , rgb(39, 39, 39) 0%, rgba(0, 0, 0, 0) 60%);    
+    }
+}
+
+@media (min-width: 70em) {
+    .arrow-container {
+        right: 3.8rem;
+        width: 5rem; 
+        height: 5rem;
+    }
+}

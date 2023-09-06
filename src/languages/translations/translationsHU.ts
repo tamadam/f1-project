@@ -1,6 +1,6 @@
 export const translationsHU = {
     navbar: {
-        buttonText: "Bejelentkezés"
+        buttonText: "Felfedezés" // "Bejelentkezés"
     },
     mainCard: {
         mainTitle: "Forma 1 adatok és elemzések korlátlan kínálata.",
