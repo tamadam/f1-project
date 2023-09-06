@@ -1,11 +1,11 @@
 import "./Faq.css";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import EmailForm from "../EmailForm/EmailForm";
-import { LanguageContext } from "../../App";
 import React from "react";
+import useLanguage from "../../languages/useLanguage";
 
 const Faq = () => {
-  const language = useContext(LanguageContext);
+  const { language } = useLanguage();
 
   const [activeIndex, setActiveIndex] = useState(-1);
 

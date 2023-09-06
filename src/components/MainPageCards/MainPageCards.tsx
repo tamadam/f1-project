@@ -1,16 +1,10 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import MainCard from "../MainCard/MainCard";
 import SeparatorLine from "../SeparatorLine/SeparatorLine";
 import StoryCard from "../StoryCard/StoryCard";
-import YearSelector from "../YearSelector";
-import DriverList from "../DriverList";
-import DriverStandingList from "../DriverStandingList";
-import ConstructorList from "../ConstructorList";
-import ConstructorStandingList from "../ConstructorStandingList";
 import demoVideo from "../../assets/titlevideo.mp4";
 import laptopBackground from "../../assets/laptop6.png";
 import posterImage from "../../assets/posterImage.webp";
-import { LanguageContext } from "../../App";
 import "./MainPageCards.css";
 import StandingsLine from "../StandingsLine/StandingsLine";
 import alonsoAvatar from "../../assets/alonso.png";
@@ -20,10 +14,10 @@ import verstappenAvatar from "../../assets/verstappen.png";
 import phone from "../../assets/phone.png";
 import Faq from "../Faq/Faq";
 import SupportedDevices from "../SupportedDevices/SupportedDevices";
+import useLanguage from "../../languages/useLanguage";
 
 const MainPageCards = () => {
-  const [year, setYear] = useState("current");
-  const language = useContext(LanguageContext);
+  const { language } = useLanguage();
   const lineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -79,11 +73,8 @@ const MainPageCards = () => {
       <StoryCard
         title={language.storyCard.card1.storyTitle}
         subtitle={language.storyCard.card1.storySubtitle}
-        extraImage={
-          laptopBackground /*"https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"*/
-        }
+        extraImage={laptopBackground}
       >
-        {/*src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"*/}
         <video
           autoPlay={true}
           playsInline={true}
@@ -137,27 +128,6 @@ const MainPageCards = () => {
       <SeparatorLine />
       <SupportedDevices />
       <SeparatorLine />
-
-      {/*------------------ 
-      <div
-        style={{
-          backgroundColor: "black",
-          color: "white",
-          display: "flex",
-          alignItems: "flex-start",
-          justifyContent: "center",
-        }}
-      >
-        <YearSelector onSelectYear={(year) => setYear(year)} />
-        <div className="data-container">
-          <DriverList year={year} />
-          <DriverStandingList year={year} />
-
-          <ConstructorList year={year} />
-          <ConstructorStandingList year={year} />
-        </div>
-      </div>
-    */}
     </main>
   );
 };

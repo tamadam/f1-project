@@ -1,11 +1,10 @@
 import "./MainCard.css";
 import backgroundF1nosub from "../../assets/f1back2.jpg";
 import EmailForm from "../EmailForm/EmailForm";
-import { useContext } from "react";
-import { LanguageContext } from "../../App";
+import useLanguage from "../../languages/useLanguage";
 
 const MainCard = () => {
-  const language = useContext(LanguageContext);
+  const { language } = useLanguage();
 
   return (
     <div className="main-page-main-card-container">

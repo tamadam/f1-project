@@ -1,4 +1,4 @@
-export const languageHUN = {
+export const translationsHU = {
     navbar: {
         buttonText: "Bejelentkezés"
     },
@@ -51,5 +51,9 @@ export const languageHUN = {
         linkPrivacy: "Adatvédelem",
         warningMessage: "Ez az oldal azért készült, hogy tapasztalatot szerezzek mind frontend, mind backend környezetben történő fejlesztésben a React és Node.js technológiákat alkalmazva. Az oldal Forma 1-el kapcsolatos információkat illetve adatokat bocsájt a felhasználó rendelkezésére. Ezen adatok nyilvánosan elérhető forrásokból származnak.",
         warningMessageImportant: "Az oldal nem kereskedelmi vagy pénzbeli haszonszerzés céljából jött létre."
+    },
+    languageSelector: {
+        languageHungarian: "Magyar",
+        languageEnglish: "English",
     }
 }

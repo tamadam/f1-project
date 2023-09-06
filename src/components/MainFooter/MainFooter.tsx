@@ -1,10 +1,10 @@
 import "./MainFooter.css";
 import mainLogo from "../../assets/f1logomain3.png";
-import { useContext } from "react";
-import { LanguageContext } from "../../App";
+import LanguageSelector from "../../languages/LanguageSelector/LanguageSelector";
+import useLanguage from "../../languages/useLanguage";
 
 const MainFooter = () => {
-  const language = useContext(LanguageContext);
+  const { language } = useLanguage();
 
   return (
     <div className="main-page-footer-container">
@@ -31,6 +31,7 @@ const MainFooter = () => {
           </mark>
         </span>
       </div>
+      <LanguageSelector />
       <div className="main-page-footer-copyright-container">
         <span>©2023 F1 Dataset Hungary.</span>
       </div>

@@ -1,11 +1,10 @@
 import "./SupportedDevices.css";
-import { useContext } from "react";
-import { LanguageContext } from "../../App";
 import notebookLogo from "../../assets/computer3.png";
 import tabletPhoneLogo from "../../assets/tabletphone.png";
+import useLanguage from "../../languages/useLanguage";
 
 const SupportedDevices = () => {
-  const language = useContext(LanguageContext);
+  const { language } = useLanguage();
   return (
     <div className="main-page-supported-devices-container">
       <div className="main-page-supported-devices-title">

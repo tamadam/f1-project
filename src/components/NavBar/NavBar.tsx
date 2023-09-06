@@ -1,21 +1,10 @@
 import "./NavBar.css";
 import mainLogo from "../../assets/f1logomain3.png";
-import LanguageSelector from "../LanguageSelector/LanguageSelector";
-import { LanguageContext } from "../../App";
-import { useContext } from "react";
+import LanguageSelector from "../../languages/LanguageSelector/LanguageSelector";
+import useLanguage from "../../languages/useLanguage";
 
-interface Props {
-  onLanguageChange?: (language: string) => void;
-}
-
-const NavBar = ({ onLanguageChange }: Props) => {
-  const language = useContext(LanguageContext);
-
-  const handleLanguageChange = (language: string) => {
-    if (onLanguageChange) {
-      onLanguageChange(language);
-    }
-  };
+const NavBar = () => {
+  const { language } = useLanguage();
 
   return (
     <div className="main-page-navigation-bar-container">
@@ -27,7 +16,7 @@ const NavBar = ({ onLanguageChange }: Props) => {
         ></img>
       </div>
       <div className="main-page-nav-item main-page-nav-item-container-2">
-        <LanguageSelector onLanguageChange={handleLanguageChange} />
+        <LanguageSelector />
       </div>
       <div className="main-page-nav-item main-page-nav-item-container-3">
         <span className="main-page-explore-button">

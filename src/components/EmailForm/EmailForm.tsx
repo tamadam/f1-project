@@ -1,9 +1,9 @@
 import "./EmailForm.css";
-import { useState, FocusEvent, useContext } from "react";
-import { LanguageContext } from "../../App";
+import { useState, FocusEvent } from "react";
+import useLanguage from "../../languages/useLanguage";
 
 const EmailForm = () => {
-  const language = useContext(LanguageContext);
+  const { language } = useLanguage();
 
   const [isEmailValid, setEmailValid] = useState(true);
 

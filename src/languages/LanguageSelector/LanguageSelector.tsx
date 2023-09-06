@@ -1,21 +1,44 @@
+import {
+  LANGUAGE_CODE_ENGLISH,
+  LANGUAGE_CODE_HUNGARIAN,
+} from "../../constants";
+import useLanguage from "../useLanguage";
 import "./LanguageSelector.css";
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent } from "react";
 
-interface Props {
-  onLanguageChange: (language: string) => void;
-}
+const LanguageSelector = () => {
+  const { language, setLanguage, languageLabel, setLanguageLabel } =
+    useLanguage();
 
-const LanguageSelector = ({ onLanguageChange }: Props) => {
-  const [selectedLanguage, setSelectedLanguage] = useState("hu");
+  const handleLanguageChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    const changeToLanguageCode = event.target.value;
+    const validLanguageCodes = [LANGUAGE_CODE_HUNGARIAN, LANGUAGE_CODE_ENGLISH];
 
-  const handleLanguageSelect = (event: ChangeEvent<HTMLSelectElement>) => {
-    setSelectedLanguage(event.target.value);
+    if (!validLanguageCodes.includes(changeToLanguageCode)) {
+      console.error(
+        `Error in LanguageSelector: Invalid language code: ${changeToLanguageCode}`
+      );
+    } else {
+      switch (languageLabel) {
+        case LANGUAGE_CODE_HUNGARIAN:
+          setLanguage({ language: LANGUAGE_CODE_ENGLISH });
+          setLanguageLabel({ languageLabel: changeToLanguageCode });
+          break;
+
+        case LANGUAGE_CODE_ENGLISH:
+          setLanguage({ language: LANGUAGE_CODE_HUNGARIAN });
+          setLanguageLabel({ languageLabel: changeToLanguageCode });
+          break;
+
+        default:
+          console.error(
+            `Error in LanguageSelector: Invalid languageLabel: ${languageLabel}`
+          );
+          setLanguage({ language: LANGUAGE_CODE_HUNGARIAN });
+          setLanguageLabel({ languageLabel: LANGUAGE_CODE_HUNGARIAN });
+      }
+    }
   };
-
-  useEffect(() => {
-    // need to do that here, state is not updated in the handler function
-    onLanguageChange(selectedLanguage);
-  }, [selectedLanguage]);
 
   return (
     <div className="main-page-language-selector-container">
@@ -42,12 +65,15 @@ const LanguageSelector = ({ onLanguageChange }: Props) => {
         <select
           className="main-page-language-select"
           name="language-select"
-          id="language-select-1"
-          value={selectedLanguage}
-          onChange={handleLanguageSelect}
+          value={languageLabel}
+          onChange={handleLanguageChange}
         >
-          <option value="hu">Magyar</option>
-          <option value="en">English</option>
+          <option value={LANGUAGE_CODE_HUNGARIAN}>
+            {language.languageSelector.languageHungarian}
+          </option>
+          <option value={LANGUAGE_CODE_ENGLISH}>
+            {language.languageSelector.languageEnglish}
+          </option>
         </select>
         <div className="main-page-selector-icon">
           <svg

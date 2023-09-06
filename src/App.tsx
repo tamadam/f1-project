@@ -1,8 +1,7 @@
-import { useState, createContext, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
-import { languageHUN } from "./components/languages/languageHUN";
-import { languageEN } from "./components/languages/languageEN";
+
 import MainPageCards from "./components/MainPageCards/MainPageCards";
 import MainFooter from "./components/MainFooter/MainFooter";
 import uploadLogo from "./assets/upload.png";
@@ -11,46 +10,10 @@ import DriverList from "./components/DriverList";
 import DriverStandingList from "./components/DriverStandingList";
 import ConstructorList from "./components/ConstructorList";
 import ConstructorStandingList from "./components/ConstructorStandingList";
-
-export const LanguageContext = createContext(languageEN);
+import LanguageProvider from "./languages/LanguageProvider";
 
 function App() {
-  const [currentLanguage, setCurrentLanguage] = useState(languageHUN);
   const [isArrowVisible, setArrowVisible] = useState(false);
-
-  const handleLanguageChange = (selectedLanguage: string) => {
-    if (selectedLanguage === "hu") {
-      setCurrentLanguage(languageHUN);
-    } else if (selectedLanguage === "en") {
-      setCurrentLanguage(languageEN);
-    } else {
-      setCurrentLanguage(languageHUN);
-    }
-  };
-
-  /* show arrow only on up scroll
-  let prevScrollPos = window.pageYOffset;
-
-  useEffect(() => {
-    const toggleVisibility = () => {
-      const currentScrollPos = window.pageYOffset;
-      if (prevScrollPos > currentScrollPos) {
-        setArrowVisible(true);
-      } else {
-        setArrowVisible(false);
-      }
-      prevScrollPos = currentScrollPos;
-
-      if (window.scrollY === 0) {
-        setArrowVisible(false);
-      }
-    };
-
-    window.addEventListener("scroll", toggleVisibility);
-
-    return () => window.removeEventListener("scroll", toggleVisibility);
-  }, []);
-  */
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,14 +37,14 @@ function App() {
 
   return (
     <div className="container">
-      <LanguageContext.Provider value={currentLanguage}>
+      <LanguageProvider>
         {isArrowVisible && (
           <div className="arrow-container" onClick={handleArrowClick}>
             <img src={uploadLogo} alt="" />
           </div>
         )}
         <header>
-          <NavBar onLanguageChange={handleLanguageChange} />
+          <NavBar />
         </header>
         <MainPageCards />
         <footer>
@@ -93,43 +56,8 @@ function App() {
           <ConstructorList year="2023" />
           <ConstructorStandingList year="2023" />
         </div>
-      </LanguageContext.Provider>
+      </LanguageProvider>
     </div>
-
-    /*<div className="container">*/
-
-    /*
-      <header>
-        <NavBar />
-      </header>
-      <div className="story-cards">
-        <div className="test-title">Hello</div>
-        <div className="hero-title">
-          <div className="image-bg">
-            <img src={backgroundF1} alt="" className="bg-image" />
-            <div className="bg-color"></div>
-          </div>
-        </div>
-      </div>
-  */
-
-    /*
-      <div className="main-header">
-        <img src={backgroundF1} alt="" className="background-image-header" />
-        {<div className="background-header"></div>}
-
-        <div className="hero">Text</div>
-      </div>
-        <YearSelector onSelectYear={(year) => setYear(year)} /> */
-
-    /*<div className="data-container">
-        <DriverList year={year} />
-        <DriverStandingList year={year} />
-
-        <ConstructorList year={year} />
-        <ConstructorStandingList year={year} />
-  </div>*/
-    /*</div>*/
   );
 }
 
