@@ -1,0 +1,18 @@
+.btn-primary {
+    background-color: rgb(229, 9, 20);
+    color: white;
+    transition-duration: 250ms;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    user-select: none;
+    font-family: "NetflixMedium";
+    font-size: 0.875rem;
+
+}
+
+.btn-primary:hover{
+    cursor: pointer;
+    background-color: rgb(184, 8, 17);
+}
