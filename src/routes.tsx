@@ -2,21 +2,24 @@ import { createBrowserRouter } from "react-router-dom";
 import LayoutMainPage from "./LayoutMainPage/LayoutMainPage";
 import LayoutHomePage from "./LayoutHomePage/LayoutHomePage";
 import LayoutResults from "./LayoutResults/LayoutResults";
+import LayoutStatistics from "./LayoutStatistics/LayoutStatistics";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/", // in the future: /welcome
     element: <LayoutMainPage />,
-    /*     children: [
-      { path: "/home", element: <LayoutHomePage /> },
-      { path: "results", element: <LayoutResults /> },
-    ], */
   },
   {
-    path: "/home",
+    path: "/home", // in the future "/"
     element: <LayoutHomePage />,
+    children: [
+      { path: "results", element: <LayoutResults /> },
+      {
+        path: "statistics",
+        element: <LayoutStatistics />,
+      },
+    ],
   },
-  { path: "/results", element: <LayoutResults /> },
 ]);
 
 export default router;

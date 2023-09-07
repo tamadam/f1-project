@@ -1,7 +1,7 @@
 import "./MainCard.css";
-import mainPageBackground from "../../assets/mainPageBackground.jpg";
+import mainPageBackground from "../../../assets/mainPageBackground.jpg";
 import EmailForm from "../EmailForm/EmailForm";
-import useLanguage from "../../languages/useLanguage";
+import useLanguage from "../../../languages/useLanguage";
 
 const MainCard = () => {
   const { language } = useLanguage();

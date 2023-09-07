@@ -18,6 +18,11 @@
     height: 100%;
 }
 
+/* select language selector's container */
+.main-page-nav-item:nth-child(2) {
+    width: clamp(0.0625rem, 100%, 8rem);
+}
+
 
 .main-page-navbar-main-logo {    
     height: 1.5rem;

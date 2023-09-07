@@ -1,6 +1,6 @@
 import "./EmailForm.css";
 import { useState, FocusEvent } from "react";
-import useLanguage from "../../languages/useLanguage";
+import useLanguage from "../../../languages/useLanguage";
 
 const EmailForm = () => {
   const { language } = useLanguage();

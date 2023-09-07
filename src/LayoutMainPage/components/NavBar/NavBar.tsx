@@ -1,8 +1,8 @@
 import "./NavBar.css";
-import mainLogo from "../../assets/f1DatasetLogo.png";
-import LanguageSelector from "../../languages/LanguageSelector/LanguageSelector";
-import useLanguage from "../../languages/useLanguage";
-import GeneralButton from "../GeneralButton/GeneralButton";
+import mainLogo from "../../../assets/f1DatasetLogo.png";
+import LanguageSelector from "../../../languages/LanguageSelector/LanguageSelector";
+import useLanguage from "../../../languages/useLanguage";
+import GeneralButton from "../../../components/GeneralButton/GeneralButton";
 
 const NavBar = () => {
   const { language } = useLanguage();

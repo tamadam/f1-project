@@ -1,6 +1,6 @@
 import "./Faq.css";
 import { useState } from "react";
-import EmailForm from "../EmailForm/EmailForm";
+import EmailForm from "../../LayoutMainPage/components/EmailForm/EmailForm";
 import React from "react";
 import useLanguage from "../../languages/useLanguage";
 

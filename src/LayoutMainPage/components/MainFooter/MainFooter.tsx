@@ -1,7 +1,7 @@
 import "./MainFooter.css";
-import mainLogo from "../../assets/f1DatasetLogo.png";
-import LanguageSelector from "../../languages/LanguageSelector/LanguageSelector";
-import useLanguage from "../../languages/useLanguage";
+import mainLogo from "../../../assets/f1DatasetLogo.png";
+import LanguageSelector from "../../../languages/LanguageSelector/LanguageSelector";
+import useLanguage from "../../../languages/useLanguage";
 
 const MainFooter = () => {
   const { language } = useLanguage();

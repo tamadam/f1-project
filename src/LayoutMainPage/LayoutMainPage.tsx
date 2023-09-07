@@ -3,14 +3,14 @@ import { useEffect, useRef, useState } from "react";
 import useLanguage from "../languages/useLanguage";
 
 // components
-import NavBar from "../components/NavBar/NavBar";
-import MainCard from "../components/MainCard/MainCard";
+import NavBar from "./components/NavBar/NavBar";
+import MainCard from "./components/MainCard/MainCard";
 import SeparatorLine from "../components/SeparatorLine/SeparatorLine";
-import StoryCard from "../components/StoryCard/StoryCard";
-import StandingsLine from "../components/StandingsLine/StandingsLine";
+import StoryCard from "./components/StoryCard/StoryCard";
+import StandingsLine from "./components/StandingsLine/StandingsLine";
 import Faq from "../components/Faq/Faq";
-import SupportedDevices from "../components/SupportedDevices/SupportedDevices";
-import MainFooter from "../components/MainFooter/MainFooter";
+import SupportedDevices from "./components/SupportedDevices/SupportedDevices";
+import MainFooter from "./components/MainFooter/MainFooter";
 
 // assets
 import scrollUpIcon from "../assets/scrollUpIcon.png";
@@ -24,11 +24,6 @@ import laptopBackground from "../assets/laptop.png";
 import posterImage from "../assets/posterImage.webp";
 
 import "./LayoutMainPage.css";
-
-import ConstructorList from "../components/ConstructorList";
-import ConstructorStandingList from "../components/ConstructorStandingList";
-import DriverList from "../components/DriverList";
-import DriverStandingList from "../components/DriverStandingList";
 
 const LayoutMainPage = () => {
   // get translations

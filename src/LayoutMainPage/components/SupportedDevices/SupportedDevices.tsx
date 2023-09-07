@@ -1,7 +1,7 @@
 import "./SupportedDevices.css";
-import notebookLogo from "../../assets/computer.png";
-import tabletPhoneLogo from "../../assets/tabletphone.png";
-import useLanguage from "../../languages/useLanguage";
+import notebookLogo from "../../../assets/computer.png";
+import tabletPhoneLogo from "../../../assets/tabletphone.png";
+import useLanguage from "../../../languages/useLanguage";
 
 const SupportedDevices = () => {
   const { language } = useLanguage();

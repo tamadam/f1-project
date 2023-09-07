@@ -10,6 +10,6 @@
 
 .home-page-test {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 1rem;
 }
