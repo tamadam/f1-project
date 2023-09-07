@@ -13,7 +13,7 @@
     background-color: rgba(63, 63, 63, 0.4);
     border: 1px solid rgba(255,255,255,0.4);
     border-radius: 0.25rem;
-    
+
 }
 
 .main-page-language-world-icon {
@@ -24,7 +24,7 @@
 
 .main-page-language-select {  
     all: unset;
-    width: 100%;
+    width: 0rem;
     padding: 0.5rem 1.9rem;
 }
 
@@ -43,6 +43,7 @@
 @media (min-width: 40em) {
     .main-page-language-select {  
         width: fit-content;
+        max-width: 8rem;
     }
 
     .main-page-language-world-icon {
