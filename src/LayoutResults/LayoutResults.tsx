@@ -24,10 +24,6 @@ const LayoutResults = () => {
         <ConstructorList year={year} />
         <ConstructorStandingList year={year} />
       </div>
-      <div className="results-page-buttons">
-        <GeneralButton label="Go to Home page" target="/home" />
-        <GeneralButton label="Go to Main page" target="/" />
-      </div>
     </div>
   );
 };

@@ -1,0 +1,7 @@
+.nav {
+    color: red;
+    display: flex;
+    flex-direction: row;
+    gap: 0.6rem;
+    justify-items: center;
+}

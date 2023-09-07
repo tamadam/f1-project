@@ -1,17 +1,20 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import "./LayoutHomePage.css";
-import GeneralButton from "../components/GeneralButton/GeneralButton";
+import NavBar from "./components/NavBar/NavBar";
+import { PATH_HOME_PAGE } from "../constants";
 
 const LayoutHomePage = () => {
+  const location = useLocation();
+
   return (
-    <div className="home-page">
-      <p>HomePage</p>
-      <div className="home-page-test">
-        <GeneralButton label="Go to Results page" target="results" />
-        <GeneralButton label="Go to Statistics page" target="statistics" />
-        <GeneralButton label="Go to Home page" target="" />
-        <GeneralButton label="Go to Main page" target="/" />
-        <Outlet />
+    <div className="home-page-container">
+      <NavBar />
+      <div className="home-page-content">
+        {location.pathname === PATH_HOME_PAGE ? (
+          "Default content here"
+        ) : (
+          <Outlet />
+        )}
       </div>
     </div>
   );

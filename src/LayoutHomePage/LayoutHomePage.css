@@ -1,4 +1,4 @@
-.home-page {
+.home-page-container {
     color: white;
     display: flex;
     flex-direction: column;
@@ -8,7 +8,7 @@
     font-size: 2rem;
 }
 
-.home-page-test {
+.home-page-content {
     display: flex;
     flex-direction: column;
     gap: 1rem;
