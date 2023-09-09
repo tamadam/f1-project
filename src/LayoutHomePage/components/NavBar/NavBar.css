@@ -1,11 +1,12 @@
 :root {
-    --home-page-navbar-bg-color: #272727;
+    --home-page-navbar-bg-default-color: #272727;
+    --home-page-navbar-bg-color-gradient: linear-gradient(180deg, rgb(20, 20, 20) 0%, rgba(0,0,0,1) 70%);
     --home-page-navbar-img: url('../../../assets/homePageNavBarBackground.png');
     --home-page-navbar-height: 5rem;
     --home-page-navbar-side-padding: 4vw;
 
     --home-page-nav-menu-cover-bg-color: rgba(0, 0, 0, 0.5);
-    --home-page-nav-menu-bg-color: #0f0f0f;
+    --home-page-nav-menu-bg-color: #0a0a0a;
     --home-page-nav-menu-border: 2px solid var(--default-f1-red);
 
     --home-page-nav-menu-open-transition: grid-template-rows ease-in-out 0.2s, opacity ease-out 0.2s;
@@ -13,9 +14,10 @@
 }
 
 .home-page-navigation-bar-container {
-    background-color: var(--home-page-navbar-bg-color);
-    background-image: var(--home-page-navbar-img);
-    background-repeat: repeat;
+    background-color: var(--home-page-navbar-bg-default-color);
+    background: var(--home-page-navbar-bg-color-gradient);
+
+
     height: 5rem;
     padding: 0 var(--home-page-navbar-side-padding);
 
