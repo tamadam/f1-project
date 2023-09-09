@@ -97,24 +97,22 @@ const NavBar = () => {
             </div>
           )}
 
-          <ul
+          <div
             className={`home-page-nav-menu ${
               isMobile ? "small-screen" : "large-screen"
             } ${isMenuOpen ? "open" : ""}`}
           >
             <span className="home-page-nav-menu-options-wrapper">
-              <li
-                className="home-page-nav-menu-option"
+              <NavLink
+                to={PATH_RESULTS_PAGE_FROM_HOME_PAGE}
+                className={({ isActive }) =>
+                  isActive
+                    ? "home-page-nav-menu-option nav-option-active"
+                    : "home-page-nav-menu-option"
+                }
                 onClick={handleMenuClick}
               >
-                <NavLink
-                  to={PATH_RESULTS_PAGE_FROM_HOME_PAGE}
-                  className={({ isActive }) =>
-                    isActive ? "nav-option-active" : ""
-                  }
-                >
-                  Results
-                </NavLink>
+                Results
                 {isMobile && (
                   <img
                     className="home-page-nav-menu-option-img"
@@ -122,19 +120,18 @@ const NavBar = () => {
                     alt="arrowRight"
                   />
                 )}
-              </li>
-              <li
-                className="home-page-nav-menu-option"
+              </NavLink>
+
+              <NavLink
+                to={PATH_STATISTICS_PAGE_FROM_HOME_PAGE}
+                className={({ isActive }) =>
+                  isActive
+                    ? "home-page-nav-menu-option nav-option-active"
+                    : "home-page-nav-menu-option"
+                }
                 onClick={handleMenuClick}
               >
-                <NavLink
-                  to={PATH_STATISTICS_PAGE_FROM_HOME_PAGE}
-                  className={({ isActive }) =>
-                    isActive ? "nav-option-active" : ""
-                  }
-                >
-                  Statistics
-                </NavLink>
+                Statistics
                 {isMobile && (
                   <img
                     className="home-page-nav-menu-option-img"
@@ -142,19 +139,18 @@ const NavBar = () => {
                     alt="arrowRight"
                   />
                 )}
-              </li>
-              <li
-                className="home-page-nav-menu-option"
+              </NavLink>
+
+              <NavLink
+                to={PATH_MAIN_PAGE}
+                className={({ isActive }) =>
+                  isActive
+                    ? "home-page-nav-menu-option nav-option-active"
+                    : "home-page-nav-menu-option"
+                }
                 onClick={handleMenuClick}
               >
-                <NavLink
-                  to={PATH_MAIN_PAGE}
-                  className={({ isActive }) =>
-                    isActive ? "nav-option-active" : ""
-                  }
-                >
-                  Future Feature
-                </NavLink>
+                Future Feature
                 {isMobile && (
                   <img
                     className="home-page-nav-menu-option-img"
@@ -162,19 +158,18 @@ const NavBar = () => {
                     alt="arrowRight"
                   />
                 )}
-              </li>
-              <li
-                className="home-page-nav-menu-option"
+              </NavLink>
+
+              <NavLink
+                to={PATH_MAIN_PAGE}
+                className={({ isActive }) =>
+                  isActive
+                    ? "home-page-nav-menu-option nav-option-active"
+                    : "home-page-nav-menu-option"
+                }
                 onClick={handleMenuClick}
               >
-                <NavLink
-                  to={PATH_MAIN_PAGE}
-                  className={({ isActive }) =>
-                    isActive ? "nav-option-active" : ""
-                  }
-                >
-                  Videos
-                </NavLink>
+                Videos
                 {isMobile && (
                   <img
                     className="home-page-nav-menu-option-img"
@@ -182,19 +177,18 @@ const NavBar = () => {
                     alt="arrowRight"
                   />
                 )}
-              </li>
-              <li
-                className="home-page-nav-menu-option"
+              </NavLink>
+
+              <NavLink
+                to={PATH_MAIN_PAGE}
+                className={({ isActive }) =>
+                  isActive
+                    ? "home-page-nav-menu-option nav-option-active"
+                    : "home-page-nav-menu-option"
+                }
                 onClick={handleMenuClick}
               >
-                <NavLink
-                  to={PATH_MAIN_PAGE}
-                  className={({ isActive }) =>
-                    isActive ? "nav-option-active" : ""
-                  }
-                >
-                  Power Rankings
-                </NavLink>
+                Power Rankings
                 {isMobile && (
                   <img
                     className="home-page-nav-menu-option-img"
@@ -202,9 +196,9 @@ const NavBar = () => {
                     alt="arrowRight"
                   />
                 )}
-              </li>
+              </NavLink>
             </span>
-          </ul>
+          </div>
         </div>
         {/*       <GeneralButton
         label="Go to Results page"
