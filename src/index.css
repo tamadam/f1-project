@@ -65,12 +65,6 @@ body {
   background-color: black;
 }
 
-body.noscroll {
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-}
-
 #root {
   display: flex;
   flex-direction: column;
