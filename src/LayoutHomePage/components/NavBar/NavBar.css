@@ -16,7 +16,7 @@
     background-color: var(--home-page-navbar-bg-color);
     background-image: var(--home-page-navbar-img);
     background-repeat: repeat;
-    height: var(--home-page-navbar-height);
+    height: 5rem;
     padding: 0 var(--home-page-navbar-side-padding);
 
     display: flex;
@@ -67,7 +67,7 @@
 
 .home-page-nav-menu.small-screen {
     position: absolute;
-    top: var(--home-page-navbar-height);
+    top: 5rem;
     left: 0;
     width: 100%;
     background-color: var(--home-page-nav-menu-bg-color);
