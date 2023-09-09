@@ -18,6 +18,10 @@
   src: url('./fonts/Formula1_Regular.ttf') format('truetype');
 }
 
+:root {
+  --default-f1-red: #ee0000;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -31,6 +35,12 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
   border: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 button, a {
