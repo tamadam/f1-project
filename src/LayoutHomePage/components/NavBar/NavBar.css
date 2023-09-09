@@ -6,7 +6,7 @@
     --home-page-navbar-side-padding: 4vw;
 
     --home-page-nav-menu-cover-bg-color: rgba(0, 0, 0, 0.5);
-    --home-page-nav-menu-bg-color: #0a0a0a;
+    --home-page-nav-menu-bg-color: #000;
     --home-page-nav-menu-border: 2px solid var(--default-f1-red);
 
     --home-page-nav-menu-open-transition: grid-template-rows ease-in-out 0.2s, opacity ease-out 0.2s;
