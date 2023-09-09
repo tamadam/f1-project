@@ -44,6 +44,19 @@ const NavBar = () => {
     };
   }, [isMobile]);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add("noscroll");
+    } else {
+      document.body.classList.remove("noscroll");
+    }
+
+    // Clean up the effect by removing the class when the component unmounts
+    return () => {
+      document.body.classList.remove("noscroll");
+    };
+  }, [isMenuOpen]);
+
   return (
     <>
       {/*       {isMobile && isMenuOpen && (
