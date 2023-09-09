@@ -21,12 +21,23 @@ const NavBar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < PIXEL_THRESHOLD);
 
+  useEffect(() => {
+    // Add the 'noscroll' class to the body element when isMenuOpen is true
+    if (isMenuOpen) {
+      document.body.classList.add("noscroll");
+    } else {
+      // Remove the 'noscroll' class from the body element when isMenuOpen is false
+      document.body.classList.remove("noscroll");
+    }
+
+    // Clean up the effect by removing the class when the component unmounts
+    return () => {
+      document.body.classList.remove("noscroll");
+    };
+  }, [isMenuOpen]);
+
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
-  };
-
-  const handleMenuClick = () => {
-    if (isMenuOpen && isMobile) setMenuOpen(false);
   };
 
   useEffect(() => {
@@ -46,14 +57,14 @@ const NavBar = () => {
 
   return (
     <>
-      {/*       {isMobile && isMenuOpen && (
-        <div className="home-page-menu-cover" onClick={toggleMenu}></div>
-      )} */}
+      {isMenuOpen && (
+        <div className="home-page-nav-cover" onClick={toggleMenu}></div>
+      )}
       <div className="home-page-navigation-bar-container">
         <div className="home-page-nav-item">
           <NavLink
             to={PATH_HOME_PAGE}
-            onClick={handleMenuClick}
+            onClick={() => setMenuOpen(false)}
             className={({ isActive }) => (isActive ? "nav-option-active" : "")}
           >
             <img
@@ -68,29 +79,29 @@ const NavBar = () => {
             <div className="home-page-nav-menu-toggle" onClick={toggleMenu}>
               {!isMenuOpen && (
                 <svg
-                  width="23"
-                  height="15"
-                  viewBox="0 0 23 15"
+                  width="26"
+                  height="20"
+                  viewBox="0 0 26 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M0 15H23V12.5H0V15ZM0 8.75H23V6.25H0V8.75ZM0 0V2.5H23V0H0Z"
+                    d="M0 20H26V16.6667H0V20ZM0 11.6667H26V8.33333H0V11.6667ZM0 0V3.33333H26V0H0Z"
                     fill="#D81515"
                   />
                 </svg>
               )}
               {isMenuOpen && (
                 <svg
-                  width="23"
-                  height="20"
-                  viewBox="0 0 23 20"
+                  width="26"
+                  height="26"
+                  viewBox="0 0 26 26"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M23 2.01429L20.6836 0L11.5 7.98571L2.31643 0L0 2.01429L9.18357 10L0 17.9857L2.31643 20L11.5 12.0143L20.6836 20L23 17.9857L13.8164 10L23 2.01429Z"
-                    fill="#ee0000"
+                    d="M26 2.61857L23.3814 0L13 10.3814L2.61857 0L0 2.61857L10.3814 13L0 23.3814L2.61857 26L13 15.6186L23.3814 26L26 23.3814L15.6186 13L26 2.61857Z"
+                    fill="#EA1111"
                   />
                 </svg>
               )}
@@ -110,7 +121,7 @@ const NavBar = () => {
                     ? "home-page-nav-menu-option nav-option-active"
                     : "home-page-nav-menu-option"
                 }
-                onClick={handleMenuClick}
+                onClick={isMobile ? toggleMenu : undefined}
               >
                 Results
                 {isMobile && (
@@ -129,7 +140,7 @@ const NavBar = () => {
                     ? "home-page-nav-menu-option nav-option-active"
                     : "home-page-nav-menu-option"
                 }
-                onClick={handleMenuClick}
+                onClick={isMobile ? toggleMenu : undefined}
               >
                 Statistics
                 {isMobile && (
@@ -148,7 +159,7 @@ const NavBar = () => {
                     ? "home-page-nav-menu-option nav-option-active"
                     : "home-page-nav-menu-option"
                 }
-                onClick={handleMenuClick}
+                onClick={isMobile ? toggleMenu : undefined}
               >
                 Future Feature
                 {isMobile && (
@@ -167,7 +178,7 @@ const NavBar = () => {
                     ? "home-page-nav-menu-option nav-option-active"
                     : "home-page-nav-menu-option"
                 }
-                onClick={handleMenuClick}
+                onClick={isMobile ? toggleMenu : undefined}
               >
                 Videos
                 {isMobile && (
@@ -186,7 +197,7 @@ const NavBar = () => {
                     ? "home-page-nav-menu-option nav-option-active"
                     : "home-page-nav-menu-option"
                 }
-                onClick={handleMenuClick}
+                onClick={isMobile ? toggleMenu : undefined}
               >
                 Power Rankings
                 {isMobile && (

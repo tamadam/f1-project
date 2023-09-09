@@ -6,6 +6,8 @@
     gap: 1rem;
     font-family: "Formula1_Regular";
     font-size: 2rem;
+    min-height: 100vh;
+
 }
 
 .home-page-content {

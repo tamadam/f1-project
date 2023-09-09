@@ -30,7 +30,7 @@
     user-select: none;
 }
 
-/* .home-page-menu-cover {
+.home-page-nav-cover {
     background-color: var(--home-page-nav-menu-cover-bg-color); 
 
     position: fixed;
@@ -39,7 +39,7 @@
     width: 100%;
     height: 100%;
     z-index: 5; 
-} */
+} 
 
 .home-page-navbar-main-logo {    
     height: 1.5rem;
