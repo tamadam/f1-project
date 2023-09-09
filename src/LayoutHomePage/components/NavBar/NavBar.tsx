@@ -46,9 +46,9 @@ const NavBar = () => {
 
   return (
     <>
-      {isMobile && isMenuOpen && (
+      {/*       {isMobile && isMenuOpen && (
         <div className="home-page-menu-cover" onClick={toggleMenu}></div>
-      )}
+      )} */}
       <div className="home-page-navigation-bar-container">
         <div className="home-page-nav-item">
           <NavLink
