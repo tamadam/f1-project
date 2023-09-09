@@ -60,7 +60,7 @@ const NavBar = () => {
       {isMenuOpen && (
         <div className="home-page-nav-cover" onClick={toggleMenu}></div>
       )}
-      <div className="home-page-navigation-bar-container">
+      <header className="home-page-navigation-bar-container">
         <div className="home-page-nav-item">
           <NavLink
             to={PATH_HOME_PAGE}
@@ -221,7 +221,7 @@ const NavBar = () => {
       />
       <GeneralButton label="Go to Home page" target={PATH_HOME_PAGE} />
       <GeneralButton label="Go to Main page" target={PATH_MAIN_PAGE} /> */}
-      </div>
+      </header>
     </>
   );
 };

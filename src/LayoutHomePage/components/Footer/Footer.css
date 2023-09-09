@@ -1,0 +1,84 @@
+.home-page-footer-container {
+    color: rgba(255, 255, 255, 0.840);
+    font-size: 1rem;
+    text-align: center;
+    padding: 3rem 0 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: calc(100% - 3rem);
+    margin: auto;
+    gap: 1rem;
+}
+
+
+.home-page-footer-logo {
+    width: 10rem;
+}
+
+.home-page-footer-redirect-links-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.home-page-footer-redirect-links-container a{
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: underline;
+}
+
+.home-page-footer-redirect-links-container a:hover{
+    cursor: pointer;
+}
+
+.home-page-footer-redirect-links-container a:active{
+    color: red;
+}
+
+.home-page-footer-warning-important {
+    all: unset;
+    color: rgb(229, 9, 20);
+    font-family: "NetflixMedium";
+    display: block;
+    margin-top: 0.6rem;
+}
+
+.home-page-footer-copyright-container {
+    font-size: 0.7rem;
+}
+
+/* MEDIA */ 
+
+@media (min-width: 30em) {
+    .home-page-footer-container {
+        max-width: calc(100% - 4rem);
+        font-size: 1.2rem;
+    }
+
+    .home-page-footer-redirect-links-container{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 16vw;
+    }
+
+    .home-page-footer-logo {
+        width: 12rem;
+    }
+
+    .home-page-footer-copyright-container {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+@media (min-width: 50em) {
+    .home-page-footer-redirect-links-container{
+        column-gap: 24vw;
+    }
+}
+
+
+
