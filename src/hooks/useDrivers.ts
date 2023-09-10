@@ -3,11 +3,17 @@ import driverService, { DriverData } from "../services/driver-service";
 import { CACHE_KEY_DRIVERS } from "../constants";
 
 const useDrivers = (year: string) => {
-    return useQuery<DriverData, Error>({
+
+
+    const query = useQuery<DriverData, Error>({
         queryKey: [CACHE_KEY_DRIVERS, year], 
-        queryFn: () => driverService.getAll(year), 
+        queryFn: ({signal}) => driverService.getAll(year, signal)
+
         //staleTime: 3 * 1000,
+        
     });
+
+    return query;
 }
 
 export default useDrivers;

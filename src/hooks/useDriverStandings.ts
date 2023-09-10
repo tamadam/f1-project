@@ -7,7 +7,7 @@ const useDriverStandings = (year: string) => {
 
     return useQuery<DriverStandingsData, Error>({
         queryKey: [CACHE_KEY_DRIVER_STANDINGS, year], 
-        queryFn: () => driverStandingsService.getAll(year), 
+        queryFn: ({signal}) => driverStandingsService.getAll(year, signal), 
         //staleTime: 3 * 1000,
     });
 

@@ -6,7 +6,7 @@ const useConstructors = (year: string) => {
 
     return useQuery<ConstructorData, Error>({
         queryKey: [CACHE_KEY_CONSTRUCTORS, year], 
-        queryFn: () => constructorService.getAll(year), 
+        queryFn: ({signal}) => constructorService.getAll(year, signal), 
         //staleTime: 3 * 1000,
     });
 

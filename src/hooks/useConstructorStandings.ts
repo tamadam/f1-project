@@ -6,7 +6,7 @@ const useConstructorStandings = (year: string) => {
     
     return useQuery<ConstructorStandingsData, Error>({
         queryKey: [CACHE_KEY_CONSTRUCTOR_STANDINGS, year], 
-        queryFn: () => constructorStandingsService.getAll(year), 
+        queryFn: ({signal}) => constructorStandingsService.getAll(year, signal), 
         //staleTime: 3 * 1000,
     });
  }
