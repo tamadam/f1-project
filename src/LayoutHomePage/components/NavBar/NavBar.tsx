@@ -14,7 +14,7 @@ const convertEmToPixel = (em: number) => {
   return em * 16;
 };
 
-const EM_THRESHOLD = 50;
+const EM_THRESHOLD = 60;
 const PIXEL_THRESHOLD = convertEmToPixel(EM_THRESHOLD);
 
 const NavBar = () => {
@@ -61,154 +61,180 @@ const NavBar = () => {
         <div className="home-page-nav-cover" onClick={toggleMenu}></div>
       )}
       <header className="home-page-navigation-bar-container">
-        <div className="home-page-nav-item">
-          <NavLink
-            to={PATH_HOME_PAGE}
-            onClick={() => setMenuOpen(false)}
-            className={({ isActive }) => (isActive ? "nav-option-active" : "")}
-          >
-            <img
-              className="home-page-navbar-main-logo"
-              src={mainLogo}
-              alt="f1 dataset logo"
-            />
-          </NavLink>
-        </div>
-        <div className="home-page-nav-item">
-          {isMobile && (
-            <div className="home-page-nav-menu-toggle" onClick={toggleMenu}>
-              {!isMenuOpen && (
-                <svg
-                  width="26"
-                  height="20"
-                  viewBox="0 0 26 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+        <div className="home-page-nav-items-wrapper">
+          <div className="home-page-nav-item">
+            <NavLink
+              to={PATH_HOME_PAGE}
+              onClick={() => setMenuOpen(false)}
+              className={({ isActive }) =>
+                isActive
+                  ? "home-page-nav-menu-logo-option"
+                  : "home-page-nav-menu-logo-option"
+              }
+            >
+              <img
+                className="home-page-navbar-main-logo"
+                src={mainLogo}
+                alt="f1 dataset logo"
+              />
+            </NavLink>
+          </div>
+          <div className="home-page-nav-item">
+            {isMobile && (
+              <div className="home-page-nav-menu-toggle" onClick={toggleMenu}>
+                {!isMenuOpen && (
+                  <svg
+                    width="26"
+                    height="20"
+                    viewBox="0 0 26 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 20H26V16.6667H0V20ZM0 11.6667H26V8.33333H0V11.6667ZM0 0V3.33333H26V0H0Z"
+                      fill="#D81515"
+                    />
+                  </svg>
+                )}
+                {isMenuOpen && (
+                  <svg
+                    width="26"
+                    height="26"
+                    viewBox="0 0 26 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M26 2.61857L23.3814 0L13 10.3814L2.61857 0L0 2.61857L10.3814 13L0 23.3814L2.61857 26L13 15.6186L23.3814 26L26 23.3814L15.6186 13L26 2.61857Z"
+                      fill="#EA1111"
+                    />
+                  </svg>
+                )}
+              </div>
+            )}
+
+            <div
+              className={`home-page-nav-menu ${
+                isMobile ? "small-screen" : "large-screen"
+              } ${isMenuOpen ? "open" : ""}`}
+            >
+              <span className="home-page-nav-menu-options-wrapper">
+                <NavLink
+                  to={PATH_RESULTS_PAGE_FROM_HOME_PAGE}
+                  className={({ isActive }) =>
+                    `${
+                      isMobile
+                        ? "home-page-nav-menu-option-mobile"
+                        : isActive
+                        ? "home-page-nav-menu-option nav-option-active"
+                        : "home-page-nav-menu-option"
+                    }`
+                  }
+                  onClick={isMobile ? toggleMenu : undefined}
                 >
-                  <path
-                    d="M0 20H26V16.6667H0V20ZM0 11.6667H26V8.33333H0V11.6667ZM0 0V3.33333H26V0H0Z"
-                    fill="#D81515"
-                  />
-                </svg>
-              )}
-              {isMenuOpen && (
-                <svg
-                  width="26"
-                  height="26"
-                  viewBox="0 0 26 26"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                  Results
+                  {isMobile && (
+                    <img
+                      className="home-page-nav-menu-option-img"
+                      src={arrowRight}
+                      alt="arrowRight"
+                    />
+                  )}
+                </NavLink>
+
+                <NavLink
+                  to={PATH_STATISTICS_PAGE_FROM_HOME_PAGE}
+                  className={({ isActive }) =>
+                    `${
+                      isMobile
+                        ? "home-page-nav-menu-option-mobile"
+                        : isActive
+                        ? "home-page-nav-menu-option nav-option-active"
+                        : "home-page-nav-menu-option"
+                    }`
+                  }
+                  onClick={isMobile ? toggleMenu : undefined}
                 >
-                  <path
-                    d="M26 2.61857L23.3814 0L13 10.3814L2.61857 0L0 2.61857L10.3814 13L0 23.3814L2.61857 26L13 15.6186L23.3814 26L26 23.3814L15.6186 13L26 2.61857Z"
-                    fill="#EA1111"
-                  />
-                </svg>
-              )}
+                  Statistics
+                  {isMobile && (
+                    <img
+                      className="home-page-nav-menu-option-img"
+                      src={arrowRight}
+                      alt="arrowRight"
+                    />
+                  )}
+                </NavLink>
+
+                <NavLink
+                  to={PATH_MAIN_PAGE}
+                  className={({ isActive }) =>
+                    `${
+                      isMobile
+                        ? "home-page-nav-menu-option-mobile"
+                        : isActive
+                        ? "home-page-nav-menu-option nav-option-active"
+                        : "home-page-nav-menu-option"
+                    }`
+                  }
+                  onClick={isMobile ? toggleMenu : undefined}
+                >
+                  Future Feature
+                  {isMobile && (
+                    <img
+                      className="home-page-nav-menu-option-img"
+                      src={arrowRight}
+                      alt="arrowRight"
+                    />
+                  )}
+                </NavLink>
+
+                <NavLink
+                  to={PATH_MAIN_PAGE}
+                  className={({ isActive }) =>
+                    `${
+                      isMobile
+                        ? "home-page-nav-menu-option-mobile"
+                        : isActive
+                        ? "home-page-nav-menu-option nav-option-active"
+                        : "home-page-nav-menu-option"
+                    }`
+                  }
+                  onClick={isMobile ? toggleMenu : undefined}
+                >
+                  Videos
+                  {isMobile && (
+                    <img
+                      className="home-page-nav-menu-option-img"
+                      src={arrowRight}
+                      alt="arrowRight"
+                    />
+                  )}
+                </NavLink>
+
+                <NavLink
+                  to={PATH_MAIN_PAGE}
+                  className={({ isActive }) =>
+                    `${
+                      isMobile
+                        ? "home-page-nav-menu-option-mobile"
+                        : isActive
+                        ? "home-page-nav-menu-option nav-option-active"
+                        : "home-page-nav-menu-option"
+                    }`
+                  }
+                  onClick={isMobile ? toggleMenu : undefined}
+                >
+                  Power Rankings
+                  {isMobile && (
+                    <img
+                      className="home-page-nav-menu-option-img"
+                      src={arrowRight}
+                      alt="arrowRight"
+                    />
+                  )}
+                </NavLink>
+              </span>
             </div>
-          )}
-
-          <div
-            className={`home-page-nav-menu ${
-              isMobile ? "small-screen" : "large-screen"
-            } ${isMenuOpen ? "open" : ""}`}
-          >
-            <span className="home-page-nav-menu-options-wrapper">
-              <NavLink
-                to={PATH_RESULTS_PAGE_FROM_HOME_PAGE}
-                className={({ isActive }) =>
-                  isActive
-                    ? "home-page-nav-menu-option nav-option-active"
-                    : "home-page-nav-menu-option"
-                }
-                onClick={isMobile ? toggleMenu : undefined}
-              >
-                Results
-                {isMobile && (
-                  <img
-                    className="home-page-nav-menu-option-img"
-                    src={arrowRight}
-                    alt="arrowRight"
-                  />
-                )}
-              </NavLink>
-
-              <NavLink
-                to={PATH_STATISTICS_PAGE_FROM_HOME_PAGE}
-                className={({ isActive }) =>
-                  isActive
-                    ? "home-page-nav-menu-option nav-option-active"
-                    : "home-page-nav-menu-option"
-                }
-                onClick={isMobile ? toggleMenu : undefined}
-              >
-                Statistics
-                {isMobile && (
-                  <img
-                    className="home-page-nav-menu-option-img"
-                    src={arrowRight}
-                    alt="arrowRight"
-                  />
-                )}
-              </NavLink>
-
-              <NavLink
-                to={PATH_MAIN_PAGE}
-                className={({ isActive }) =>
-                  isActive
-                    ? "home-page-nav-menu-option nav-option-active"
-                    : "home-page-nav-menu-option"
-                }
-                onClick={isMobile ? toggleMenu : undefined}
-              >
-                Future Feature
-                {isMobile && (
-                  <img
-                    className="home-page-nav-menu-option-img"
-                    src={arrowRight}
-                    alt="arrowRight"
-                  />
-                )}
-              </NavLink>
-
-              <NavLink
-                to={PATH_MAIN_PAGE}
-                className={({ isActive }) =>
-                  isActive
-                    ? "home-page-nav-menu-option nav-option-active"
-                    : "home-page-nav-menu-option"
-                }
-                onClick={isMobile ? toggleMenu : undefined}
-              >
-                Videos
-                {isMobile && (
-                  <img
-                    className="home-page-nav-menu-option-img"
-                    src={arrowRight}
-                    alt="arrowRight"
-                  />
-                )}
-              </NavLink>
-
-              <NavLink
-                to={PATH_MAIN_PAGE}
-                className={({ isActive }) =>
-                  isActive
-                    ? "home-page-nav-menu-option nav-option-active"
-                    : "home-page-nav-menu-option"
-                }
-                onClick={isMobile ? toggleMenu : undefined}
-              >
-                Power Rankings
-                {isMobile && (
-                  <img
-                    className="home-page-nav-menu-option-img"
-                    src={arrowRight}
-                    alt="arrowRight"
-                  />
-                )}
-              </NavLink>
-            </span>
           </div>
         </div>
         {/*       <GeneralButton
