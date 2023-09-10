@@ -13,4 +13,6 @@
     flex-direction: column;
     gap: 1rem;
     min-height: 100vh;
+    max-width: 80rem;
+    margin: auto;
 }

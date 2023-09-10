@@ -21,21 +21,6 @@ const NavBar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < PIXEL_THRESHOLD);
 
-  useEffect(() => {
-    // Add the 'noscroll' class to the body element when isMenuOpen is true
-    if (isMenuOpen) {
-      document.body.classList.add("noscroll");
-    } else {
-      // Remove the 'noscroll' class from the body element when isMenuOpen is false
-      document.body.classList.remove("noscroll");
-    }
-
-    // Clean up the effect by removing the class when the component unmounts
-    return () => {
-      document.body.classList.remove("noscroll");
-    };
-  }, [isMenuOpen]);
-
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };

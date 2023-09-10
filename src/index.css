@@ -63,12 +63,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: black;
-}
 
-body.noscroll {
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
 }
 
 #root {
@@ -77,6 +72,6 @@ body.noscroll {
   width: 100%; 
 
   font-family: "NetflixLight";
-  overflow-x: auto;
 }
+
 

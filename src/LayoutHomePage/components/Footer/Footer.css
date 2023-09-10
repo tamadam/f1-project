@@ -1,20 +1,22 @@
+
+
 .home-page-footer-container {
+    max-width: 80rem;
+    margin: 3rem auto;
     color: rgba(255, 255, 255, 0.840);
     font-size: 1rem;
-    text-align: center;
-    padding: 3rem 0 4rem;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: calc(100% - 3rem);
-    margin: auto;
     gap: 1rem;
+    width: 100%;
 }
 
 
 .home-page-footer-logo {
-    width: 10rem;
+    width: 8rem;
 }
 
 .home-page-footer-redirect-links-container{
@@ -22,7 +24,7 @@
     grid-template-columns: repeat(1, 1fr);
     row-gap: 1rem;
     text-align: center;
-    margin-bottom: 1rem;
+
 }
 
 .home-page-footer-redirect-links-container a{
@@ -38,47 +40,35 @@
     color: red;
 }
 
-.home-page-footer-warning-important {
-    all: unset;
-    color: rgb(229, 9, 20);
-    font-family: "NetflixMedium";
-    display: block;
-    margin-top: 0.6rem;
-}
-
 .home-page-footer-copyright-container {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
 /* MEDIA */ 
 
-@media (min-width: 30em) {
-    .home-page-footer-container {
-        max-width: calc(100% - 4rem);
-        font-size: 1.2rem;
-    }
-
+@media (min-width: 20em) {
     .home-page-footer-redirect-links-container{
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 16vw;
+        justify-content: space-between;
+        width: 90%;
+        text-align: center;
     }
+
+    .home-page-footer-redirect-links-container a:nth-child(odd) {
+        text-align: left;
+    }
+
+    .home-page-footer-redirect-links-container a:nth-child(even) {
+        text-align: right;
+    }
+
 
     .home-page-footer-logo {
-        width: 12rem;
-    }
-
-    .home-page-footer-copyright-container {
-        font-size: 0.8rem;
+        width: 10rem;
     }
 }
 
 
-
-@media (min-width: 50em) {
-    .home-page-footer-redirect-links-container{
-        column-gap: 24vw;
-    }
-}
 
 
 
