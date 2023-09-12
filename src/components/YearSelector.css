@@ -1,0 +1,18 @@
+select {
+    all: unset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    border: none;
+    background: none;
+    text-align: center;
+    overflow:hidden;
+}
+
+select option {
+    background-color: black;
+}
+
+select:focus {
+    outline: none;
+}

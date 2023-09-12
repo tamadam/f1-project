@@ -1,0 +1,80 @@
+.year-selector-wrapper {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.year-selector-background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 80rem;
+}
+
+.year-selector-background-gradient {
+    background-color: transparent;
+    background: radial-gradient(circle, rgba(0,0,0,1) 36%, rgba(15,15,15,0) 100%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.year-selector-container {
+    z-index: 8;
+    padding: 1rem 1.8rem;
+    margin: 1.8rem  1.8rem;
+    background-color: black;
+    border-radius: 50%;
+    border: 4px solid;
+    box-shadow: 0px 0px 18px 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    user-select: none;
+}
+
+.year-selector {
+    cursor: pointer;
+    color: white;
+}
+
+.yearChangeUp {
+    padding: 0.4rem;
+    cursor: pointer;
+}
+
+.yearChangeUp.hidden {
+    visibility: hidden;
+}
+
+.yearChangeDown {
+    padding: 0.4rem;
+    cursor: pointer;
+}
+
+.yearChangeDown.hidden {
+    visibility: hidden;
+}
+
+.yearChangeDown svg {
+    transform: rotateX(180deg);
+}
+
+@media (min-width: 30em) {
+    .year-selector-background-gradient {
+        background: radial-gradient(circle, rgba(0,0,0,1) 20%, rgba(15,15,15,0) 60%);
+    }
+}
+
+@media (min-width: 70em) {
+    .year-selector-background-gradient {
+        width: 80rem;
+        background: radial-gradient(circle, rgba(0,0,0,1) 16%, rgba(0,0,0,0) 47%, rgba(2,2,2,0.7063200280112045) 85%, rgb(0, 0, 0) 98%);
+    }
+}
