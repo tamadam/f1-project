@@ -1,0 +1,101 @@
+import "./DriverStandingList.css";
+import useDriverStandings from "../../hooks/useDriverStandings";
+import LoadingIndicator from "../LoadingIndicator/LoadingIndicator";
+import helmet from "../../assets/helmet.png";
+import { useEffect, useState } from "react";
+
+const convertEmToPixel = (em: number) => {
+  return em * 16;
+};
+
+const EM_THRESHOLD = 60;
+const PIXEL_THRESHOLD = convertEmToPixel(EM_THRESHOLD);
+
+interface Props {
+  year: number;
+}
+
+const DriverStandingList = ({ year }: Props) => {
+  const { data, error, isLoading } = useDriverStandings(year);
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < PIXEL_THRESHOLD);
+
+  useEffect(() => {
+    const handleResize = () => {
+      console.log(isMobile);
+      const isMobileNow = window.innerWidth < PIXEL_THRESHOLD;
+      if (isMobileNow !== isMobile) {
+        setIsMobile(isMobileNow);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isMobile]);
+
+  /* const selectedYear = year === "current" ? new Date().getFullYear() : year; */
+
+  return (
+    <div className="standings-table-container">
+      <h2 className="standings-table-title">Driver standings</h2>
+      {error && <p className="error-message">{error.message}</p>}
+
+      <div className="standings-table-header">
+        <div className="standings-table-header-item pos">POS</div>
+        <div className="standings-table-header-item driver">DRIVER</div>
+        {!isMobile && (
+          <>
+            <div className="standings-table-header-item nationality">
+              NATIONALITY
+            </div>
+            <div className="standings-table-header-item car">CAR</div>
+          </>
+        )}
+        <div className="standings-table-header-item points">POINTS</div>
+      </div>
+      <div className="standings-content">
+        {isLoading && <LoadingIndicator />}
+        {!isLoading && (
+          <ul>
+            {data?.MRData.StandingsTable.StandingsLists[0].DriverStandings.map(
+              (driverStanding) => (
+                <li
+                  className="standings-table-content-item"
+                  key={driverStanding.Driver.driverId}
+                >
+                  <span className="driver-position">
+                    {`${driverStanding.position}.`}
+                  </span>
+                  <div className="driver-name">
+                    <span>
+                      <img className="helmet-icon" src={helmet} alt="h" />
+                    </span>
+                    <span>
+                      {driverStanding.Driver.givenName}{" "}
+                      {driverStanding.Driver.familyName}
+                    </span>
+                  </div>
+                  {!isMobile && (
+                    <>
+                      <span className="driver-nationality">
+                        {driverStanding.Driver.nationality}
+                      </span>
+                      <span className="driver-car">
+                        {driverStanding.Constructors[0].name}
+                      </span>
+                    </>
+                  )}
+                  <span className="driver-points">{driverStanding.points}</span>
+                </li>
+              )
+            )}
+          </ul>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default DriverStandingList;

@@ -2,7 +2,7 @@ import { useState } from "react";
 import ConstructorList from "../components/ConstructorList";
 import ConstructorStandingList from "../components/ConstructorStandingList";
 import DriverList from "../components/DriverList";
-import DriverStandingList from "../components/DriverStandingList";
+import DriverStandingList from "../components/DriverStandingList/DriverStandingList";
 import "./LayoutResults.css";
 
 import {
@@ -47,13 +47,37 @@ const LayoutResults = () => {
         onYearChange={handleYearChange}
       />
       <ResultSelector onChange={handleResultContentChange} />
-      <div className="results-page-test">
+      <div className="results-page-content">
         {/* <DriverList year={selectedYear} /> */}
         {/* <ConstructorList year={selectedYear} /> */}
-        {activeContent === 0 && <p>Work in progress</p>}
-        {activeContent === 1 && <DriverStandingList year={selectedYear} />}
-        {activeContent === 2 && <ConstructorStandingList year={selectedYear} />}
-        {activeContent === 3 && <p>Work in progress</p>}
+        <div
+          className={`component-content ${
+            activeContent === 0 ? "visible" : ""
+          }`}
+        >
+          <p>Work in progress</p>
+        </div>
+        <div
+          className={`component-content ${
+            activeContent === 1 ? "visible" : ""
+          }`}
+        >
+          <DriverStandingList year={selectedYear} />
+        </div>
+        <div
+          className={`component-content ${
+            activeContent === 2 ? "visible" : ""
+          }`}
+        >
+          <ConstructorStandingList year={selectedYear} />
+        </div>
+        <div
+          className={`component-content ${
+            activeContent === 3 ? "visible" : ""
+          }`}
+        >
+          <p>Work in progress</p>
+        </div>
       </div>
     </div>
   );

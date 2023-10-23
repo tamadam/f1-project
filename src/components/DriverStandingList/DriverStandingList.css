@@ -1,0 +1,115 @@
+.standings-table-container {
+    border: 3px solid #D81515;
+    border-radius: 0.8em;
+    padding: 0.6em;
+    margin: 2rem 0.6rem;
+    position: relative;
+    font-size: 1em;
+}
+
+.standings-table-title {
+    font-size: 0.775em;
+    position: absolute;
+    top: -1.1rem;
+    left: -0.4rem;
+    background-color: #0F0F0F;
+    padding-bottom: 0.4em;
+    padding-right: 0.4em;
+}
+
+.standings-table-header,
+.standings-table-content-item {
+    font-size: 0.5em;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    align-items: center;
+    width: 100%;
+}
+
+.standings-table-header {
+    margin: 0.4em 0;
+    background-color: #a70606;
+    border-radius: 0.4em;
+    padding: 0.8em 0.4em;
+}
+
+.standings-table-content-item {
+    margin-bottom: 0.2em;
+    border-radius: 0.4em;
+    padding: 1em 0.4em;
+}
+
+.standings-table-content-item:nth-child(even) {
+    background-color:#181818;
+}
+
+.standings-table-header-item.driver,
+.standings-table-header-item.nationality,
+.standings-table-header-item.car,
+.standings-table-header-item .points,
+.driver-nationality,
+.driver-car,
+.driver-points {
+    text-align: center;
+}
+
+.driver-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.4em;
+}
+
+.helmet-icon {
+    width: 1rem;
+}
+
+/* MEDIA */
+
+@media (min-width: 30em) {
+    .standings-table-title {
+        font-size: 0.9em;
+        top: -1.3rem;
+        padding-bottom: 0.6em;
+        padding-right: 0.6em;
+    }
+
+    .standings-table-header,
+    .standings-table-content-item {
+        font-size: 0.6em;
+    }    
+    
+    .standings-table-header {
+        margin-top: 1em;
+    }
+
+    .standings-table-header-item.driver {
+        text-align: left;
+    }
+
+    .helmet-icon {
+        width: 2rem;
+    }
+}
+
+@media (min-width: 50em){
+    .standings-table-container {
+        margin: 3rem 2rem;
+    }
+}
+
+@media (min-width: 60em) {
+    .standings-table-header,
+    .standings-table-content-item {
+        grid-template-columns: 0.8fr 3fr 3fr 3fr 1fr;
+    }
+
+    .helmet-icon {
+        width: 2.2rem;
+    }
+
+    .standings-table-title {
+        font-size: 1em;
+        top: -1.5rem;
+    }    
+}

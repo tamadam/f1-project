@@ -8,6 +8,28 @@
 
 }
 
+.results-page-content {
+    background-color: #0F0F0F;
+    max-width: 80rem;
+    width: 100%;
+
+}
+
+.component-content {
+    display: none;
+}
+
+.component-content.visible {
+    display: block;
+}
+
+
+@media (min-width: 60em) {
+    .results-page-content {
+        margin: 0 auto;
+    
+    }
+}
 
 
 
@@ -16,8 +38,9 @@
 
 
 
-.results-page-test {
-    background-color: rgb(36, 36, 36);
+/* 
+.results-page-content {
+    background-color: #0F0F0F;
     padding: 1rem;
     border-radius: 0.8rem;
     display: grid;
@@ -29,10 +52,10 @@
 }
 
 @media (min-width: 30em) {
-    .results-page-test {
+    .results-page-content {
         margin: 1rem auto;
     }
 
 }
-
+ */
 
