@@ -3,7 +3,7 @@ import driverStandingsService, { DriverStandingsData } from "../services/driver-
 import { CACHE_KEY_DRIVER_STANDINGS } from "../constants";
 
 
-const useDriverStandings = (year: string) => {
+const useDriverStandings = (year: number) => {
 
     return useQuery<DriverStandingsData, Error>({
         queryKey: [CACHE_KEY_DRIVER_STANDINGS, year], 

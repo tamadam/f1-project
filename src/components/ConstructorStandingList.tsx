@@ -2,17 +2,17 @@ import useConstructorStandings from "../hooks/useConstructorStandings";
 import LoadingIndicator from "./LoadingIndicator/LoadingIndicator";
 
 interface Props {
-  year: string;
+  year: number;
 }
 
 const ConstructorStandingList = ({ year }: Props) => {
-  const selectedYear =
-    year === "current" ? new Date().getFullYear() : parseInt(year);
+  /* const selectedYear =
+    year === "current" ? new Date().getFullYear() : parseInt(year); */
 
-  if (selectedYear < 1958)
+  if (year < 1958)
     return (
       <>
-        <h2>Constructor standings in {selectedYear}</h2>
+        <h2>Constructor standings in {year}</h2>
         <p>The Constructors Championship was not awarded until 1958</p>
       </>
     );
@@ -21,7 +21,7 @@ const ConstructorStandingList = ({ year }: Props) => {
 
   return (
     <div className="">
-      <h2>Constructor standings in {selectedYear}</h2>
+      <h2>Constructor standings in {year}</h2>
       {error && <p className="error-message">{error.message}</p>}
       {isLoading && <LoadingIndicator />}
       {/*   IMPORTANT!!!!!!!!!!!!!!!!!!!!!!!!

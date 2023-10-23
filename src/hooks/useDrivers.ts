@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import driverService, { DriverData } from "../services/driver-service";
 import { CACHE_KEY_DRIVERS } from "../constants";
 
-const useDrivers = (year: string) => {
+const useDrivers = (year: number) => {
 
 
     const query = useQuery<DriverData, Error>({

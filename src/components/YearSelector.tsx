@@ -1,10 +1,10 @@
 import "./YearSelector.css";
 
 interface Props {
-  initialYear: string;
-  currentYear: string;
-  baseYear: string;
-  onSelectYear: (year: string) => void;
+  initialYear: number;
+  currentYear: number;
+  baseYear: number;
+  onSelectYear: (year: number) => void;
 }
 
 const YearSelector = ({
@@ -15,8 +15,8 @@ const YearSelector = ({
 }: Props) => {
   //calculating all the years since F1 started
 
-  const localCurrentYear = parseInt(currentYear);
-  const localBaseYear = parseInt(baseYear);
+  const localCurrentYear = currentYear;
+  const localBaseYear = baseYear;
 
   const allYears = Array.from(
     new Array(localCurrentYear - localBaseYear + 1),
@@ -28,7 +28,7 @@ const YearSelector = ({
       <select
         id="results-year-selector"
         value={initialYear}
-        onChange={(event) => onSelectYear(event.target.value)}
+        onChange={(event) => onSelectYear(parseInt(event.target.value))}
       >
         {allYears.map((year) => (
           <option key={year} value={year}>

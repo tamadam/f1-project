@@ -6,22 +6,22 @@ import defaultBackground from "../../../assets/default-bg.png";
 import redbullMax from "../../../assets/redbullmax-bg.png";
 
 const yearStylesMap: Record<string, { imgSrc: string; color: string }> = {
-  "2017": { imgSrc: mercedesHamilton, color: "#00A19B" },
-  "2018": { imgSrc: mercedesHamilton, color: "#00A19B" },
-  "2019": { imgSrc: mercedesHamilton, color: "#00A19B" },
-  "2020": { imgSrc: mercedesHamilton, color: "#00A19B" },
-  "2021": { imgSrc: redbullMax, color: "#0d32bd" },
-  "2022": { imgSrc: redbullMax, color: "#0d32bd" },
-  "2023": { imgSrc: redbullMax, color: "#0d32bd" },
+  2017: { imgSrc: mercedesHamilton, color: "#00A19B" },
+  2018: { imgSrc: mercedesHamilton, color: "#00A19B" },
+  2019: { imgSrc: mercedesHamilton, color: "#00A19B" },
+  2020: { imgSrc: mercedesHamilton, color: "#00A19B" },
+  2021: { imgSrc: redbullMax, color: "#0d32bd" },
+  2022: { imgSrc: redbullMax, color: "#0d32bd" },
+  2023: { imgSrc: redbullMax, color: "#0d32bd" },
 };
 
 const defaultYearStyles = { imgSrc: defaultBackground, color: "#e8ab33" };
 
 interface Props {
-  selectedYear: string;
-  currentYear: string;
-  baseYear: string;
-  onYearChange: (year: string) => void;
+  selectedYear: number;
+  currentYear: number;
+  baseYear: number;
+  onYearChange: (year: number) => void;
 }
 
 const YearSelectorWrapper = ({
@@ -31,13 +31,13 @@ const YearSelectorWrapper = ({
   onYearChange,
 }: Props) => {
   const handleYearChange = (increment: number) => {
-    const newYear = (parseInt(selectedYear) + increment).toString();
+    const newYear = selectedYear + increment;
 
     if (newYear > currentYear || newYear < baseYear) {
       return;
     }
 
-    onYearChange(newYear.toString());
+    onYearChange(newYear);
   };
 
   const [yearStyles, setYearStyles] = useState<{
@@ -68,9 +68,7 @@ const YearSelectorWrapper = ({
         className="year-selector-container"
       >
         <span
-          className={`yearChangeUp ${
-            parseInt(selectedYear) === 2023 ? "hidden" : ""
-          }`}
+          className={`yearChangeUp ${selectedYear === 2023 ? "hidden" : ""}`}
           onClick={() => handleYearChange(1)}
         >
           <svg
@@ -95,9 +93,7 @@ const YearSelectorWrapper = ({
           />
         </span>
         <span
-          className={`yearChangeDown ${
-            parseInt(selectedYear) === 1950 ? "hidden" : ""
-          }`}
+          className={`yearChangeDown ${selectedYear === 1950 ? "hidden" : ""}`}
           onClick={() => handleYearChange(-1)}
         >
           <svg

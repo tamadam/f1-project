@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import constructorService, { ConstructorData } from "../services/constructor-service";
 import { CACHE_KEY_CONSTRUCTORS } from "../constants";
 
-const useConstructors = (year: string) => {
+const useConstructors = (year: number) => {
 
     return useQuery<ConstructorData, Error>({
         queryKey: [CACHE_KEY_CONSTRUCTORS, year], 

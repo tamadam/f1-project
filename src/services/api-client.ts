@@ -11,7 +11,7 @@ class APIClient<T> {
         this.endpoint = endpoint;
     }
 
-    getAll = (year: string, signal?: AbortSignal) => {
+    getAll = (year: number, signal?: AbortSignal) => {
         const finalEndpoint = (year ? `/${year}/${this.endpoint}` : `/${this.endpoint}`)
 
         return axiosInstance.get<T>(finalEndpoint, {signal}).then(res => res.data);

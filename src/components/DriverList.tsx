@@ -2,17 +2,16 @@ import useDrivers from "../hooks/useDrivers";
 import LoadingIndicator from "./LoadingIndicator/LoadingIndicator";
 
 interface Props {
-  year: string;
+  year: number;
 }
 
 const DriverList = ({ year }: Props) => {
   const { data, error, isLoading } = useDrivers(year);
 
-  const yearInTitle = year === "current" ? new Date().getFullYear() : year;
-
+  /*   const selectedYear = year === "current" ? new Date().getFullYear() : year; */
   return (
     <div className="">
-      <h2>Driver list in {yearInTitle}</h2>
+      <h2>Driver list in {year}</h2>
       {error && <p className="error-message">{error.message}</p>}
       {isLoading && <LoadingIndicator />}
 
