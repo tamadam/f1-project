@@ -14,13 +14,9 @@ const YearSelector = ({
   onSelectYear,
 }: Props) => {
   //calculating all the years since F1 started
-
-  const localCurrentYear = currentYear;
-  const localBaseYear = baseYear;
-
   const allYears = Array.from(
-    new Array(localCurrentYear - localBaseYear + 1),
-    (val, index) => "" + -1 * (index - localCurrentYear)
+    new Array(currentYear - baseYear + 1),
+    (val, index) => "" + -1 * (index - currentYear)
   );
 
   return (
