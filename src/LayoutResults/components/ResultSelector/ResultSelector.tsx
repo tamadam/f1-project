@@ -10,7 +10,11 @@ const convertEmToPixel = (em: number) => {
 const EM_THRESHOLD = 60;
 const PIXEL_THRESHOLD = convertEmToPixel(EM_THRESHOLD);
 
-const ResultSelector = () => {
+interface Props {
+  onChange: (index: number) => void;
+}
+
+const ResultSelector = ({ onChange }: Props) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < PIXEL_THRESHOLD);
 
   useEffect(() => {
@@ -31,19 +35,22 @@ const ResultSelector = () => {
   const resultSelectorItems = ["Races", "Drivers", "Teams", "Fastest Laps"];
 
   const handleSelectorButtonClick = (isRightButton: boolean) => {
+    let newIndex = 0;
     if (isRightButton) {
-      setCurrentIndex((currentIndex) =>
-        currentIndex < resultSelectorItems.length - 1 ? currentIndex + 1 : 0
-      );
+      newIndex =
+        currentIndex < resultSelectorItems.length - 1 ? currentIndex + 1 : 0;
     } else {
-      setCurrentIndex((currentIndex) =>
-        currentIndex > 0 ? currentIndex - 1 : resultSelectorItems.length - 1
-      );
+      newIndex =
+        currentIndex > 0 ? currentIndex - 1 : resultSelectorItems.length - 1;
     }
+
+    setCurrentIndex(newIndex);
+    onChange(newIndex);
   };
 
   const handleSelectorItemClick = (index: number) => {
     setCurrentIndex(index);
+    onChange(index);
   };
 
   return (

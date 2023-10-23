@@ -32,6 +32,12 @@ const LayoutResults = () => {
     setSelectedYear(year);
   };
 
+  const [activeContent, setActiveContent] = useState(0);
+
+  const handleResultContentChange = (index: number) => {
+    setActiveContent(index);
+  };
+
   return (
     <div className="results-page-container">
       <YearSelectorWrapper
@@ -40,12 +46,14 @@ const LayoutResults = () => {
         baseYear={baseYear}
         onYearChange={handleYearChange}
       />
-      <ResultSelector />
+      <ResultSelector onChange={handleResultContentChange} />
       <div className="results-page-test">
-        <DriverList year={selectedYear} />
-        <DriverStandingList year={selectedYear} />
-        <ConstructorList year={selectedYear} />
-        <ConstructorStandingList year={selectedYear} />
+        {/* <DriverList year={selectedYear} /> */}
+        {/* <ConstructorList year={selectedYear} /> */}
+        {activeContent === 0 && <p>Work in progress</p>}
+        {activeContent === 1 && <DriverStandingList year={selectedYear} />}
+        {activeContent === 2 && <ConstructorStandingList year={selectedYear} />}
+        {activeContent === 3 && <p>Work in progress</p>}
       </div>
     </div>
   );
