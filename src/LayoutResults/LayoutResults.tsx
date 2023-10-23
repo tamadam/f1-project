@@ -13,6 +13,7 @@ import {
 } from "../constants";
 import { useQueryClient } from "@tanstack/react-query";
 import YearSelectorWrapper from "./components/YearSelectorWrapper/YearSelectorWrapper";
+import ResultSelector from "./components/ResultSelector/ResultSelector";
 
 const LayoutResults = () => {
   const currentYear = new Date().getFullYear();
@@ -39,6 +40,7 @@ const LayoutResults = () => {
         baseYear={baseYear}
         onYearChange={handleYearChange}
       />
+      <ResultSelector />
       <div className="results-page-test">
         <DriverList year={selectedYear} />
         <DriverStandingList year={selectedYear} />
