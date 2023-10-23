@@ -24,12 +24,7 @@ const ConstructorStandingList = ({ year }: Props) => {
       <h2>Constructor standings in {year}</h2>
       {error && <p className="error-message">{error.message}</p>}
       {isLoading && <LoadingIndicator />}
-      {/*   IMPORTANT!!!!!!!!!!!!!!!!!!!!!!!!
-    {!constructorStandings && (
-        <p className="warning-message">
-          The Constructors Championship was not awarded until 1958
-        </p>
-      )} */}
+
       {!isLoading && (
         <ul>
           {data?.MRData.StandingsTable.StandingsLists[0].ConstructorStandings.map(
