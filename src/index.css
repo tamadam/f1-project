@@ -72,6 +72,23 @@ body {
   width: 100%; 
 
   font-family: "NetflixLight";
+  zoom: 20%;
 }
 
+@media (min-width: 6em) {
+  #root {
+    zoom: 30%;
+  }
+}
 
+@media (min-width: 12em) {
+  #root {
+    zoom: 50%;
+  }
+}
+
+ @media (min-width: 17em) {
+  #root {
+    zoom: normal;
+  }
+}

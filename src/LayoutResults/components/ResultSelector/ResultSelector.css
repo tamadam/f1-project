@@ -15,6 +15,7 @@
     align-items: center;
     justify-content: space-between;
     width: clamp(16rem, 40vw, 80rem);
+    margin: 0 1em;
 }
 
 .result-selector-arrow-icon-container {
@@ -83,6 +84,13 @@
 
 
 /* MEDIA */
+
+
+@media (min-width: 18.75em) {
+    .result-selector-items {
+        margin: 0;
+    }
+}
 
 @media (min-width: 60em) {
     .result-selector-items {
