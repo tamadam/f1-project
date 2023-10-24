@@ -1,5 +1,5 @@
-import useConstructorStandings from "../hooks/useConstructorStandings";
-import LoadingIndicator from "./LoadingIndicator/LoadingIndicator";
+import useConstructorStandings from "../../hooks/useConstructorStandings";
+import LoadingIndicator from "../LoadingIndicator/LoadingIndicator";
 
 interface Props {
   year: number;

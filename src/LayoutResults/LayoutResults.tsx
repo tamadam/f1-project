@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ConstructorList from "../components/ConstructorList";
-import ConstructorStandingList from "../components/ConstructorStandingList";
+import ConstructorStandingList from "../components/ConstructorStandingList/ConstructorStandingList";
 import DriverList from "../components/DriverList";
 import DriverStandingList from "../components/DriverStandingList/DriverStandingList";
 import "./LayoutResults.css";
