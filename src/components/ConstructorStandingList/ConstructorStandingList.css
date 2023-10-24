@@ -8,7 +8,7 @@
 }
 
 .constructor-standings-table-title {
-    font-size: 0.65em;
+    font-size: 0.6em;
     background-color: #0F0F0F;
     margin-bottom: 0.6em;
 }
@@ -57,6 +57,13 @@
     width: 1.2em;
 }
 
+.constructor-standings-without-award {
+    padding: 1em 0 0.4em;
+    color: #cdcdcd;
+    font-size: 0.55em;
+
+}
+
 /* MEDIA */
 
 @media (min-width: 18.75em) {
@@ -71,6 +78,12 @@
 
     .constructor-standings-team-icon {
         display: block;
+    }
+}
+
+@media (min-width: 24em) {
+    .constructor-standings-table-title {
+        font-size: 0.75em;
     }
 }
 
@@ -106,6 +119,11 @@
 @media (min-width: 50em){
     .constructor-standings-table-container {
         margin: 1.6em 1em;
+    }
+
+    .constructor-standings-without-award {
+        padding: 2.4em 0 0.6em 0.4em;
+        font-size: 0.7em;
     }
 }
 

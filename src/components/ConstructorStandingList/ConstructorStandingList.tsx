@@ -20,6 +20,7 @@ const ConstructorStandingList = ({ year }: Props) => {
     year === "current" ? new Date().getFullYear() : parseInt(year); */
 
   const [isMobile, setIsMobile] = useState(window.innerWidth < PIXEL_THRESHOLD);
+  const { data, error, isLoading } = useConstructorStandings(year);
 
   useEffect(() => {
     const handleResize = () => {
@@ -38,13 +39,15 @@ const ConstructorStandingList = ({ year }: Props) => {
 
   if (year < 1958)
     return (
-      <>
-        <h2>Constructor standings in {year}</h2>
-        <p>The Constructors Championship was not awarded until 1958</p>
-      </>
+      <div className="constructor-standings-table-container">
+        <h2 className="constructor-standings-table-title">
+          Constructor standings
+        </h2>
+        <p className="constructor-standings-without-award">
+          The Constructors Championship was not awarded until 1958
+        </p>
+      </div>
     );
-
-  const { data, error, isLoading } = useConstructorStandings(year);
 
   return (
     <div className="constructor-standings-table-container">
