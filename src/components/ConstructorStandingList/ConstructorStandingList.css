@@ -1,0 +1,120 @@
+.constructor-standings-table-container {
+    border: 0.1em solid #D81515;
+    border-radius: 0.8em;
+    padding: 0.6em;
+    margin: 1em 0.3em;
+    position: relative;
+    font-size: 1em;
+}
+
+.constructor-standings-table-title {
+    font-size: 0.65em;
+    background-color: #0F0F0F;
+    margin-bottom: 0.6em;
+}
+
+.constructor-standings-table-header,
+.constructor-standings-table-content-item {
+    font-size: 0.5em;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    align-items: center;
+    width: 100%;
+}
+
+.constructor-standings-table-header {
+    margin: 0.4em 0;
+    background-color: #a70606;
+    border-radius: 0.4em;
+    padding: 0.8em 0.4em;
+}
+
+.constructor-standings-table-content-item {
+    margin-bottom: 0.2em;
+    border-radius: 0.4em;
+    padding: 1em 0.4em;
+}
+
+.constructor-standings-table-content-item:nth-child(even) {
+    background-color:#181818;
+}
+
+.constructor-standings-table-header-item.team,
+.constructor-standings-table-header-item.points,
+.constructor-standings-team-points {
+    text-align: center;
+}
+
+.constructor-standings-team-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.4em;
+}
+
+.constructor-standings-team-icon {
+    display: none;
+    width: 1.2em;
+}
+
+/* MEDIA */
+
+@media (min-width: 18.75em) {
+    .constructor-standings-table-title {
+        position: absolute;
+        top: -0.75em;
+        left: -0.2em;
+        padding-bottom: 0.4em;
+        padding-right: 0.4em;
+        margin: 0;
+    }
+
+    .constructor-standings-team-icon {
+        display: block;
+    }
+}
+
+@media (min-width: 30em) {
+    .constructor-standings-table-container {
+        margin: 1em 0.6em;
+    }
+
+    .constructor-standings-table-title {
+        font-size: 0.9em;
+        padding-bottom: 0.6em;
+        padding-right: 0.6em;
+    }
+
+    .constructor-standings-table-header,
+    .constructor-standings-table-content-item {
+        font-size: 0.6em;
+    }    
+    
+    .constructor-standings-table-header {
+        margin-top: 1em;
+    }
+
+    .constructor-standings-team-icon {
+        width: 1.7em;
+    } 
+
+    .constructor-standings-table-header-item.team {
+        text-align: left;
+    }
+}
+
+@media (min-width: 50em){
+    .constructor-standings-table-container {
+        margin: 1.6em 1em;
+    }
+}
+
+@media (min-width: 60em) {
+    .constructor-standings-team-icon {
+        width: 1.85em;
+    }
+
+    .constructor-standings-table-title {
+        font-size: 1em;
+    }    
+}

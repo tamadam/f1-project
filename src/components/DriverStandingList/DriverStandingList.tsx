@@ -38,39 +38,43 @@ const DriverStandingList = ({ year }: Props) => {
   /* const selectedYear = year === "current" ? new Date().getFullYear() : year; */
 
   return (
-    <div className="standings-table-container">
-      <h2 className="standings-table-title">Driver standings</h2>
+    <div className="driver-standings-table-container">
+      <h2 className="driver-standings-table-title">Driver standings</h2>
       {error && <p className="error-message">{error.message}</p>}
 
-      <div className="standings-table-header">
-        <div className="standings-table-header-item pos">POS</div>
-        <div className="standings-table-header-item driver">DRIVER</div>
+      <div className="driver-standings-table-header">
+        <div className="driver-standings-table-header-item pos">POS</div>
+        <div className="driver-standings-table-header-item driver">DRIVER</div>
         {!isMobile && (
           <>
-            <div className="standings-table-header-item nationality">
+            <div className="driver-standings-table-header-item nationality">
               NATIONALITY
             </div>
-            <div className="standings-table-header-item car">CAR</div>
+            <div className="driver-standings-table-header-item car">CAR</div>
           </>
         )}
-        <div className="standings-table-header-item points">POINTS</div>
+        <div className="driver-standings-table-header-item points">POINTS</div>
       </div>
-      <div className="standings-content">
+      <div className="driver-standings-content">
         {isLoading && <LoadingIndicator />}
         {!isLoading && (
           <ul>
             {data?.MRData.StandingsTable.StandingsLists[0].DriverStandings.map(
               (driverStanding) => (
                 <li
-                  className="standings-table-content-item"
+                  className="driver-standings-table-content-item"
                   key={driverStanding.Driver.driverId}
                 >
-                  <span className="driver-position">
+                  <span className="driver-standings-driver-position">
                     {`${driverStanding.position}.`}
                   </span>
-                  <div className="driver-name">
+                  <div className="driver-standings-driver-name">
                     <span>
-                      <img className="helmet-icon" src={helmet} alt="h" />
+                      <img
+                        className="driver-standings-helmet-icon"
+                        src={helmet}
+                        alt=""
+                      />
                     </span>
                     <span>
                       {driverStanding.Driver.givenName}{" "}
@@ -79,15 +83,17 @@ const DriverStandingList = ({ year }: Props) => {
                   </div>
                   {!isMobile && (
                     <>
-                      <span className="driver-nationality">
+                      <span className="driver-standings-driver-nationality">
                         {driverStanding.Driver.nationality}
                       </span>
-                      <span className="driver-car">
+                      <span className="driver-standings-driver-car">
                         {driverStanding.Constructors[0].name}
                       </span>
                     </>
                   )}
-                  <span className="driver-points">{driverStanding.points}</span>
+                  <span className="driver-standings-driver-points">
+                    {driverStanding.points}
+                  </span>
                 </li>
               )
             )}

@@ -1,4 +1,4 @@
-.standings-table-container {
+.driver-standings-table-container {
     border: 0.1em solid #D81515;
     border-radius: 0.8em;
     padding: 0.6em;
@@ -7,14 +7,14 @@
     font-size: 1em;
 }
 
-.standings-table-title {
+.driver-standings-table-title {
     font-size: 0.775em;
     background-color: #0F0F0F;
     margin-bottom: 0.6em;
 }
 
-.standings-table-header,
-.standings-table-content-item {
+.driver-standings-table-header,
+.driver-standings-table-content-item {
     font-size: 0.5em;
     display: grid;
     grid-template-columns: 0.8fr 4fr 1fr;
@@ -22,41 +22,41 @@
     width: 100%;
 }
 
-.standings-table-header {
+.driver-standings-table-header {
     margin: 0.4em 0;
     background-color: #a70606;
     border-radius: 0.4em;
     padding: 0.8em 0.4em;
 }
 
-.standings-table-content-item {
+.driver-standings-table-content-item {
     margin-bottom: 0.2em;
     border-radius: 0.4em;
     padding: 1em 0.4em;
 }
 
-.standings-table-content-item:nth-child(even) {
+.driver-standings-table-content-item:nth-child(even) {
     background-color:#181818;
 }
 
-.standings-table-header-item.driver,
-.standings-table-header-item.nationality,
-.standings-table-header-item.car,
-.standings-table-header-item .points,
-.driver-nationality,
-.driver-car,
-.driver-points {
+.driver-standings-table-header-item.driver,
+.driver-standings-table-header-item.nationality,
+.driver-standings-table-header-item.car,
+.driver-standings-table-header-item.points,
+.driver-standings-driver-nationality,
+.driver-standings-driver-car,
+.driver-standings-driver-points {
     text-align: center;
 }
 
-.driver-name {
+.driver-standings-driver-name {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 0.4em;
 }
 
-.helmet-icon {
+.driver-standings-helmet-icon {
     display: none;
     width: 1.2em;
 }
@@ -64,7 +64,7 @@
 /* MEDIA */
 
 @media (min-width: 18.75em) {
-    .standings-table-title {
+    .driver-standings-table-title {
         position: absolute;
         top: -0.75em;
         left: -0.2em;
@@ -73,62 +73,62 @@
         margin: 0;
     }
 
-    .standings-table-header,
-    .standings-table-content-item {
+    .driver-standings-table-header,
+    .driver-standings-table-content-item {
         grid-template-columns: 1fr 4fr 1fr;
     }
 
-    .helmet-icon {
+    .driver-standings-helmet-icon {
         display: block;
     }
 }
 
 @media (min-width: 30em) {
-    .standings-table-container {
+    .driver-standings-table-container {
         margin: 1em 0.6em;
     }
 
-    .standings-table-title {
+    .driver-standings-table-title {
         font-size: 0.9em;
         padding-bottom: 0.6em;
         padding-right: 0.6em;
     }
 
-    .standings-table-header,
-    .standings-table-content-item {
+    .driver-standings-table-header,
+    .driver-standings-table-content-item {
         font-size: 0.6em;
     }    
     
-    .standings-table-header {
+    .driver-standings-table-header {
         margin-top: 1em;
     }
 
-    .standings-table-header-item.driver {
+    .driver-standings-table-header-item.driver {
         text-align: left;
     }
 
-    .helmet-icon {
+    .driver-standings-helmet-icon {
         width: 1.7em;
     }
 }
 
 @media (min-width: 50em){
-    .standings-table-container {
+    .driver-standings-table-container {
         margin: 1.6em 1em;
     }
 }
 
 @media (min-width: 60em) {
-    .standings-table-header,
-    .standings-table-content-item {
+    .driver-standings-table-header,
+    .driver-standings-table-content-item {
         grid-template-columns: 0.8fr 3fr 3fr 3fr 1fr;
     }
 
-    .helmet-icon {
+    .driver-standings-helmet-icon {
         width: 1.85em;
     }
 
-    .standings-table-title {
+    .driver-standings-table-title {
         font-size: 1em;
     }    
 }
