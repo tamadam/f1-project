@@ -3,7 +3,7 @@ import mainLogo from "../../../assets/f1DatasetLogo.png";
 import LanguageSelector from "../../../languages/LanguageSelector/LanguageSelector";
 import useLanguage from "../../../languages/useLanguage";
 import GeneralButton from "../../../components/GeneralButton/GeneralButton";
-import { PATH_HOME_PAGE } from "../../../constants";
+import { PATH_HOME_PAGE, PATH_RESULTS_PAGE } from "../../../constants";
 
 const NavBar = () => {
   const { language } = useLanguage();
@@ -21,7 +21,8 @@ const NavBar = () => {
         <LanguageSelector />
         <GeneralButton
           label={language.navbar.buttonText}
-          target={PATH_HOME_PAGE}
+          //target={PATH_HOME_PAGE}
+          target={PATH_RESULTS_PAGE}
         />
       </div>
     </div>

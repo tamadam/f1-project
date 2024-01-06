@@ -8,5 +8,6 @@ export const LANGUAGE_CODE_ENGLISH = "EN";
 
 export const PATH_MAIN_PAGE = "/";
 export const PATH_HOME_PAGE = "/home";
+export const PATH_RESULTS_PAGE = "/home/results"
 export const PATH_RESULTS_PAGE_FROM_HOME_PAGE = "results"
 export const PATH_STATISTICS_PAGE_FROM_HOME_PAGE = "statistics"
