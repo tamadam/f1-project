@@ -32,7 +32,7 @@ const LayoutResults = () => {
     setSelectedYear(year);
   };
 
-  const [activeContent, setActiveContent] = useState(0);
+  const [activeContent, setActiveContent] = useState(1);
 
   const handleResultContentChange = (index: number) => {
     setActiveContent(index);
@@ -46,7 +46,10 @@ const LayoutResults = () => {
         baseYear={baseYear}
         onYearChange={handleYearChange}
       />
-      <ResultSelector onChange={handleResultContentChange} />
+      <ResultSelector
+        onChange={handleResultContentChange}
+        startIndex={activeContent}
+      />
       <div className="results-page-content">
         {/* <DriverList year={selectedYear} /> */}
         {/* <ConstructorList year={selectedYear} /> */}

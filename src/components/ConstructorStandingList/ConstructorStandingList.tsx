@@ -49,6 +49,8 @@ const ConstructorStandingList = ({ year }: Props) => {
       </div>
     );
 
+  const constructorData = data?.MRData.StandingsTable.StandingsLists[0];
+
   return (
     <div className="constructor-standings-table-container">
       <h2 className="constructor-standings-table-title">
@@ -68,31 +70,35 @@ const ConstructorStandingList = ({ year }: Props) => {
 
         {!isLoading && (
           <ul>
-            {data?.MRData.StandingsTable.StandingsLists[0].ConstructorStandings.map(
-              (constructorStanding) => (
-                <li
-                  className="constructor-standings-table-content-item"
-                  key={constructorStanding.Constructor.constructorId}
-                >
-                  <span className="constructor-standings-team-position">
-                    {constructorStanding.position}
-                  </span>
-                  <div className="constructor-standings-team-name">
-                    <span>
-                      <img
-                        className="constructor-standings-team-icon"
-                        src={teamLogo}
-                        alt=""
-                      />
-                    </span>
-                    <span>{constructorStanding.Constructor.name}</span>
-                  </div>
-                  <span className="constructor-standings-team-points">
-                    {constructorStanding.points}
-                  </span>
-                </li>
-              )
+            {!constructorData && (
+              <p className="info-text">The season hasn't started yet</p>
             )}
+            {constructorData &&
+              data?.MRData.StandingsTable.StandingsLists[0]?.ConstructorStandings.map(
+                (constructorStanding) => (
+                  <li
+                    className="constructor-standings-table-content-item"
+                    key={constructorStanding.Constructor.constructorId}
+                  >
+                    <span className="constructor-standings-team-position">
+                      {constructorStanding.position}
+                    </span>
+                    <div className="constructor-standings-team-name">
+                      <span>
+                        <img
+                          className="constructor-standings-team-icon"
+                          src={teamLogo}
+                          alt=""
+                        />
+                      </span>
+                      <span>{constructorStanding.Constructor.name}</span>
+                    </div>
+                    <span className="constructor-standings-team-points">
+                      {constructorStanding.points}
+                    </span>
+                  </li>
+                )
+              )}
           </ul>
         )}
       </div>

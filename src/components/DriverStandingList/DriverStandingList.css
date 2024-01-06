@@ -61,6 +61,12 @@
     width: 1.2em;
 }
 
+.info-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.6em;
+    margin: 1em 0 0.6em;
+}
+
 /* MEDIA */
 
 @media (min-width: 18.75em) {

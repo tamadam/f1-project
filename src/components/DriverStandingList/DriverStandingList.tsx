@@ -37,6 +37,8 @@ const DriverStandingList = ({ year }: Props) => {
 
   /* const selectedYear = year === "current" ? new Date().getFullYear() : year; */
 
+  const driverData = data?.MRData.StandingsTable.StandingsLists[0];
+
   return (
     <div className="driver-standings-table-container">
       <h2 className="driver-standings-table-title">Driver standings</h2>
@@ -59,44 +61,48 @@ const DriverStandingList = ({ year }: Props) => {
         {isLoading && <LoadingIndicator />}
         {!isLoading && (
           <ul>
-            {data?.MRData.StandingsTable.StandingsLists[0].DriverStandings.map(
-              (driverStanding) => (
-                <li
-                  className="driver-standings-table-content-item"
-                  key={driverStanding.Driver.driverId}
-                >
-                  <span className="driver-standings-driver-position">
-                    {`${driverStanding.position}.`}
-                  </span>
-                  <div className="driver-standings-driver-name">
-                    <span>
-                      <img
-                        className="driver-standings-helmet-icon"
-                        src={helmet}
-                        alt=""
-                      />
-                    </span>
-                    <span>
-                      {driverStanding.Driver.givenName}{" "}
-                      {driverStanding.Driver.familyName}
-                    </span>
-                  </div>
-                  {!isMobile && (
-                    <>
-                      <span className="driver-standings-driver-nationality">
-                        {driverStanding.Driver.nationality}
-                      </span>
-                      <span className="driver-standings-driver-car">
-                        {driverStanding.Constructors[0].name}
-                      </span>
-                    </>
-                  )}
-                  <span className="driver-standings-driver-points">
-                    {driverStanding.points}
-                  </span>
-                </li>
-              )
+            {!driverData && (
+              <p className="info-text">The season hasn't started yet</p>
             )}
+            {driverData &&
+              data?.MRData.StandingsTable.StandingsLists[0]?.DriverStandings.map(
+                (driverStanding) => (
+                  <li
+                    className="driver-standings-table-content-item"
+                    key={driverStanding.Driver.driverId}
+                  >
+                    <span className="driver-standings-driver-position">
+                      {`${driverStanding.position}.`}
+                    </span>
+                    <div className="driver-standings-driver-name">
+                      <span>
+                        <img
+                          className="driver-standings-helmet-icon"
+                          src={helmet}
+                          alt=""
+                        />
+                      </span>
+                      <span>
+                        {driverStanding.Driver.givenName}{" "}
+                        {driverStanding.Driver.familyName}
+                      </span>
+                    </div>
+                    {!isMobile && (
+                      <>
+                        <span className="driver-standings-driver-nationality">
+                          {driverStanding.Driver.nationality}
+                        </span>
+                        <span className="driver-standings-driver-car">
+                          {driverStanding.Constructors[0].name}
+                        </span>
+                      </>
+                    )}
+                    <span className="driver-standings-driver-points">
+                      {driverStanding.points}
+                    </span>
+                  </li>
+                )
+              )}
           </ul>
         )}
       </div>

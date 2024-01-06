@@ -68,7 +68,9 @@ const YearSelectorWrapper = ({
         className="year-selector-container"
       >
         <span
-          className={`yearChangeUp ${selectedYear === 2023 ? "hidden" : ""}`}
+          className={`yearChangeUp ${
+            selectedYear === currentYear ? "hidden" : ""
+          }`}
           onClick={() => handleYearChange(1)}
         >
           <svg
